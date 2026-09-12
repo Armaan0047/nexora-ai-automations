@@ -18,16 +18,16 @@ export function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 lg:px-8 pt-4 transition-all duration-300">
       <div
-        className={`max-w-7xl mx-auto rounded-xl border transition-all duration-300 ${
+        className={`max-w-7xl mx-auto rounded-lg border transition-all duration-300 ${
           scrolled
-            ? "border-white/15 bg-background/95 backdrop-blur-md shadow-lg py-2.5 px-4 sm:px-6"
-            : "border-white/10 bg-surface-1/90 backdrop-blur-sm py-3 px-5 sm:px-6"
+            ? "border-white/15 bg-background/96 backdrop-blur-md shadow-lg py-2.5 px-4 sm:px-6"
+            : "border-white/10 bg-surface-1/94 backdrop-blur-sm py-3 px-5 sm:px-6"
         }`}
       >
         <div className="flex items-center justify-between">
           <a href="#" className="flex items-center gap-2.5 group focus-visible:outline-none" aria-label="Nexora Home">
-            <div className="w-7 h-7 rounded-md bg-surface-2 border border-white/20 flex items-center justify-center transition-colors group-hover:border-blue-500/50">
-              <span className="w-2 h-2 rounded-sm bg-blue-500 transition-transform group-hover:scale-110" />
+            <div className="w-7 h-7 rounded-md bg-surface-3 border border-white/15 flex items-center justify-center transition-colors group-hover:border-[#b36f56]/60">
+              <span className="w-2 h-2 rounded-sm bg-[#b36f56] transition-transform group-hover:scale-110" />
             </div>
             <span className="text-base font-semibold tracking-[0.18em] text-white font-sans">NEXORA</span>
           </a>
@@ -41,8 +41,8 @@ export function Navbar() {
           </nav>
 
           <div className="hidden sm:flex items-center gap-3">
-            <div className="hidden lg:flex items-center gap-2 text-xs font-mono text-slate-400 px-3 py-1.5 rounded-md border border-white/5 bg-white/[0.02]">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+            <div className="hidden lg:flex items-center gap-2 text-xs font-mono text-slate-400 px-3 py-1.5 rounded-md border border-white/8 bg-white/[0.02]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#879071]" />
               <span>Inquiries Active</span>
             </div>
             <Button variant="primary" size="sm" withArrow href="#consultation">Start Consultation</Button>
@@ -59,7 +59,7 @@ export function Navbar() {
 
       {mobileMenuOpen && (
         <div className="md:hidden mt-2 mx-auto max-w-7xl">
-          <div className="rounded-xl border border-white/15 bg-surface-1/95 backdrop-blur-xl p-5 shadow-2xl flex flex-col gap-3">
+          <div className="rounded-lg border border-white/15 bg-surface-1/98 backdrop-blur-xl p-5 shadow-2xl flex flex-col gap-3">
             <div className="flex items-center justify-between pb-3 border-b border-white/10">
               <span className="text-xs font-mono text-slate-400">{COMPANY_DETAILS.statusMessage}</span>
             </div>
