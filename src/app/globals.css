@@ -3,19 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #080a0f;
-  --foreground: #f8fafc;
-  --surface-1: #0d111a;
-  --surface-2: #131926;
-  --surface-3: #1a2234;
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.14);
+  /* Nexora Editorial — warm, restrained, non-generic consultancy palette */
+  --background: #f3f1eb;
+  --foreground: #1b1a17;
+  --surface-1: #ffffff;
+  --surface-2: #ebe8e0;
+  --surface-3: #dfdbd1;
+  --border-subtle: rgba(27, 26, 23, 0.09);
+  --border-medium: rgba(27, 26, 23, 0.15);
+  --accent: #9a5b45;
+  --accent-dark: #7f4736;
+  --accent-soft: #f0e2db;
+  --success: #5e6b55;
 }
 
-html {
-  scroll-behavior: smooth;
-  color-scheme: dark;
-}
+html { scroll-behavior: smooth; color-scheme: light; }
 
 body {
   background-color: var(--background);
@@ -26,32 +28,44 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom subtle scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-track {
-  background: #080a0f;
-}
-::-webkit-scrollbar-thumb {
-  background: #1e2638;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #2b364e;
+/* Translate the previous dark-blue component vocabulary into the editorial palette. */
+.text-white { color: #1b1a17 !important; }
+.text-slate-950 { color: #f7f5ef !important; }
+.text-slate-300 { color: #514d46 !important; }
+.text-slate-400 { color: #68635b !important; }
+.text-slate-500 { color: #827b70 !important; }
+.text-slate-200 { color: #2f2d28 !important; }
+.text-slate-100 { color: #24231f !important; }
+[class*="text-blue-"] { color: var(--accent) !important; }
+[class*="bg-blue-"] { background-color: var(--accent) !important; }
+[class*="border-blue-"] { border-color: rgba(154, 91, 69, 0.38) !important; }
+[class*="text-emerald-"] { color: var(--success) !important; }
+[class*="bg-emerald-"] { background-color: rgba(94, 107, 85, 0.12) !important; }
+[class*="border-emerald-"] { border-color: rgba(94, 107, 85, 0.30) !important; }
+[class*="border-white/"] { border-color: rgba(27, 26, 23, 0.12) !important; }
+[class*="bg-white/[0."] { background-color: rgba(27, 26, 23, 0.035) !important; }
+
+.bg-background { background-color: var(--background) !important; }
+.bg-surface-1 { background-color: var(--surface-1) !important; }
+.bg-surface-2 { background-color: var(--surface-2) !important; }
+.bg-surface-3 { background-color: var(--surface-3) !important; }
+
+/* Primary CTA becomes restrained ink instead of a futuristic white pill. */
+.bg-white.text-slate-950 {
+  background-color: #1b1a17 !important;
+  color: #f7f5ef !important;
+  border-color: #1b1a17 !important;
 }
 
-/* Accessible visible focus states */
-:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #e8e5dd; }
+::-webkit-scrollbar-thumb { background: #b8b2a7; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #9f988c; }
 
-/* Reduced motion preference */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
 @media (prefers-reduced-motion: reduce) {
-  *,
-  ::before,
-  ::after {
+  *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
