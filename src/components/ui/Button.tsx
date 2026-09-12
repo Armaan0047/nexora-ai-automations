@@ -16,17 +16,17 @@ export function Button({ children, variant = "primary", size = "md", withArrow =
   };
 
   const variantStyles = {
-    primary: "bg-[#1b1a17] text-[#f7f5ef] font-medium hover:bg-[#302d28] active:scale-[0.98] border border-[#1b1a17] shadow-sm",
-    accent: "bg-[#9a5b45] text-white font-medium hover:bg-[#7f4736] active:scale-[0.98] border border-[#9a5b45] shadow-sm",
-    secondary: "bg-transparent text-[#2f2d28] font-medium hover:bg-black/[0.04] hover:text-[#1b1a17] border border-black/15 active:scale-[0.98]",
-    ghost: "bg-transparent text-[#68635b] font-medium hover:text-[#1b1a17] hover:bg-black/[0.03]",
+    primary: "bg-[#eeeae1] text-[#121210] font-medium hover:bg-[#d9d3c8] active:scale-[0.98] border border-[#eeeae1] shadow-sm",
+    accent: "bg-[#b36f56] text-[#f8f4ed] font-medium hover:bg-[#955744] active:scale-[0.98] border border-[#b36f56] shadow-sm",
+    secondary: "bg-transparent text-[#ddd7cc] font-medium hover:bg-white/[0.05] hover:text-[#eeeae1] border border-white/15 active:scale-[0.98]",
+    ghost: "bg-transparent text-[#a59d91] font-medium hover:text-[#eeeae1] hover:bg-white/[0.03]",
   };
 
   const content = (
     <>
       <span>{children}</span>
       {withArrow && (
-        <span className="inline-flex items-center justify-center rounded-full bg-white/10 text-current p-1 ml-2 transition-transform duration-200 group-hover:translate-x-0.5">
+        <span className="inline-flex items-center justify-center rounded-full bg-black/10 text-current p-1 ml-2 transition-transform duration-200 group-hover:translate-x-0.5">
           <ArrowRight className="w-3.5 h-3.5" />
         </span>
       )}
