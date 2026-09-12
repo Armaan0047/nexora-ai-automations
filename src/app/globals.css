@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-  /* Nexora Editorial — warm, restrained, non-generic consultancy palette */
   --background: #f3f1eb;
   --foreground: #1b1a17;
   --surface-1: #ffffff;
@@ -28,7 +27,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Translate the previous dark-blue component vocabulary into the editorial palette. */
+/* Editorial translation of the original dark-blue component vocabulary. */
 .text-white { color: #1b1a17 !important; }
 .text-slate-950 { color: #f7f5ef !important; }
 .text-slate-300 { color: #514d46 !important; }
@@ -36,8 +35,10 @@ body {
 .text-slate-500 { color: #827b70 !important; }
 .text-slate-200 { color: #2f2d28 !important; }
 .text-slate-100 { color: #24231f !important; }
+
 [class*="text-blue-"] { color: var(--accent) !important; }
-[class*="bg-blue-"] { background-color: var(--accent) !important; }
+[class*="bg-blue-"] { background-color: rgba(154, 91, 69, 0.10) !important; }
+[class~="bg-blue-500"] { background-color: var(--accent) !important; }
 [class*="border-blue-"] { border-color: rgba(154, 91, 69, 0.38) !important; }
 [class*="text-emerald-"] { color: var(--success) !important; }
 [class*="bg-emerald-"] { background-color: rgba(94, 107, 85, 0.12) !important; }
@@ -49,6 +50,9 @@ body {
 .bg-surface-1 { background-color: var(--surface-1) !important; }
 .bg-surface-2 { background-color: var(--surface-2) !important; }
 .bg-surface-3 { background-color: var(--surface-3) !important; }
+[class*="bg-surface-1/"] { background-color: rgba(255, 255, 255, 0.92) !important; }
+[class*="bg-surface-2/"] { background-color: rgba(235, 232, 224, 0.78) !important; }
+[class*="bg-background/"] { background-color: rgba(243, 241, 235, 0.94) !important; }
 
 /* Primary CTA becomes restrained ink instead of a futuristic white pill. */
 .bg-white.text-slate-950 {
