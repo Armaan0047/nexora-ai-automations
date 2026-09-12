@@ -3,20 +3,22 @@
 @tailwind utilities;
 
 :root {
-  --background: #f3f1eb;
-  --foreground: #1b1a17;
-  --surface-1: #ffffff;
-  --surface-2: #ebe8e0;
-  --surface-3: #dfdbd1;
-  --border-subtle: rgba(27, 26, 23, 0.09);
-  --border-medium: rgba(27, 26, 23, 0.15);
-  --accent: #9a5b45;
-  --accent-dark: #7f4736;
-  --accent-soft: #f0e2db;
-  --success: #5e6b55;
+  /* Nexora Editorial Dark — warm charcoal, paper-white type, muted copper */
+  --background: #121210;
+  --foreground: #eeeae1;
+  --surface-1: #191815;
+  --surface-2: #201e1a;
+  --surface-3: #292620;
+  --border-subtle: rgba(238, 234, 225, 0.08);
+  --border-medium: rgba(238, 234, 225, 0.14);
+  --border-strong: rgba(238, 234, 225, 0.20);
+  --accent: #b36f56;
+  --accent-dark: #955744;
+  --accent-soft: rgba(179, 111, 86, 0.13);
+  --success: #879071;
 }
 
-html { scroll-behavior: smooth; color-scheme: light; }
+html { scroll-behavior: smooth; color-scheme: dark; }
 
 body {
   background-color: var(--background);
@@ -27,44 +29,49 @@ body {
   overflow-x: hidden;
 }
 
-/* Editorial translation of the original dark-blue component vocabulary. */
-.text-white { color: #1b1a17 !important; }
-.text-slate-950 { color: #f7f5ef !important; }
-.text-slate-300 { color: #514d46 !important; }
-.text-slate-400 { color: #68635b !important; }
-.text-slate-500 { color: #827b70 !important; }
-.text-slate-200 { color: #2f2d28 !important; }
-.text-slate-100 { color: #24231f !important; }
+/* Keep the existing component vocabulary, but translate it into the warmer brand system. */
+.text-white { color: #eeeae1 !important; }
+.text-slate-950 { color: #121210 !important; }
+.text-slate-300 { color: #c9c2b6 !important; }
+.text-slate-400 { color: #a59d91 !important; }
+.text-slate-500 { color: #81796e !important; }
+.text-slate-200 { color: #ddd7cc !important; }
+.text-slate-100 { color: #e7e1d7 !important; }
 
 [class*="text-blue-"] { color: var(--accent) !important; }
-[class*="bg-blue-"] { background-color: rgba(154, 91, 69, 0.10) !important; }
+[class*="bg-blue-"] { background-color: var(--accent-soft) !important; }
 [class~="bg-blue-500"] { background-color: var(--accent) !important; }
-[class*="border-blue-"] { border-color: rgba(154, 91, 69, 0.38) !important; }
+[class*="border-blue-"] { border-color: rgba(179, 111, 86, 0.42) !important; }
 [class*="text-emerald-"] { color: var(--success) !important; }
-[class*="bg-emerald-"] { background-color: rgba(94, 107, 85, 0.12) !important; }
-[class*="border-emerald-"] { border-color: rgba(94, 107, 85, 0.30) !important; }
-[class*="border-white/"] { border-color: rgba(27, 26, 23, 0.12) !important; }
-[class*="bg-white/[0."] { background-color: rgba(27, 26, 23, 0.035) !important; }
+[class*="bg-emerald-"] { background-color: rgba(135, 144, 113, 0.10) !important; }
+[class*="border-emerald-"] { border-color: rgba(135, 144, 113, 0.28) !important; }
+
+[class*="border-white/"] { border-color: rgba(238, 234, 225, 0.10) !important; }
+[class*="bg-white/[0."] { background-color: rgba(238, 234, 225, 0.035) !important; }
 
 .bg-background { background-color: var(--background) !important; }
 .bg-surface-1 { background-color: var(--surface-1) !important; }
 .bg-surface-2 { background-color: var(--surface-2) !important; }
 .bg-surface-3 { background-color: var(--surface-3) !important; }
-[class*="bg-surface-1/"] { background-color: rgba(255, 255, 255, 0.92) !important; }
-[class*="bg-surface-2/"] { background-color: rgba(235, 232, 224, 0.78) !important; }
-[class*="bg-background/"] { background-color: rgba(243, 241, 235, 0.94) !important; }
+[class*="bg-surface-1/"] { background-color: rgba(25, 24, 21, 0.94) !important; }
+[class*="bg-surface-2/"] { background-color: rgba(32, 30, 26, 0.84) !important; }
+[class*="bg-background/"] { background-color: rgba(18, 18, 16, 0.94) !important; }
 
-/* Primary CTA becomes restrained ink instead of a futuristic white pill. */
+/* Warm editorial treatment for generic black utility classes. */
+[class*="border-black/"] { border-color: rgba(238, 234, 225, 0.14) !important; }
+[class*="bg-black/[0."] { background-color: rgba(238, 234, 225, 0.035) !important; }
+
+/* Primary CTA: ink on paper, with a small copper accent used sparingly elsewhere. */
 .bg-white.text-slate-950 {
-  background-color: #1b1a17 !important;
-  color: #f7f5ef !important;
-  border-color: #1b1a17 !important;
+  background-color: #eeeae1 !important;
+  color: #121210 !important;
+  border-color: #eeeae1 !important;
 }
 
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #e8e5dd; }
-::-webkit-scrollbar-thumb { background: #b8b2a7; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #9f988c; }
+::-webkit-scrollbar-track { background: #121210; }
+::-webkit-scrollbar-thumb { background: #39352e; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #4a443b; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
