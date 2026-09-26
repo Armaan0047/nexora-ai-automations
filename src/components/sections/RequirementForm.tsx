@@ -23,11 +23,11 @@ const TIMELINE_OPTIONS = [
 ];
 
 const BUDGET_OPTIONS = [
-  "Help me scope this",
-  "Under ₹25,000",
-  "₹25,000 – ₹75,000",
-  "₹75,000 – ₹1,50,000",
-  "₹1,50,000+",
+  "₹3,000 – ₹5,000",
+  "₹5,000 – ₹8,000",
+  "₹8,000 – ₹10,000",
+  "₹10,000+",
+  "Not sure yet",
 ];
 
 export function RequirementForm() {
@@ -211,12 +211,12 @@ export function RequirementForm() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Field label="Target Timeline">
                     <select value={timeline} onChange={(e) => setTimeline(e.target.value)} className={inputClass}>
-                      {TIMELINE_OPTIONS.map((option) => <option key={option} value={option}>{option}</option>)}
+                      {TIMELINE_OPTIONS.map((option) => <option key={option} value={option} className="bg-surface-2 text-white">{option}</option>)}
                     </select>
                   </Field>
                   <Field label="Budget Range" optional>
                     <select value={budget} onChange={(e) => setBudget(e.target.value)} className={inputClass}>
-                      {BUDGET_OPTIONS.map((option) => <option key={option} value={option}>{option}</option>)}
+                      {BUDGET_OPTIONS.map((option) => <option key={option} value={option} className="bg-surface-2 text-white">{option}</option>)}
                     </select>
                   </Field>
                 </div>
