@@ -21,7 +21,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#080A0F",
+  themeColor: "#07090E",
   width: "device-width",
   initialScale: 1,
 };
@@ -65,9 +65,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "NEXORA | AI Systems. Automated Growth.",
+    title: "NEXORA | Modern Websites & AI Solutions",
     description:
-      "Nexora engineers custom, high-performance websites and intelligent AI agents for modern businesses.",
+      "Modern business websites, landing pages, redesigns, AI chatbots, and business automation tailored to your exact requirements.",
   },
   robots: {
     index: true,

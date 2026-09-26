@@ -3,22 +3,25 @@
 @tailwind utilities;
 
 :root {
-  /* Nexora Editorial Dark — warm charcoal, paper-white type, muted copper */
-  --background: #121210;
-  --foreground: #eeeae1;
-  --surface-1: #191815;
-  --surface-2: #201e1a;
-  --surface-3: #292620;
-  --border-subtle: rgba(238, 234, 225, 0.08);
-  --border-medium: rgba(238, 234, 225, 0.14);
-  --border-strong: rgba(238, 234, 225, 0.20);
-  --accent: #b36f56;
-  --accent-dark: #955744;
-  --accent-soft: rgba(179, 111, 86, 0.13);
-  --success: #879071;
+  /* Nexora Modern Midnight — Apple precision, Nike contrast, Electric Blue accent */
+  --background: #07090e;
+  --foreground: #f8fafc;
+  --surface-1: #0c0f17;
+  --surface-2: #121622;
+  --surface-3: #181e2e;
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-medium: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.20);
+  --accent: #3b82f6;
+  --accent-violet: #6366f1;
+  --accent-soft: rgba(59, 130, 246, 0.12);
+  --success: #10b981;
 }
 
-html { scroll-behavior: smooth; color-scheme: dark; }
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
 
 body {
   background-color: var(--background);
@@ -27,53 +30,63 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  selection-background-color: rgba(59, 130, 246, 0.25);
+  selection-color: #ffffff;
 }
 
-/* Keep the existing component vocabulary, but translate it into the warmer brand system. */
-.text-white { color: #eeeae1 !important; }
-.text-slate-950 { color: #121210 !important; }
-.text-slate-300 { color: #c9c2b6 !important; }
-.text-slate-400 { color: #a59d91 !important; }
-.text-slate-500 { color: #81796e !important; }
-.text-slate-200 { color: #ddd7cc !important; }
-.text-slate-100 { color: #e7e1d7 !important; }
-
-[class*="text-blue-"] { color: var(--accent) !important; }
-[class*="bg-blue-"] { background-color: var(--accent-soft) !important; }
-[class~="bg-blue-500"] { background-color: var(--accent) !important; }
-[class*="border-blue-"] { border-color: rgba(179, 111, 86, 0.42) !important; }
-[class*="text-emerald-"] { color: var(--success) !important; }
-[class*="bg-emerald-"] { background-color: rgba(135, 144, 113, 0.10) !important; }
-[class*="border-emerald-"] { border-color: rgba(135, 144, 113, 0.28) !important; }
-
-[class*="border-white/"] { border-color: rgba(238, 234, 225, 0.10) !important; }
-[class*="bg-white/[0."] { background-color: rgba(238, 234, 225, 0.035) !important; }
-
-.bg-background { background-color: var(--background) !important; }
-.bg-surface-1 { background-color: var(--surface-1) !important; }
-.bg-surface-2 { background-color: var(--surface-2) !important; }
-.bg-surface-3 { background-color: var(--surface-3) !important; }
-[class*="bg-surface-1/"] { background-color: rgba(25, 24, 21, 0.94) !important; }
-[class*="bg-surface-2/"] { background-color: rgba(32, 30, 26, 0.84) !important; }
-[class*="bg-background/"] { background-color: rgba(18, 18, 16, 0.94) !important; }
-
-/* Warm editorial treatment for generic black utility classes. */
-[class*="border-black/"] { border-color: rgba(238, 234, 225, 0.14) !important; }
-[class*="bg-black/[0."] { background-color: rgba(238, 234, 225, 0.035) !important; }
-
-/* Primary CTA: ink on paper, with a small copper accent used sparingly elsewhere. */
-.bg-white.text-slate-950 {
-  background-color: #eeeae1 !important;
-  color: #121210 !important;
-  border-color: #eeeae1 !important;
+/* Apple-grade glass & surface lighting */
+.glass-nav {
+  background: rgba(7, 9, 14, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #121210; }
-::-webkit-scrollbar-thumb { background: #39352e; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #4a443b; }
+.glass-card {
+  background: rgba(12, 15, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
 
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.glass-card:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle ambient gradient mesh for depth */
+.ambient-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, rgba(99, 102, 241, 0.05) 35%, transparent 70%);
+}
+
+.ambient-glow-bottom {
+  background: radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.10) 0%, rgba(99, 102, 241, 0.04) 40%, transparent 70%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c2233;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #283148;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
 
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

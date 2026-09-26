@@ -11,62 +11,62 @@ export interface MethodologyStep {
 export const METHODOLOGY_STEPS: MethodologyStep[] = [
   {
     phaseNumber: "01",
-    name: "Discover & Understand",
-    tagline: "Understanding Your Business & Goals",
-    durationGuideline: "Initial Consultation",
+    name: "Share Your Requirements",
+    tagline: "Consultation & Scope Assessment",
+    durationGuideline: "Step 01",
     whatHappens:
-      "We discuss what your business does, who your target customers are, and what you need your website to do. No complicated jargon—just a clear conversation about your goals and requirements.",
+      "Tell us what you want to build, what your business offers, and what your website needs to achieve. We provide clear, transparent pricing tailored to your exact deliverables.",
     clientCommitment:
-      "A quick 30-minute chat or call to discuss your project.",
+      "A brief conversation or consultation form submission.",
     outcomes: [
-      "Clear understanding of your services and target audience",
-      "List of pages, sections, and features you need",
-      "Clear, transparent project estimate with no surprises",
+      "Agreed scope of pages and features",
+      "Transparent quotation with zero hidden fees",
+      "Realistic launch timeline",
     ],
   },
   {
     phaseNumber: "02",
-    name: "Plan & Structure",
-    tagline: "Layout, Design & Content Setup",
-    durationGuideline: "Design & Content",
+    name: "Plan & Design Your Website",
+    tagline: "Layout, UX & Content Architecture",
+    durationGuideline: "Step 02",
     whatHappens:
-      "We plan the layout of your pages, prepare clear content for your services, and map out helpful features like WhatsApp buttons, contact forms, or FAQ sections.",
+      "We design a clean, modern aesthetic with clear typography and intuitive mobile navigation. We plan where contact forms, WhatsApp links, and AI tools will sit.",
     clientCommitment:
-      "Sharing your logo, photos, and any specific business details.",
+      "Sharing your logo, branding, and core business information.",
     outcomes: [
-      "Clear visual plan of your website layout",
-      "Structured service descriptions and FAQ content",
-      "Confirmed contact and WhatsApp button placements",
+      "Visual structure and page wireframes",
+      "Clear, benefit-driven copy and service sections",
+      "Placement of high-converting call-to-actions",
     ],
   },
   {
     phaseNumber: "03",
-    name: "Build & Integrate",
-    tagline: "Developing the Website & Adding Features",
-    durationGuideline: "Development & Testing",
+    name: "Develop & Integrate Features",
+    tagline: "High-Performance Build & Smart Tools",
+    durationGuideline: "Step 03",
     whatHappens:
-      "We build your website with clean, modern code, ensuring it looks sharp and loads quickly on phones and computers. We set up all forms, WhatsApp buttons, and AI features.",
+      "We build your website using modern Next.js technology for blazing speed and mobile perfection. We configure AI chatbots, connect WhatsApp buttons, and set up automated alerts.",
     clientCommitment:
-      "Testing the private preview link on your phone to give feedback.",
+      "Reviewing the interactive private staging preview.",
     outcomes: [
-      "Complete, fast-loading website optimized for mobile",
-      "Tested contact forms and working WhatsApp links",
-      "Private staging link for your review and approval",
+      "Fast-loading, mobile-friendly website",
+      "Fully operational AI chatbot and WhatsApp integration",
+      "Automated lead routing to your email or phone",
     ],
   },
   {
     phaseNumber: "04",
-    name: "Launch & Support",
-    tagline: "Going Live & Easy Ownership",
-    durationGuideline: "Go-Live & Support",
+    name: "Review & Launch",
+    tagline: "Final Testing & 100% Handover",
+    durationGuideline: "Step 04",
     whatHappens:
-      "We connect your website to your domain, test everything live on the web, and make sure new inquiries arrive smoothly to your email or WhatsApp.",
+      "We test speed, contrast, and form submissions across iPhones, Androids, tablets, and laptops. Once you approve, we connect your custom domain and hand over 100% ownership.",
     clientCommitment:
-      "Giving final go-ahead and pointing your domain name.",
+      "Final review and giving the green light to go live.",
     outcomes: [
-      "Live website running securely with fast loading",
-      "Instant inquiry alerts sent straight to your phone or inbox",
-      "100% ownership of your website and peace of mind",
+      "Live website connected to your custom domain",
+      "100% code, design, and content ownership",
+      "Ongoing support whenever you need updates",
     ],
   },
 ];

@@ -2,36 +2,38 @@ import React from "react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { SystemVisual } from "./SystemVisual";
-import { Globe, Sparkles } from "lucide-react";
+import { Globe, ArrowRight, ShieldCheck, Zap, Smartphone, Bot } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative pt-36 sm:pt-44 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <section className="relative pt-32 sm:pt-40 pb-20 sm:pb-28 px-4 sm:px-6 lg:px-8 overflow-hidden ambient-glow">
       <div className="max-w-7xl mx-auto">
         {/* Main Hero Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column: Typographic Core */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+          {/* Left Column: Typographic Powerhouse */}
           <div className="lg:col-span-7 flex flex-col items-start">
             {/* Eyebrow badge */}
             <div className="mb-6">
               <Badge variant="accent">
-                <Globe className="w-3 h-3 text-blue-400" />
-                <span>WEBSITES • AI CHATBOTS • AUTOMATION</span>
+                <Globe className="w-3.5 h-3.5 text-blue-400" />
+                <span>MODERN WEBSITES • AI CHATBOTS • AUTOMATION</span>
               </Badge>
             </div>
 
-            {/* Display Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.06] font-sans">
-              Modern Websites. <br />
-              <span className="text-slate-300">Automated Growth.</span>
+            {/* Display Headline — Bold Nike & Apple Typography */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.05] font-sans">
+              We build modern websites that{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-white">
+                win customers.
+              </span>
             </h1>
 
             {/* Supporting Copy */}
-            <p className="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl font-normal">
-              We build fast, modern business websites, upgrade existing sites, add helpful AI chatbots, connect WhatsApp, and automate everyday workflows to help you win more customers.
+            <p className="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl font-normal">
+              Custom business websites, high-converting landing pages, and redesigns—supercharged with 24/7 AI chatbots, direct WhatsApp contact, and automated client workflows.
             </p>
 
-            {/* Dual CTAs */}
+            {/* Dual High-Contrast CTAs */}
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Button
                 variant="primary"
@@ -50,22 +52,42 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Practical Indicators */}
-            <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
+            {/* 4 Feature Highlights Grid */}
+            <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-5 w-full">
               <div className="flex flex-col">
-                <span className="text-xs font-mono uppercase text-slate-500">Core Services</span>
-                <span className="text-sm font-medium text-slate-200 mt-1">Websites & Redesigns</span>
-                <span className="text-xs text-slate-400 mt-0.5">Fast, responsive & custom</span>
+                <div className="flex items-center gap-1.5 text-xs font-mono text-blue-400 uppercase">
+                  <Globe className="w-3.5 h-3.5" />
+                  <span>Websites</span>
+                </div>
+                <span className="text-sm font-semibold text-white mt-1">Custom Built</span>
+                <span className="text-xs text-slate-400 mt-0.5">Mobile-first &amp; fast</span>
               </div>
+
               <div className="flex flex-col">
-                <span className="text-xs font-mono uppercase text-slate-500">Smart Features</span>
-                <span className="text-sm font-medium text-slate-200 mt-1">AI Chat & WhatsApp</span>
-                <span className="text-xs text-slate-400 mt-0.5">Easy for clients to reach you</span>
+                <div className="flex items-center gap-1.5 text-xs font-mono text-blue-400 uppercase">
+                  <Bot className="w-3.5 h-3.5" />
+                  <span>AI Chatbots</span>
+                </div>
+                <span className="text-sm font-semibold text-white mt-1">24/7 Support</span>
+                <span className="text-xs text-slate-400 mt-0.5">Instant FAQ answers</span>
               </div>
+
               <div className="flex flex-col">
-                <span className="text-xs font-mono uppercase text-slate-500">How We Work</span>
-                <span className="text-sm font-medium text-slate-200 mt-1">Requirement-Based</span>
-                <span className="text-xs text-slate-400 mt-0.5">Tailored to your needs</span>
+                <div className="flex items-center gap-1.5 text-xs font-mono text-emerald-400 uppercase">
+                  <Smartphone className="w-3.5 h-3.5" />
+                  <span>WhatsApp</span>
+                </div>
+                <span className="text-sm font-semibold text-white mt-1">Direct Chat</span>
+                <span className="text-xs text-slate-400 mt-0.5">1-click inquiries</span>
+              </div>
+
+              <div className="flex flex-col">
+                <div className="flex items-center gap-1.5 text-xs font-mono text-indigo-400 uppercase">
+                  <ShieldCheck className="w-3.5 h-3.5" />
+                  <span>Ownership</span>
+                </div>
+                <span className="text-sm font-semibold text-white mt-1">100% Yours</span>
+                <span className="text-xs text-slate-400 mt-0.5">No vendor lock-in</span>
               </div>
             </div>
           </div>

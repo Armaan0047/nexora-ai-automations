@@ -3,7 +3,7 @@ import { Badge } from "./Badge";
 
 interface SectionHeaderProps {
   eyebrow?: string;
-  badgeVariant?: "default" | "accent" | "status" | "demo";
+  badgeVariant?: "default" | "accent" | "status" | "demo" | "brand";
   title: string;
   description?: string;
   align?: "left" | "center";
@@ -29,7 +29,7 @@ export function SectionHeader({
           <Badge variant={badgeVariant}>{eyebrow}</Badge>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-white leading-[1.15]">
+      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.12]">
         {title}
       </h2>
       {description && (

@@ -5,7 +5,7 @@ import { ArrowRight, Bot, Globe, Plus, Sparkles } from "lucide-react";
 
 export function SolutionsMatrix() {
   return (
-    <section className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-surface-1/30">
+    <section className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 relative">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           eyebrow="REAL-WORLD EXAMPLES"
@@ -15,51 +15,51 @@ export function SolutionsMatrix() {
         />
 
         {/* Combined Industry Scenarios Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {COMBINED_SOLUTIONS.map((item) => (
             <div
               key={item.id}
-              className="rounded-2xl border border-white/10 bg-surface-1 p-6 sm:p-8 flex flex-col justify-between transition-colors hover:border-white/20"
+              className="glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:border-white/20"
             >
               <div>
                 <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
-                  <h3 className="text-lg font-semibold text-white tracking-tight">
+                  <h3 className="text-xl font-bold text-white tracking-tight">
                     {item.industryProfile}
                   </h3>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase px-2 py-0.5 rounded border border-white/10">
+                  <span className="text-[10px] font-mono text-blue-400 bg-blue-500/10 border border-blue-500/30 uppercase px-2.5 py-0.5 rounded-full font-semibold">
                     Website + Tools
                   </span>
                 </div>
 
-                <p className="text-sm text-slate-400 leading-relaxed font-normal">
+                <p className="text-sm text-slate-300 leading-relaxed font-normal">
                   {item.scenarioDescription}
                 </p>
 
                 {/* Integration equation */}
-                <div className="mt-6 space-y-3 pt-4 border-t border-white/5">
-                  <div className="flex items-start gap-3 p-3 rounded-lg border border-white/5 bg-surface-2/60">
+                <div className="mt-6 space-y-3 pt-4 border-t border-white/8">
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl border border-white/8 bg-[#121622]/80">
                     <Globe className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-[11px] font-mono text-blue-400 uppercase block font-medium">
-                        Website:
+                      <span className="text-[11px] font-mono text-blue-400 uppercase block font-bold">
+                        Website Foundation:
                       </span>
-                      <span className="text-xs text-slate-300 leading-relaxed block mt-0.5">
+                      <span className="text-xs text-slate-200 leading-relaxed block mt-0.5">
                         {item.websiteComponent}
                       </span>
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center text-slate-600">
+                  <div className="flex items-center justify-center text-slate-500">
                     <Plus className="w-4 h-4" />
                   </div>
 
-                  <div className="flex items-start gap-3 p-3 rounded-lg border border-white/5 bg-surface-2/60">
-                    <Bot className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 p-3.5 rounded-xl border border-white/8 bg-[#121622]/80">
+                    <Bot className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
                     <div>
-                      <span className="text-[11px] font-mono text-blue-400 uppercase block font-medium">
-                        Smart Tools & Chat:
+                      <span className="text-[11px] font-mono text-indigo-400 uppercase block font-bold">
+                        Smart Tools &amp; Chat:
                       </span>
-                      <span className="text-xs text-slate-300 leading-relaxed block mt-0.5">
+                      <span className="text-xs text-slate-200 leading-relaxed block mt-0.5">
                         {item.agentComponent}
                       </span>
                     </div>
@@ -69,10 +69,10 @@ export function SolutionsMatrix() {
 
               {/* Unified Outcome */}
               <div className="mt-6 pt-4 border-t border-white/10">
-                <span className="text-[11px] font-mono uppercase text-emerald-400 block font-semibold mb-1">
+                <span className="text-[11px] font-mono uppercase text-emerald-400 block font-bold mb-1">
                   What This Delivers:
                 </span>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
                   {item.unifiedOutcome}
                 </p>
               </div>
@@ -86,7 +86,7 @@ export function SolutionsMatrix() {
             Need something specific for your business?{" "}
             <a
               href="#consultation"
-              className="text-white hover:text-blue-400 font-medium underline underline-offset-4 inline-flex items-center gap-1 ml-1"
+              className="text-white hover:text-blue-400 font-semibold underline underline-offset-4 inline-flex items-center gap-1 ml-1 transition-colors"
             >
               <span>Tell us about your project requirements</span>
               <ArrowRight className="w-3.5 h-3.5" />

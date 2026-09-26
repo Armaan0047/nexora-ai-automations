@@ -8,32 +8,44 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
 }
 
-export function Button({ children, variant = "primary", size = "md", withArrow = false, href, className = "", ...props }: ButtonProps) {
+export function Button({
+  children,
+  variant = "primary",
+  size = "md",
+  withArrow = false,
+  href,
+  className = "",
+  ...props
+}: ButtonProps) {
   const sizeStyles = {
-    sm: "px-3.5 py-1.5 text-xs",
-    md: "px-5 py-2.5 text-sm",
-    lg: "px-6 py-3.5 text-base",
+    sm: "px-4 py-2 text-xs font-medium rounded-lg",
+    md: "px-5 py-2.5 text-sm font-medium rounded-xl",
+    lg: "px-7 py-3.5 text-base font-semibold rounded-xl",
   };
 
   const variantStyles = {
-    primary: "bg-[#eeeae1] text-[#121210] font-medium hover:bg-[#d9d3c8] active:scale-[0.98] border border-[#eeeae1] shadow-sm",
-    accent: "bg-[#b36f56] text-[#f8f4ed] font-medium hover:bg-[#955744] active:scale-[0.98] border border-[#b36f56] shadow-sm",
-    secondary: "bg-transparent text-[#ddd7cc] font-medium hover:bg-white/[0.05] hover:text-[#eeeae1] border border-white/15 active:scale-[0.98]",
-    ghost: "bg-transparent text-[#a59d91] font-medium hover:text-[#eeeae1] hover:bg-white/[0.03]",
+    primary:
+      "bg-white text-[#07090e] font-semibold hover:bg-slate-100 hover:shadow-[0_0_24px_rgba(255,255,255,0.25)] border border-white active:scale-[0.98] shadow-md",
+    accent:
+      "bg-blue-600 text-white font-medium hover:bg-blue-500 hover:shadow-[0_0_28px_rgba(59,130,246,0.45)] border border-blue-400/30 active:scale-[0.98] shadow-sm",
+    secondary:
+      "bg-surface-2/90 text-slate-200 font-medium hover:bg-surface-3 hover:text-white hover:border-white/30 border border-white/12 active:scale-[0.98] shadow-sm backdrop-blur-sm",
+    ghost:
+      "bg-transparent text-slate-400 font-medium hover:text-white hover:bg-white/[0.05]",
   };
 
   const content = (
     <>
       <span>{children}</span>
       {withArrow && (
-        <span className="inline-flex items-center justify-center rounded-full bg-black/10 text-current p-1 ml-2 transition-transform duration-200 group-hover:translate-x-0.5">
+        <span className="inline-flex items-center justify-center rounded-full bg-black/10 dark:bg-black/15 text-current p-1 ml-2 transition-transform duration-200 group-hover:translate-x-1">
           <ArrowRight className="w-3.5 h-3.5" />
         </span>
       )}
     </>
   );
 
-  const combinedClasses = `group inline-flex items-center justify-center rounded-lg transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
+  const combinedClasses = `group inline-flex items-center justify-center transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;
 
   if (href) return <a href={href} className={combinedClasses}>{content}</a>;
   return <button className={combinedClasses} {...props}>{content}</button>;

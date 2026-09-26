@@ -11,6 +11,7 @@ import {
   HelpCircle,
   ShieldCheck,
   UserCheck,
+  Sparkles,
 } from "lucide-react";
 
 export function AgentsSection() {
@@ -90,12 +91,12 @@ export function AgentsSection() {
   };
 
   return (
-    <section id="agents" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-surface-1/30">
+    <section id="agents" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 relative">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           eyebrow="SMART INTEGRATIONS"
           title="Helpful AI assistants that answer questions and capture leads."
-          description="We can add smart AI chatbots, FAQ helpers, and automations directly into your website so customers get answers instantly, day and night."
+          description="We add smart AI chatbots, FAQ helpers, and automations directly into your website so prospective customers get answers instantly, day and night."
           className="mb-16"
         />
 
@@ -105,8 +106,8 @@ export function AgentsSection() {
             onClick={() => handleRoleChange("chatbot")}
             className={`text-left p-4 rounded-xl border transition-all cursor-pointer ${
               selectedRole === "chatbot"
-                ? "border-blue-500/50 bg-surface-1 text-white shadow-sm"
-                : "border-white/10 bg-surface-base text-slate-400 hover:text-slate-200 hover:border-white/20"
+                ? "border-blue-500/50 bg-[#121622] text-white shadow-[0_0_20px_rgba(59,130,246,0.15)]"
+                : "border-white/10 bg-[#0C0F17] text-slate-400 hover:text-slate-200 hover:border-white/20"
             }`}
           >
             <div className="flex items-center justify-between mb-2">
@@ -121,8 +122,8 @@ export function AgentsSection() {
             onClick={() => handleRoleChange("support")}
             className={`text-left p-4 rounded-xl border transition-all cursor-pointer ${
               selectedRole === "support"
-                ? "border-blue-500/50 bg-surface-1 text-white shadow-sm"
-                : "border-white/10 bg-surface-base text-slate-400 hover:text-slate-200 hover:border-white/20"
+                ? "border-blue-500/50 bg-[#121622] text-white shadow-[0_0_20px_rgba(59,130,246,0.15)]"
+                : "border-white/10 bg-[#0C0F17] text-slate-400 hover:text-slate-200 hover:border-white/20"
             }`}
           >
             <div className="flex items-center justify-between mb-2">
@@ -137,8 +138,8 @@ export function AgentsSection() {
             onClick={() => handleRoleChange("qualifier")}
             className={`text-left p-4 rounded-xl border transition-all cursor-pointer ${
               selectedRole === "qualifier"
-                ? "border-blue-500/50 bg-surface-1 text-white shadow-sm"
-                : "border-white/10 bg-surface-base text-slate-400 hover:text-slate-200 hover:border-white/20"
+                ? "border-blue-500/50 bg-[#121622] text-white shadow-[0_0_20px_rgba(59,130,246,0.15)]"
+                : "border-white/10 bg-[#0C0F17] text-slate-400 hover:text-slate-200 hover:border-white/20"
             }`}
           >
             <div className="flex items-center justify-between mb-2">
@@ -153,8 +154,8 @@ export function AgentsSection() {
             onClick={() => handleRoleChange("assistant")}
             className={`text-left p-4 rounded-xl border transition-all cursor-pointer ${
               selectedRole === "assistant"
-                ? "border-blue-500/50 bg-surface-1 text-white shadow-sm"
-                : "border-white/10 bg-surface-base text-slate-400 hover:text-slate-200 hover:border-white/20"
+                ? "border-blue-500/50 bg-[#121622] text-white shadow-[0_0_20px_rgba(59,130,246,0.15)]"
+                : "border-white/10 bg-[#0C0F17] text-slate-400 hover:text-slate-200 hover:border-white/20"
             }`}
           >
             <div className="flex items-center justify-between mb-2">
@@ -167,15 +168,15 @@ export function AgentsSection() {
         </div>
 
         {/* Live Functional Agent Playground Window */}
-        <div className="rounded-2xl border border-white/15 bg-surface-1 shadow-2xl p-4 sm:p-7">
+        <div className="rounded-2xl border border-white/12 bg-[#0C0F17] shadow-[0_20px_50px_rgba(0,0,0,0.6)] p-5 sm:p-8">
           {/* Playground Header */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-white/10">
             <div className="flex items-center gap-2.5">
-              <Badge variant="demo">Interactive Demo</Badge>
-              <h3 className="text-sm sm:text-base font-semibold text-white">
+              <Badge variant="demo">Interactive Playground</Badge>
+              <h3 className="text-sm sm:text-base font-bold text-white">
                 {profile.name}
               </h3>
-              <span className="text-xs font-mono text-slate-500 hidden md:inline">
+              <span className="text-xs font-mono text-slate-400 hidden md:inline">
                 [{profile.badge}]
               </span>
             </div>
@@ -187,9 +188,9 @@ export function AgentsSection() {
           </div>
 
           {/* Context Boundary Display */}
-          <div className="mt-4 p-3 rounded-lg border border-white/10 bg-surface-2/60 text-xs text-slate-400">
-            <span className="font-mono text-slate-300 font-semibold uppercase mr-2">
-              How It Works:
+          <div className="mt-4 p-3.5 rounded-xl border border-white/8 bg-[#121622] text-xs text-slate-300">
+            <span className="font-mono text-blue-400 font-semibold uppercase mr-2">
+              System Capability:
             </span>
             {profile.systemPromptSummary}
           </div>
@@ -199,7 +200,7 @@ export function AgentsSection() {
             {/* Left Column: Sample Business Prompts + Custom Input */}
             <div className="lg:col-span-5 space-y-5">
               <div>
-                <span className="text-xs font-mono uppercase text-slate-400 block mb-2">
+                <span className="text-xs font-mono uppercase text-slate-400 block mb-2 font-medium">
                   Click a Sample Customer Question:
                 </span>
                 <div className="space-y-2">
@@ -207,17 +208,17 @@ export function AgentsSection() {
                     <button
                       key={idx}
                       onClick={() => handleSelectScenario(idx)}
-                      className={`w-full text-left p-3 rounded-lg border text-xs leading-relaxed transition-all cursor-pointer ${
+                      className={`w-full text-left p-3.5 rounded-xl border text-xs leading-relaxed transition-all cursor-pointer ${
                         activeScenarioIndex === idx
-                          ? "border-blue-500/50 bg-blue-500/[0.08] text-white"
-                          : "border-white/10 bg-surface-2/60 text-slate-300 hover:border-white/20 hover:text-white"
+                          ? "border-blue-500/60 bg-blue-500/10 text-white font-medium shadow-sm"
+                          : "border-white/10 bg-[#121622]/70 text-slate-300 hover:border-white/20 hover:text-white"
                       }`}
                     >
-                      <div className="font-mono text-[10px] text-blue-400 uppercase mb-1">
+                      <div className="font-mono text-[10px] text-blue-400 uppercase mb-1 font-semibold">
                         Topic: {sc.category}
                       </div>
-                      <div className="line-clamp-2 italic font-serif">
-                        “{sc.prompt}”
+                      <div className="line-clamp-2 italic font-sans text-slate-200">
+                        &ldquo;{sc.prompt}&rdquo;
                       </div>
                     </button>
                   ))}
@@ -226,8 +227,8 @@ export function AgentsSection() {
 
               {/* Freeform Live Test Input */}
               <div className="pt-2 border-t border-white/10">
-                <span className="text-xs font-mono uppercase text-slate-400 block mb-2">
-                  Or Try Your Own Question:
+                <span className="text-xs font-mono uppercase text-slate-400 block mb-2 font-medium">
+                  Or Test Your Own Question:
                 </span>
                 <form onSubmit={handleCustomSubmit} className="relative">
                   <input
@@ -243,31 +244,31 @@ export function AgentsSection() {
                         ? "e.g. I need a quote for our 3-bedroom house..."
                         : "e.g. Draft a quick quote follow-up email..."
                     }
-                    className="w-full text-xs bg-surface-2 border border-white/15 rounded-lg px-3.5 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 pr-10"
+                    className="w-full text-xs bg-[#121622] border border-white/15 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 pr-10 shadow-inner"
                   />
                   <button
                     type="submit"
-                    className="absolute right-2 top-2.5 p-1 rounded text-slate-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+                    className="absolute right-2.5 top-2.5 p-1 rounded-lg text-slate-400 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
                     aria-label="Send test query"
                   >
-                    <CornerDownLeft className="w-4 h-4" />
+                    <CornerDownLeft className="w-4 h-4 text-blue-400" />
                   </button>
                 </form>
                 <span className="text-[11px] text-slate-500 mt-1.5 block">
-                  Simulates how the assistant formulates an accurate, friendly response.
+                  Demonstrates how the assistant delivers accurate, verified answers.
                 </span>
               </div>
             </div>
 
             {/* Right Column: Execution Workflow Breakdown */}
-            <div className="lg:col-span-7 rounded-xl border border-white/10 bg-surface-base p-5 space-y-5">
+            <div className="lg:col-span-7 rounded-xl border border-white/10 bg-[#07090E] p-5 sm:p-6 space-y-5">
               {/* Step 1: Topic Recognition */}
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-1.5">
-                  <span className="uppercase text-blue-400">Step 01 / Customer Topic</span>
+                  <span className="uppercase text-blue-400 font-semibold">Step 01 / Customer Topic</span>
                   <span>Identified Intent</span>
                 </div>
-                <div className="p-2.5 rounded border border-white/10 bg-surface-2 text-xs font-mono text-slate-200">
+                <div className="p-3 rounded-lg border border-white/10 bg-[#121622] text-xs font-mono text-slate-200">
                   {activeResponse.intent}
                 </div>
               </div>
@@ -275,10 +276,10 @@ export function AgentsSection() {
               {/* Step 2: Internal Reasoning Steps */}
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-1.5">
-                  <span className="uppercase text-blue-400">Step 02 / Business Knowledge Lookup</span>
+                  <span className="uppercase text-blue-400 font-semibold">Step 02 / Business Knowledge Lookup</span>
                   <span>Checked Against Real Info</span>
                 </div>
-                <div className="p-3 rounded border border-white/10 bg-surface-2/60 space-y-1.5 font-mono text-xs text-slate-300">
+                <div className="p-3.5 rounded-lg border border-white/10 bg-[#121622]/60 space-y-1.5 font-mono text-xs text-slate-300">
                   {activeResponse.reasoning.map((step, idx) => (
                     <div key={idx} className="flex items-start gap-2">
                       <span className="text-blue-400 shrink-0">›</span>
@@ -291,10 +292,10 @@ export function AgentsSection() {
               {/* Step 3: Synthesized Output */}
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-1.5">
-                  <span className="uppercase text-emerald-400">Step 03 / Response Sent to Customer</span>
-                  <span>Friendly &amp; Accurate</span>
+                  <span className="uppercase text-emerald-400 font-semibold">Step 03 / Response Sent to Customer</span>
+                  <span>Accurate &amp; Friendly</span>
                 </div>
-                <div className="p-4 rounded-lg border border-white/15 bg-surface-1 text-xs sm:text-sm text-slate-200 leading-relaxed whitespace-pre-line font-sans">
+                <div className="p-4 rounded-xl border border-white/15 bg-[#121622] text-xs sm:text-sm text-slate-100 leading-relaxed whitespace-pre-line font-sans shadow-inner">
                   {activeResponse.answer}
                 </div>
               </div>
@@ -303,9 +304,9 @@ export function AgentsSection() {
               <div className="pt-3 border-t border-white/10">
                 <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2">
                   <span className="uppercase text-slate-300 font-semibold">
-                    Step 04 / Next Step for Your Business
+                    Step 04 / Automated Next Action
                   </span>
-                  <span className="text-emerald-400">Logged</span>
+                  <span className="text-emerald-400 font-semibold">Ready</span>
                 </div>
                 <div className="text-xs text-slate-400 mb-2">
                   {activeResponse.action}
@@ -314,8 +315,8 @@ export function AgentsSection() {
                 {activeResponse.dataPayload && (
                   <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-2 border-t border-white/5">
                     {Object.entries(activeResponse.dataPayload).map(([k, v]) => (
-                      <div key={k} className="p-2 rounded bg-surface-2 border border-white/5">
-                        <span className="text-[10px] font-mono text-slate-500 block">{k}</span>
+                      <div key={k} className="p-2.5 rounded-lg bg-[#121622] border border-white/5">
+                        <span className="text-[10px] font-mono text-slate-400 block">{k}</span>
                         <span className="text-xs text-slate-200 font-mono truncate block mt-0.5">{v}</span>
                       </div>
                     ))}

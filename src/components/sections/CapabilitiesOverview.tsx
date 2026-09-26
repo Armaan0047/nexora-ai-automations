@@ -1,104 +1,223 @@
 import React from "react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { ArrowUpRight, Bot, Globe, MessageCircle, Wrench } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  Bot,
+  Check,
+  Globe,
+  Layers,
+  MessageCircle,
+  RefreshCw,
+  Sparkles,
+  Zap,
+} from "lucide-react";
 
 export function CapabilitiesOverview() {
-  const pillars = [
+  const secondaryServices = [
     {
-      id: "business-websites",
-      number: "01",
-      icon: Globe,
-      title: "Business Website Development",
-      scope: "New Websites • Landing Pages • Redesigns • Portfolios",
-      narrative:
-        "We build clean, fast, and mobile-friendly websites that showcase your business with credibility. Whether you need a brand-new website or a high-converting landing page, we tailor it to your exact needs.",
-      actionLink: "#websites",
-      actionText: "Explore Website Services",
+      id: "landing-pages",
+      icon: Layers,
+      title: "Landing Pages & Portfolios",
+      tagline: "Built to Convert Visitors Into Paying Clients",
+      description:
+        "High-velocity single-page websites engineered for marketing campaigns, product launches, or showcasing your agency and portfolio with maximum visual impact.",
+      bullets: ["Lead capture focused", "Clear call-to-actions", "Fast page speeds"],
+      link: "#websites",
+    },
+    {
+      id: "website-redesigns",
+      icon: RefreshCw,
+      title: "Website Redesigns & Upgrades",
+      tagline: "Turn Outdated Sites Into Modern Powerhouses",
+      description:
+        "We rebuild slow, outdated, and uninspiring websites from scratch. Get a clean, modern aesthetic that looks exceptional on phones and rebuilds credibility.",
+      bullets: ["Mobile-first layout", "Zero-downtime transition", "Modern visual identity"],
+      link: "#websites",
     },
     {
       id: "ai-chatbots",
-      number: "02",
       icon: Bot,
-      title: "AI Chatbots & 24/7 Support",
-      scope: "Website Chatbots • FAQ Answers • Customer Assistance",
-      narrative:
-        "Add a helpful AI assistant directly to your website. It greets visitors, answers common questions about your services or pricing instantly, and collects customer contact details around the clock.",
-      actionLink: "#agents",
-      actionText: "Explore AI Features",
+      title: "Website AI Chatbots",
+      tagline: "24/7 Customer Engagement & Support",
+      description:
+        "Custom AI assistants embedded directly into your website. They answer visitor questions about pricing, hours, and services using your verified business info.",
+      bullets: ["Answers repetitive FAQs", "Captures lead contact info", "Works 24/7 automatically"],
+      link: "#agents",
     },
     {
       id: "whatsapp-integration",
-      number: "03",
       icon: MessageCircle,
-      title: "WhatsApp & Direct Contact",
-      scope: "WhatsApp Buttons • Direct Chat • Click-to-Call",
-      narrative:
-        "Make it effortless for potential customers to reach you. We add direct WhatsApp buttons and quick contact options so visitors can start a conversation with your business in one tap.",
-      actionLink: "#consultation",
-      actionText: "Ask About Integrations",
+      title: "Direct WhatsApp Redirection",
+      tagline: "Instant One-Tap Customer Connection",
+      description:
+        "Connect visitors directly to your WhatsApp with pre-filled inquiries. Eliminate long forms and let interested buyers message you instantly on mobile.",
+      bullets: ["One-tap chat buttons", "Pre-filled project inquiries", "Zero missed customers"],
+      link: "#consultation",
     },
     {
-      id: "website-improvements",
-      number: "04",
-      icon: Wrench,
-      title: "Website Improvements & Automation",
-      scope: "UI/UX Redesign • Speed Boost • Automated Lead Routing",
-      narrative:
-        "Already have a website? We can refresh its look, improve mobile responsiveness, add support/FAQ pages, and automate inquiry notifications so you never miss a prospective client.",
-      actionLink: "#how-it-works",
-      actionText: "See Our Simple Process",
+      id: "faq-automation",
+      icon: Zap,
+      title: "Support Pages & Business Automation",
+      tagline: "Cut Repetitive Busywork & Route Inquiries",
+      description:
+        "Dedicated FAQ hubs and structured customer support pages, paired with automated email alerts so inquiries land directly in your inbox or team chat.",
+      bullets: ["Dedicated help & FAQ hubs", "Automated email alerts", "Calendar appointment links"],
+      link: "#consultation",
     },
   ];
 
   return (
-    <section id="capabilities" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10">
+    <section id="capabilities" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 relative">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           eyebrow="OUR SERVICES"
-          title="Everything you need to grow your business online."
-          description="We build your website, upgrade existing pages, add helpful AI features, connect WhatsApp, and automate repetitive tasks—practical solutions that bring in more customers."
+          title="Modern websites and digital solutions built for your business."
+          description="Nexora builds custom business websites, landing pages, and redesigns as our primary discipline—accompanied by AI chatbots, WhatsApp integrations, and smart automations."
           className="mb-16"
         />
 
-        {/* Editorial 2-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-          {pillars.map((pillar) => {
-            const Icon = pillar.icon;
+        {/* Flagship Hero Card: Business Website Development */}
+        <div className="mb-8 rounded-3xl border border-white/12 bg-gradient-to-br from-[#0E121E] via-[#0C0F17] to-[#07090E] p-8 sm:p-12 shadow-2xl relative overflow-hidden group">
+          {/* Subtle blue accent glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            <div className="lg:col-span-7 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono">
+                <Globe className="w-3.5 h-3.5" />
+                <span>PRIMARY SPECIALTY // FLAGSHIP</span>
+              </div>
+
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+                Custom Business Website Development
+              </h3>
+
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-2xl">
+                We design and build clean, fast, and high-converting websites from the ground up. Whether you are a local service provider, a professional practice, or a growing company, we build a digital home that commands respect and wins client trust.
+              </p>
+
+              <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200">
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-blue-400 shrink-0" />
+                  <span>100% Mobile &amp; Tablet Responsive</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-blue-400 shrink-0" />
+                  <span>Sub-Second Page Load Speeds</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-blue-400 shrink-0" />
+                  <span>Search Engine (SEO) Optimized</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Check className="w-4 h-4 text-blue-400 shrink-0" />
+                  <span>100% Full Code Ownership</span>
+                </div>
+              </div>
+
+              <div className="pt-4 flex flex-wrap items-center gap-4">
+                <a
+                  href="#websites"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-[#07090E] font-semibold text-sm hover:bg-slate-100 transition-colors shadow-md"
+                >
+                  <span>Explore Website Options</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <a
+                  href="#consultation"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-surface-2 text-slate-200 hover:text-white border border-white/10 hover:border-white/20 font-medium text-sm transition-colors"
+                >
+                  <span>Request a Custom Quote</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Visual Preview Graphic */}
+            <div className="lg:col-span-5 w-full">
+              <div className="rounded-2xl border border-white/10 bg-[#07090E]/90 p-5 shadow-2xl space-y-3 font-mono text-xs">
+                <div className="flex items-center justify-between pb-3 border-b border-white/10 text-slate-400">
+                  <span className="text-white font-semibold">Web Performance Audit</span>
+                  <span className="text-emerald-400">PASSED</span>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex justify-between items-center text-slate-300">
+                    <span>Performance Score</span>
+                    <span className="text-emerald-400 font-bold">100 / 100</span>
+                  </div>
+                  <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                    <div className="bg-emerald-500 h-full w-full rounded-full" />
+                  </div>
+                </div>
+                <div className="space-y-2 pt-1">
+                  <div className="flex justify-between items-center text-slate-300">
+                    <span>Mobile Responsiveness</span>
+                    <span className="text-blue-400 font-bold">100 / 100</span>
+                  </div>
+                  <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                    <div className="bg-blue-500 h-full w-full rounded-full" />
+                  </div>
+                </div>
+                <div className="space-y-2 pt-1">
+                  <div className="flex justify-between items-center text-slate-300">
+                    <span>Search Engine Optimization</span>
+                    <span className="text-indigo-400 font-bold">100 / 100</span>
+                  </div>
+                  <div className="w-full bg-white/5 h-1.5 rounded-full overflow-hidden">
+                    <div className="bg-indigo-500 h-full w-full rounded-full" />
+                  </div>
+                </div>
+                <div className="pt-2 text-[11px] text-slate-400 border-t border-white/5">
+                  Built with React 19 &amp; Next.js 15 for enterprise reliability.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 5 Complementary Solutions Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {secondaryServices.map((service) => {
+            const Icon = service.icon;
             return (
               <div
-                key={pillar.id}
-                className="group flex flex-col justify-between pt-6 border-t border-white/15 transition-colors hover:border-blue-500/40"
+                key={service.id}
+                className="glass-card rounded-2xl p-7 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:border-white/20"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono text-slate-500">
-                      {pillar.number} // SERVICE
-                    </span>
-                    <div className="w-8 h-8 rounded-lg bg-surface-2 border border-white/10 flex items-center justify-center text-slate-400 group-hover:text-blue-400 group-hover:border-blue-500/30 transition-colors">
-                      <Icon className="w-4 h-4" />
-                    </div>
+                  <div className="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/25 flex items-center justify-center text-blue-400 mb-5">
+                    <Icon className="w-5 h-5" />
                   </div>
 
-                  <h3 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white group-hover:text-slate-100">
-                    {pillar.title}
-                  </h3>
+                  <h4 className="text-xl font-bold text-white tracking-tight">
+                    {service.title}
+                  </h4>
 
-                  <p className="mt-2 text-xs font-mono text-blue-400">
-                    {pillar.scope}
+                  <span className="text-xs font-mono text-blue-400 block mt-1">
+                    {service.tagline}
+                  </span>
+
+                  <p className="mt-3 text-sm text-slate-400 leading-relaxed font-normal">
+                    {service.description}
                   </p>
 
-                  <p className="mt-4 text-base text-slate-400 leading-relaxed font-normal">
-                    {pillar.narrative}
-                  </p>
+                  <div className="mt-4 pt-4 border-t border-white/5 space-y-1.5">
+                    {service.bullets.map((bullet, i) => (
+                      <div key={i} className="flex items-center gap-2 text-xs text-slate-300">
+                        <Check className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                        <span>{bullet}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                <div className="mt-8 pt-4 border-t border-white/5">
+                <div className="mt-6 pt-4 border-t border-white/8">
                   <a
-                    href={pillar.actionLink}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-300 hover:text-white transition-colors group-hover:text-blue-400"
+                    href={service.link}
+                    className="inline-flex items-center gap-1 text-xs font-medium text-slate-300 hover:text-white transition-colors"
                   >
-                    <span>{pillar.actionText}</span>
-                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <span>Learn more</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-blue-400" />
                   </a>
                 </div>
               </div>
