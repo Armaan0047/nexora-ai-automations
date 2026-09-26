@@ -2,11 +2,12 @@ export const SCHEMA_ORGANIZATION = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "NEXORA",
-  "legalName": "Nexora Technologies",
-  "url": "https://nexora.systems",
-  "logo": "https://nexora.systems/nexora-icon.png",
-  "description": "Nexora builds custom modern websites, landing pages, AI chatbots, and business automation.",
-  "slogan": "Modern Websites. Automated Growth.",
+  "legalName": "Nexora Digital Studio",
+  "url": "https://nexora-ai-automations.vercel.app",
+  "logo": "https://nexora-ai-automations.vercel.app/nexora-icon.png",
+  "description":
+    "Nexora is a boutique digital studio building custom business websites, high-conversion landing pages, AI assistants, and WhatsApp lead automation.",
+  "slogan": "Websites that make your business easier to trust—and easier to contact.",
   "email": "ai.nexora.automations@gmail.com",
   "sameAs": [],
   "knowsAbout": [
@@ -16,16 +17,17 @@ export const SCHEMA_ORGANIZATION = {
     "Website Redesigns",
     "Website AI Chatbots",
     "WhatsApp Integration",
-    "Business Automation"
+    "Lead Automation"
   ]
 };
 
 export const SCHEMA_WEBSITE = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "NEXORA - Modern Websites & Digital Solutions",
-  "url": "https://nexora.systems",
-  "description": "Official website for Nexora, building modern business websites, landing pages, AI chatbots, and digital solutions.",
+  "name": "NEXORA — Boutique Digital Studio",
+  "url": "https://nexora-ai-automations.vercel.app",
+  "description":
+    "Modern websites and practical automation for businesses that want more qualified inquiries and less busywork.",
   "publisher": {
     "@type": "Organization",
     "name": "NEXORA"
@@ -41,17 +43,19 @@ export const SCHEMA_SERVICES = [
       "@type": "Organization",
       "name": "NEXORA"
     },
-    "description": "Custom business websites, high-converting landing pages, portfolio sites, and complete website redesigns."
+    "description":
+      "Custom business websites, high-converting landing pages, portfolio sites, and complete website redesigns."
   },
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "AI & Digital Solutions",
+    "serviceType": "AI & Lead Automation",
     "provider": {
       "@type": "Organization",
       "name": "NEXORA"
     },
-    "description": "Website AI chatbots, 24/7 customer support assistants, direct WhatsApp integration, and business automation."
+    "description":
+      "On-site AI chatbots trained on business docs, direct WhatsApp integrations, and automated lead capture."
   }
 ];
 
@@ -61,34 +65,34 @@ export const SCHEMA_FAQ = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Does Nexora offer rigid pricing tiers or custom quotes?",
+      "name": "Does Nexora offer rigid packages or custom quotations?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nexora operates strictly on a requirement-driven model. Because every business has unique operations, technical integrations, and scope requirements, we provide customized architecture proposals and transparent quotations based on your specific deliverables."
+        "text": "Nexora operates strictly on a requirement-based model. We tailor every quotation to your exact scope and budget, starting from accessible tiers, with no rigid packages or forced add-ons."
       }
     },
     {
       "@type": "Question",
-      "name": "How does Nexora prevent AI agents from hallucinating or answering off-topic?",
+      "name": "How does Nexora make business websites easier to contact?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We implement retrieval-augmented generation (RAG) combined with strict deterministic system guardrails. Agents are constrained to your verified product, documentation, and operational data, with clear fallback protocols to human personnel when outside their scope."
+        "text": "We build direct communication triggers such as one-tap WhatsApp routing with pre-filled context, structured inquiry intake forms, and automated team notifications."
       }
     },
     {
       "@type": "Question",
-      "name": "What technology stack does Nexora use for web platforms?",
+      "name": "What technology does Nexora build with?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "We engineer web platforms using production-grade React, Next.js (App Router), TypeScript, and Tailwind CSS, prioritizing high accessibility, clean code architecture, and sub-second load times."
+        "text": "We engineer websites with Next.js, React, TypeScript, and Tailwind CSS. We avoid bloated drag-and-drop builders to ensure maximum speed and mobile performance."
       }
     },
     {
       "@type": "Question",
-      "name": "Who owns the code and intellectual property upon delivery?",
+      "name": "Who owns the website and code after launch?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your organization owns 100% of the custom codebase, design tokens, and integration scripts upon project completion and handover. We do not lock you into proprietary platforms."
+        "text": "You own 100% of your code, design assets, domain, and data upon project delivery. There are no proprietary lock-ins or mandatory recurring studio fees."
       }
     }
   ]

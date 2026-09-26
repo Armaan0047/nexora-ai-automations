@@ -12,23 +12,26 @@ export function Badge({
   className = "",
 }: BadgeProps) {
   const baseStyles =
-    "inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono tracking-wider rounded-full border transition-all duration-200 select-none";
+    "inline-flex items-center gap-1.5 px-2.5 py-0.5 text-[11px] font-mono tracking-wider rounded border select-none transition-colors";
 
   const variantStyles = {
     default:
-      "border-white/10 bg-white/[0.04] text-slate-300 hover:border-white/20 shadow-sm",
+      "border-[#35312B] bg-[#1A1916] text-[#A7A096]",
     accent:
-      "border-blue-500/30 bg-blue-500/10 text-blue-400 font-medium shadow-[0_0_14px_rgba(59,130,246,0.18)]",
+      "border-[#C9784A]/30 bg-[#C9784A]/10 text-[#C9784A]",
     status:
-      "border-emerald-500/30 bg-emerald-500/10 text-emerald-400 font-medium shadow-[0_0_14px_rgba(16,185,129,0.18)]",
+      "border-[#8FA58A]/30 bg-[#8FA58A]/10 text-[#8FA58A]",
     demo:
-      "border-sky-500/30 bg-sky-500/10 text-sky-400 font-medium tracking-wider uppercase shadow-[0_0_14px_rgba(14,165,233,0.15)]",
+      "border-[#35312B] bg-[#24221E] text-[#A7A096] uppercase",
     brand:
-      "border-indigo-500/30 bg-indigo-500/10 text-indigo-400 font-medium shadow-[0_0_14px_rgba(99,102,241,0.18)]",
+      "border-[#C9784A]/40 bg-[#1A1916] text-[#F2EEE6]",
   };
 
   return (
     <span className={`${baseStyles} ${variantStyles[variant]} ${className}`}>
+      {variant === "status" && (
+        <span className="w-1.5 h-1.5 rounded-full bg-[#8FA58A] inline-block" />
+      )}
       {children}
     </span>
   );

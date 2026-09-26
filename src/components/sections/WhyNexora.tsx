@@ -1,50 +1,101 @@
 import React from "react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { WHY_NEXORA_PRINCIPLES } from "@/data/whyNexoraData";
-import { Check, ShieldCheck } from "lucide-react";
+import { Check } from "lucide-react";
+
+const DIFFERENTIATORS = [
+  {
+    num: "01",
+    title: "No agency bloat",
+    summary: "Work directly with the person building your site.",
+    detail:
+      "Traditional agencies bill for account managers, project coordinators, and overhead. At Nexora, you communicate directly with the engineer shaping your digital presence.",
+    takeaway: "Direct answers, faster revisions, zero communication lag.",
+  },
+  {
+    num: "02",
+    title: "Built for speed and SEO",
+    summary: "Clean Next.js code instead of sluggish builders.",
+    detail:
+      "We do not use bloated themes or drag-and-drop page builders that drag down your mobile load speed. Every line of code is optimized for instant response and search indexing.",
+    takeaway: "Sub-second mobile loads that keep prospective buyers on page.",
+  },
+  {
+    num: "03",
+    title: "Practical AI, not gimmicks",
+    summary: "Only tools that actually save time and capture leads.",
+    detail:
+      "We avoid sci-fi buzzwords and speculative AI toys. We build on-site assistants that answer real client questions, qualify prospects, and reduce repetitive customer calls.",
+    takeaway: "Real operational savings and 24/7 client response.",
+  },
+  {
+    num: "04",
+    title: "Requirement-based pricing",
+    summary: "Honest scopes tailored to your budget.",
+    detail:
+      "We do not force you into inflated 'agency packages' with features you never asked for. Your business requirements define the quotation, starting from accessible tiers.",
+    takeaway: "Clear cost transparency with no surprise retainers.",
+  },
+  {
+    num: "05",
+    title: "Clear timelines",
+    summary: "Agreed launch dates with regular milestone updates.",
+    detail:
+      "Digital projects should not drag on for months. We set strict delivery schedules (typically 1–3 weeks) and keep you informed at every milestone along the way.",
+    takeaway: "Reliable scheduling so you can plan marketing confidently.",
+  },
+  {
+    num: "06",
+    title: "Post-launch care",
+    summary: "We do not disappear after the final invoice.",
+    detail:
+      "Launching the website is just the beginning. We provide a thorough walkthrough, domain handover, and post-launch verification to ensure everything runs smoothly.",
+    takeaway: "Ongoing peace of mind and responsive technical assistance.",
+  },
+];
 
 export function WhyNexora() {
   return (
-    <section id="why-nexora" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 relative">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-b border-[#35312B]">
+      <div className="max-w-6xl mx-auto">
         <SectionHeader
-          eyebrow="WHY WORK WITH US"
-          title="Why businesses choose Nexora for their websites &amp; digital solutions."
-          description="We reject generic cookie-cutter templates, sluggish page builders, and rigid packages. We engineer clean, modern websites and practical digital tools designed around your real business goals."
-          className="mb-16"
+          eyebrow="WHY NEXORA"
+          title="Direct and honest studio principles."
+          description="How working with a boutique digital studio gives your business a faster, sharper, and more personal result."
+          className="mb-14 sm:mb-16"
         />
 
-        {/* 6 Core Principles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {WHY_NEXORA_PRINCIPLES.map((principle, idx) => (
+          {DIFFERENTIATORS.map((item) => (
             <div
-              key={principle.id}
-              className="glass-card rounded-2xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:-translate-y-1 hover:border-white/20"
+              key={item.num}
+              className="p-6 rounded-lg bg-[#1A1916] border border-[#35312B] flex flex-col justify-between hover:border-[#4A453D] transition-colors"
             >
-              <div>
-                <div className="flex items-center justify-between mb-3 text-xs font-mono text-slate-400">
-                  <span className="text-blue-400 font-semibold">0{idx + 1} // STANDARD</span>
-                  <span className="px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-300 text-[10px]">
-                    Included
+              <div className="space-y-3">
+                <div className="flex items-center justify-between pb-2 border-b border-[#2A2722]">
+                  <span className="text-xs font-mono text-[#C9784A] font-semibold">
+                    {item.num} // PRINCIPLE
+                  </span>
+                  <span className="text-[10px] font-mono text-[#8FA58A] bg-[#8FA58A]/10 px-2 py-0.5 rounded border border-[#8FA58A]/20">
+                    Standard
                   </span>
                 </div>
 
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-400 block mb-1 font-semibold">
-                  {principle.pillar}
-                </span>
-
-                <h3 className="text-lg font-bold text-white tracking-tight leading-snug">
-                  {principle.headline}
+                <h3 className="font-serif text-lg sm:text-xl text-[#F2EEE6] tracking-tight">
+                  {item.title}
                 </h3>
 
-                <p className="mt-3 text-sm text-slate-300 leading-relaxed font-normal">
-                  {principle.elaboration}
+                <p className="text-xs font-medium text-[#C9784A]">
+                  {item.summary}
+                </p>
+
+                <p className="text-xs text-[#A7A096] leading-relaxed">
+                  {item.detail}
                 </p>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/8 flex items-start gap-2.5 text-xs text-slate-200">
-                <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                <span>{principle.practicalApplication}</span>
+              <div className="mt-5 pt-3 border-t border-[#2A2722] flex items-start gap-2 text-xs text-[#F2EEE6]">
+                <Check className="w-3.5 h-3.5 text-[#8FA58A] shrink-0 mt-0.5" />
+                <span>{item.takeaway}</span>
               </div>
             </div>
           ))}

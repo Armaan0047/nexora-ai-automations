@@ -1,61 +1,53 @@
 import React from "react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/hero/Hero";
-import { CapabilitiesOverview } from "@/components/sections/CapabilitiesOverview";
-import { ProblemSection } from "@/components/sections/ProblemSection";
-import { WebsitesSection } from "@/components/sections/WebsitesSection";
-import { AgentsSection } from "@/components/sections/AgentsSection";
-import { ArchitectureSection } from "@/components/sections/ArchitectureSection";
+import { CredibilityStrip } from "@/components/sections/CredibilityStrip";
+import { ShowcaseSection } from "@/components/sections/ShowcaseSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { WhyNexora } from "@/components/sections/WhyNexora";
-import { SolutionsMatrix } from "@/components/sections/SolutionsMatrix";
+import { TrustSection } from "@/components/sections/TrustSection";
 import { RequirementForm } from "@/components/sections/RequirementForm";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/layout/Footer";
 
 export default function Home() {
   return (
-    <div id="top" className="min-h-screen bg-background text-foreground flex flex-col">
-      {/* Floating Island Navigation */}
+    <div id="top" className="min-h-screen bg-background text-[#F2EEE6] flex flex-col font-sans selection:bg-[#C9784A]/30 selection:text-[#F2EEE6]">
+      {/* 01. Minimal Studio Navigation */}
       <Navbar />
 
-      {/* Main Content Flow */}
+      {/* Main Content Stream */}
       <main className="flex-1 flex flex-col">
-        {/* Section 01: Hero with Connected Architecture Visual */}
+        {/* 02. Studio Hero with Art-Directed Visual */}
         <Hero />
 
-        {/* Section 02: Core Value & Capabilities */}
-        <CapabilitiesOverview />
+        {/* 03. Restrained Credibility Strip */}
+        <CredibilityStrip />
 
-        {/* Section 03: The Operational Problem & Diagnostic */}
-        <ProblemSection />
+        {/* 04. Selected Work & Capability Showcase (3 Case Study Concepts) */}
+        <ShowcaseSection />
 
-        {/* Section 04: AI Websites with Interactive Viewport Preview */}
-        <WebsitesSection />
+        {/* 05. Focused Studio Services (4 Core Offerings) */}
+        <ServicesSection />
 
-        {/* Section 05: AI Agents with Live Workflow Playground */}
-        <AgentsSection />
-
-        {/* Section 06: Technical Architecture (6-Stage Pipeline) */}
-        <ArchitectureSection />
-
-        {/* Section 07: How It Works / Engineering Protocol */}
+        {/* 06. How It Works (4 Concise Stages) */}
         <HowItWorks />
 
-        {/* Section 08: Why Nexora (Engineering & Commercial Rigor) */}
+        {/* 07. Why Nexora (Direct & Honest Studio Strengths) */}
         <WhyNexora />
 
-        {/* Section 09: Combined Services & Solutions Matrix */}
-        <SolutionsMatrix />
+        {/* 08. Honest Proof & Trust ("What We Optimise For") */}
+        <TrustSection />
 
-        {/* Section 10: Technical Consultation & Requirement Form */}
+        {/* 09. Project Intake & Consultation Form */}
         <RequirementForm />
 
-        {/* Section 11: Final Closing Statement & Direct Action */}
+        {/* 10. Final Call to Action */}
         <FinalCta />
       </main>
 
-      {/* Section 12: Production Footer */}
+      {/* 11. Minimal Studio Footer */}
       <Footer />
     </div>
   );

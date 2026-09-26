@@ -25,15 +25,15 @@ export function SectionHeader({
       } ${className}`}
     >
       {eyebrow && (
-        <div className="mb-4">
+        <div className="mb-3.5">
           <Badge variant={badgeVariant}>{eyebrow}</Badge>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.12]">
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif text-[#F2EEE6] font-normal tracking-tight leading-[1.2]">
         {title}
       </h2>
       {description && (
-        <p className="mt-4 text-base sm:text-lg text-slate-400 font-normal leading-relaxed">
+        <p className="mt-3 text-sm sm:text-base text-[#A7A096] font-normal leading-relaxed">
           {description}
         </p>
       )}

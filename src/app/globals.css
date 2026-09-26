@@ -3,24 +3,26 @@
 @tailwind utilities;
 
 :root {
-  /* Nexora Modern Midnight — Apple precision, Nike contrast, Electric Blue accent */
-  --background: #07090e;
-  --foreground: #f8fafc;
-  --surface-1: #0c0f17;
-  --surface-2: #121622;
-  --surface-3: #181e2e;
-  --border-subtle: rgba(255, 255, 255, 0.07);
-  --border-medium: rgba(255, 255, 255, 0.12);
-  --border-strong: rgba(255, 255, 255, 0.20);
-  --accent: #3b82f6;
-  --accent-violet: #6366f1;
-  --accent-soft: rgba(59, 130, 246, 0.12);
-  --success: #10b981;
+  /* Nexora Warm Editorial Studio Palette */
+  --background: #11100E;
+  --foreground: #F2EEE6;
+  --surface-1: #1A1916;
+  --surface-2: #24221E;
+  --surface-3: #2D2A25;
+  --border: #35312B;
+  --border-subtle: #2A2722;
+  --border-strong: #4A453D;
+  --copper: #C9784A;
+  --copper-hover: #E09A68;
+  --status-green: #8FA58A;
+  --text-primary: #F2EEE6;
+  --text-secondary: #A7A096;
 }
 
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  background-color: #11100E;
 }
 
 body {
@@ -30,62 +32,67 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  selection-background-color: rgba(59, 130, 246, 0.25);
-  selection-color: #ffffff;
+  selection-background-color: rgba(201, 120, 74, 0.3);
+  selection-color: #F2EEE6;
 }
 
-/* Apple-grade glass & surface lighting */
-.glass-nav {
-  background: rgba(7, 9, 14, 0.82);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+/* Studio Surface Architecture */
+.studio-card {
+  background-color: #1A1916;
+  border: 1px solid #35312B;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.glass-card {
-  background: rgba(12, 15, 23, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+.studio-card:hover {
+  border-color: #4A453D;
 }
 
-.glass-card:hover {
-  border-color: rgba(255, 255, 255, 0.16);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+.studio-card-elevated {
+  background-color: #24221E;
+  border: 1px solid #35312B;
+  border-radius: 8px;
 }
 
-/* Subtle ambient gradient mesh for depth */
-.ambient-glow {
-  background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.12) 0%, rgba(99, 102, 241, 0.05) 35%, transparent 70%);
+/* Restrained Studio Navigation */
+.studio-nav {
+  background-color: rgba(17, 16, 14, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid #35312B;
 }
 
-.ambient-glow-bottom {
-  background: radial-gradient(circle at 50% 100%, rgba(59, 130, 246, 0.10) 0%, rgba(99, 102, 241, 0.04) 40%, transparent 70%);
+/* Editorial subtle borders */
+.border-studio {
+  border-color: #35312B;
+}
+
+.border-studio-subtle {
+  border-color: #2A2722;
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #07090e;
+  background: #11100E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #1c2233;
-  border-radius: 4px;
+  background: #24221E;
+  border-radius: 3px;
+  border: 1px solid #35312B;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #283148;
+  background: #35312B;
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
+  outline: 2px solid #C9784A;
+  outline-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

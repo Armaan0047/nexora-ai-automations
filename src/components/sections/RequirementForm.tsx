@@ -3,17 +3,15 @@
 import React, { useState } from "react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Button } from "@/components/ui/Button";
-import { Check, CheckCircle2, Mail, ShieldCheck, Sparkles } from "lucide-react";
+import { Check, CheckCircle2, Mail, ShieldCheck } from "lucide-react";
 
 const REQUIREMENT_OPTIONS = [
   { id: "business-website", label: "Business Website" },
   { id: "landing-page", label: "High-Conversion Landing Page" },
   { id: "redesign", label: "Website Redesign" },
-  { id: "chatbot", label: "Website AI Chatbot" },
-  { id: "support-agent", label: "Customer Support / FAQ Agent" },
-  { id: "qualification-agent", label: "Lead Qualification Agent" },
-  { id: "internal-assistant", label: "Internal Operations Assistant" },
-  { id: "custom-pipeline", label: "Custom End-to-End System" },
+  { id: "chatbot", label: "AI Chatbot & FAQ Assistant" },
+  { id: "automation", label: "WhatsApp & Lead Automation" },
+  { id: "custom", label: "Custom Digital Build" },
 ];
 
 const TIMELINE_OPTIONS = [
@@ -23,10 +21,9 @@ const TIMELINE_OPTIONS = [
 ];
 
 const BUDGET_OPTIONS = [
-  "Under ₹3,000",
-  "₹3,000–₹5,000",
-  "₹5,000–₹8,000",
-  "₹8,000–₹10,000",
+  "₹3,000 – ₹5,000",
+  "₹5,000 – ₹8,000",
+  "₹8,000 – ₹10,000",
   "₹10,000+",
   "Not sure yet",
 ];
@@ -57,7 +54,7 @@ export function RequirementForm() {
     setFormError("");
 
     if (!fullName.trim() || !businessName.trim() || !email.trim()) {
-      setFormError("Please provide your name, business name, and work email.");
+      setFormError("Please provide your full name, business name, and work email.");
       return;
     }
 
@@ -73,119 +70,154 @@ export function RequirementForm() {
           email,
           website,
           requirements,
-          selectedNeeds: selectedNeeds.map((id) => REQUIREMENT_OPTIONS.find((item) => item.id === id)?.label ?? id),
+          selectedNeeds: selectedNeeds.map(
+            (id) => REQUIREMENT_OPTIONS.find((item) => item.id === id)?.label ?? id
+          ),
           timeline,
           budget,
         }),
       });
 
       const data = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(data.error || "Unable to submit your request.");
+      if (!response.ok) {
+        throw new Error(data.error || "Unable to submit your request.");
+      }
 
       setSubmitted(true);
     } catch (error) {
-      setFormError(error instanceof Error ? error.message : "Unable to submit your request. Please email us directly.");
+      setFormError(
+        error instanceof Error
+          ? error.message
+          : "Unable to submit your request right now. You can email us directly at ai.nexora.automations@gmail.com."
+      );
     } finally {
       setIsSubmitting(false);
     }
   };
 
   return (
-    <section id="consultation" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 relative">
-      <div className="max-w-7xl mx-auto">
+    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-b border-[#35312B]">
+      <div className="max-w-6xl mx-auto">
         <SectionHeader
-          eyebrow="CONSULTATION"
-          title="Tell us what needs to be built or automated."
-          description="Share the outcome you want, the systems involved, and any current bottlenecks. Nexora will review the scope and come back with a practical recommendation."
-          className="mb-16"
+          eyebrow="START A PROJECT"
+          title="Tell us what needs to be built or improved."
+          description="Share what you are trying to achieve. We will review the situation and reply with a clear recommendation."
+          className="mb-14 sm:mb-16"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 items-start">
-          {/* Left Column: What Happens Next */}
-          <div className="lg:col-span-5 space-y-8">
-            <div className="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
-              <h3 className="text-xl font-bold text-white tracking-tight">What happens next</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+          {/* Left Column: What Happens After Submitting */}
+          <div className="lg:col-span-5 space-y-6">
+            <div className="p-6 sm:p-8 rounded-lg bg-[#1A1916] border border-[#35312B] space-y-6">
+              <h3 className="font-serif text-xl text-[#F2EEE6] tracking-tight">
+                What happens after submitting
+              </h3>
+
               <div className="space-y-5">
                 {[
-                  ["01", "Scope review", "We review your goals, existing setup, integrations and constraints."],
-                  ["02", "Discovery conversation", "We discuss the practical solution, priorities and implementation approach."],
-                  ["03", "Clear proposal", "You receive a scope and quotation tied to the work you actually need."],
-                ].map(([number, title, text]) => (
-                  <div key={number} className="flex items-start gap-3.5">
-                    <div className="w-8 h-8 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-xs font-mono text-blue-400 font-bold shrink-0">
-                      {number}
+                  {
+                    step: "01",
+                    title: "Initial review within 24 hours",
+                    desc: "We analyze your current website, service model, and goals before responding.",
+                  },
+                  {
+                    step: "02",
+                    title: "Straightforward recommendation & estimate",
+                    desc: "You receive an honest appraisal of the right approach and a ballpark budget scope.",
+                  },
+                  {
+                    step: "03",
+                    title: "Kickoff call only if it makes sense",
+                    desc: "If our approach fits your goals, we schedule a 20-minute setup call to finalize timelines.",
+                  },
+                ].map((item) => (
+                  <div key={item.step} className="flex items-start gap-3.5">
+                    <div className="w-7 h-7 rounded bg-[#24221E] border border-[#35312B] flex items-center justify-center text-xs font-mono text-[#C9784A] font-semibold shrink-0">
+                      {item.step}
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-white">{title}</h4>
-                      <p className="text-xs text-slate-400 mt-1 leading-relaxed">{text}</p>
+                      <h4 className="text-sm font-semibold text-[#F2EEE6]">{item.title}</h4>
+                      <p className="text-xs text-[#A7A096] mt-1 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-6 border-t border-white/8 space-y-3">
-                <div className="flex items-center gap-2 text-xs text-slate-300">
-                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                  <span>Project information is handled confidentially.</span>
+              <div className="pt-5 border-t border-[#2A2722] space-y-2.5">
+                <div className="flex items-center gap-2 text-xs text-[#A7A096]">
+                  <ShieldCheck className="w-4 h-4 text-[#8FA58A] shrink-0" />
+                  <span>Strict confidentiality. No marketing spam.</span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-slate-300">
-                  <Mail className="w-4 h-4 text-blue-400 shrink-0" />
-                  <span>Direct inquiries: <a href="mailto:ai.nexora.automations@gmail.com" className="text-white hover:text-blue-400 underline transition-colors">ai.nexora.automations@gmail.com</a></span>
+                <div className="flex items-center gap-2 text-xs text-[#A7A096]">
+                  <Mail className="w-4 h-4 text-[#C9784A] shrink-0" />
+                  <span>
+                    Direct email:{" "}
+                    <a
+                      href="mailto:ai.nexora.automations@gmail.com"
+                      className="text-[#F2EEE6] hover:text-[#C9784A] underline transition-colors"
+                    >
+                      ai.nexora.automations@gmail.com
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-[#121622]/70 p-5 shadow-sm">
-              <span className="text-xs font-mono uppercase text-slate-400 block mb-2 font-medium">Selected scope</span>
-              <div className="flex flex-wrap gap-1.5">
-                {selectedNeeds.map((needId) => {
-                  const option = REQUIREMENT_OPTIONS.find((item) => item.id === needId);
-                  return (
-                    <span key={needId} className="px-3 py-1 rounded-lg text-xs font-mono bg-blue-500/10 border border-blue-500/30 text-blue-300 font-medium">
-                      {option?.label}
-                    </span>
-                  );
-                })}
-              </div>
+            <div className="p-4 rounded-lg bg-[#161512] border border-[#35312B] text-xs text-[#A7A096] flex items-center justify-between font-mono">
+              <span>Studio Response Rate:</span>
+              <span className="text-[#8FA58A]">&lt; 24h on business days</span>
             </div>
           </div>
 
           {/* Right Column: Form Container */}
-          <div className="lg:col-span-7 rounded-3xl border border-white/12 bg-[#0C0F17] p-6 sm:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.6)]">
+          <div className="lg:col-span-7 p-6 sm:p-8 rounded-lg bg-[#1A1916] border border-[#35312B]">
             {submitted ? (
               <div className="py-12 flex flex-col items-center text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2 shadow-[0_0_20px_rgba(16,185,129,0.2)]">
-                  <CheckCircle2 className="w-8 h-8" />
+                <div className="w-12 h-12 rounded bg-[#8FA58A]/15 border border-[#8FA58A]/40 flex items-center justify-center text-[#8FA58A] mb-2">
+                  <CheckCircle2 className="w-6 h-6" />
                 </div>
-                <h3 className="text-2xl font-bold text-white tracking-tight">Request received</h3>
-                <p className="text-sm text-slate-300 max-w-md leading-relaxed">
-                  Thanks, <span className="text-white font-semibold">{fullName}</span>. Your enquiry has been delivered to Nexora and we&apos;ll review the scope before getting back to you.
+                <h3 className="font-serif text-2xl text-[#F2EEE6] tracking-tight">
+                  Enquiry received
+                </h3>
+                <p className="text-xs sm:text-sm text-[#A7A096] max-w-md leading-relaxed">
+                  Thank you, <span className="text-[#F2EEE6] font-medium">{fullName}</span>. We will review your project requirements for <span className="text-[#F2EEE6] font-medium">{businessName}</span> and reply within 24 hours.
                 </p>
-                <div className="p-5 rounded-2xl border border-white/10 bg-[#121622] text-xs text-slate-300 max-w-md text-left w-full mt-4 space-y-1.5">
-                  <div className="font-mono text-white font-bold mb-2 pb-2 border-b border-white/8">Submitted scope</div>
-                  <div>• Modules: {selectedNeeds.map((id) => REQUIREMENT_OPTIONS.find((o) => o.id === id)?.label).join(", ")}</div>
+                <div className="p-4 rounded bg-[#11100E] border border-[#2A2722] text-xs text-[#A7A096] max-w-md text-left w-full mt-4 space-y-1">
+                  <div className="font-mono text-[#F2EEE6] text-[11px] uppercase tracking-wider mb-1.5 pb-1 border-b border-[#2A2722]">
+                    Recorded Details
+                  </div>
+                  <div>• Needed: {selectedNeeds.map((id) => REQUIREMENT_OPTIONS.find((o) => o.id === id)?.label).join(", ")}</div>
                   <div>• Timeline: {timeline}</div>
                   <div>• Budget: {budget}</div>
                 </div>
-                <Button variant="secondary" size="md" onClick={() => setSubmitted(false)} className="mt-6">
-                  Submit another enquiry
+                <Button
+                  variant="secondary"
+                  size="sm"
+                  onClick={() => setSubmitted(false)}
+                  className="mt-6"
+                >
+                  Send another message
                 </Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <h3 className="text-xl font-bold text-white tracking-tight">Project requirement intake</h3>
-                  <p className="text-xs text-slate-400 mt-1">A few details help us understand the right solution before we speak.</p>
+                  <h3 className="text-base font-semibold text-[#F2EEE6] tracking-tight">
+                    Project requirement intake
+                  </h3>
+                  <p className="text-xs text-[#A7A096] mt-0.5">
+                    A few details allow us to provide an honest, accurate assessment.
+                  </p>
                 </div>
 
                 {formError && (
-                  <div className="p-3.5 rounded-xl border border-red-500/30 bg-red-500/10 text-xs text-red-200">
+                  <div className="p-3 rounded bg-red-950/40 border border-red-800/60 text-xs text-red-200">
                     {formError}
                   </div>
                 )}
 
                 <div>
-                  <label className="text-xs font-mono uppercase text-slate-300 block mb-2.5 font-semibold">
+                  <label className="text-xs font-mono uppercase text-[#A7A096] block mb-2 font-medium">
                     What do you need? (Select all that apply)
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -196,14 +228,14 @@ export function RequirementForm() {
                           key={option.id}
                           type="button"
                           onClick={() => toggleNeed(option.id)}
-                          className={`text-left p-3 rounded-xl border text-xs transition-all duration-150 flex items-center justify-between cursor-pointer ${
+                          className={`text-left p-2.5 rounded border text-xs transition-colors flex items-center justify-between cursor-pointer ${
                             checked
-                              ? "border-blue-500 bg-blue-500/10 text-white font-semibold shadow-sm"
-                              : "border-white/10 bg-[#121622]/80 text-slate-300 hover:border-white/20 hover:text-white"
+                              ? "border-[#C9784A] bg-[#C9784A]/10 text-[#F2EEE6] font-medium"
+                              : "border-[#35312B] bg-[#11100E] text-[#A7A096] hover:border-[#4A453D] hover:text-[#F2EEE6]"
                           }`}
                         >
                           <span>{option.label}</span>
-                          {checked && <Check className="w-3.5 h-3.5 text-blue-400 shrink-0" />}
+                          {checked && <Check className="w-3.5 h-3.5 text-[#C9784A] shrink-0" />}
                         </button>
                       );
                     })}
@@ -218,7 +250,7 @@ export function RequirementForm() {
                       required
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
-                      placeholder="e.g. Alex Henderson"
+                      placeholder="e.g. Rahul Sharma"
                       className={inputClass}
                     />
                   </Field>
@@ -229,7 +261,7 @@ export function RequirementForm() {
                       required
                       value={businessName}
                       onChange={(e) => setBusinessName(e.target.value)}
-                      placeholder="e.g. Acme Logistics"
+                      placeholder="e.g. Apex Advisory"
                       className={inputClass}
                     />
                   </Field>
@@ -243,7 +275,7 @@ export function RequirementForm() {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="alex@company.com"
+                      placeholder="rahul@company.com"
                       className={inputClass}
                     />
                   </Field>
@@ -262,10 +294,10 @@ export function RequirementForm() {
                 <Field label="What are you trying to achieve?">
                   <textarea
                     id="requirements"
-                    rows={4}
+                    rows={3}
                     value={requirements}
                     onChange={(e) => setRequirements(e.target.value)}
-                    placeholder="Tell us what is currently manual, what your website should do, or which systems you want connected."
+                    placeholder="Briefly describe what your current website lacks, your target audience, or what manual tasks you want automated."
                     className={`${inputClass} resize-y leading-relaxed`}
                   />
                 </Field>
@@ -278,20 +310,20 @@ export function RequirementForm() {
                       className={inputClass}
                     >
                       {TIMELINE_OPTIONS.map((option) => (
-                        <option key={option} value={option} className="bg-[#121622] text-white">
+                        <option key={option} value={option} className="bg-[#1A1916] text-[#F2EEE6]">
                           {option}
                         </option>
                       ))}
                     </select>
                   </Field>
-                  <Field label="Budget Range" optional>
+                  <Field label="Approximate Budget">
                     <select
                       value={budget}
                       onChange={(e) => setBudget(e.target.value)}
                       className={inputClass}
                     >
                       {BUDGET_OPTIONS.map((option) => (
-                        <option key={option} value={option} className="bg-[#121622] text-white">
+                        <option key={option} value={option} className="bg-[#1A1916] text-[#F2EEE6]">
                           {option}
                         </option>
                       ))}
@@ -299,18 +331,18 @@ export function RequirementForm() {
                   </Field>
                 </div>
 
-                <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <span className="text-xs text-slate-400">
-                    No spam. We only use your details to respond to this enquiry.
+                <div className="pt-3 border-t border-[#2A2722] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <span className="text-[11px] text-[#A7A096]">
+                    No obligation. Direct reply within 24 hours.
                   </span>
                   <Button
                     variant="primary"
-                    size="lg"
+                    size="md"
                     withArrow
                     type="submit"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending request..." : "Request a consultation"}
+                    {isSubmitting ? "Sending..." : "Submit project enquiry"}
                   </Button>
                 </div>
               </form>
@@ -323,7 +355,7 @@ export function RequirementForm() {
 }
 
 const inputClass =
-  "w-full text-xs sm:text-sm bg-[#121622] border border-white/15 rounded-xl px-4 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500/30 transition-all shadow-inner";
+  "w-full text-xs sm:text-sm bg-[#11100E] border border-[#35312B] rounded-md px-3.5 py-2.5 text-[#F2EEE6] placeholder:text-[#A7A096]/50 focus:outline-none focus:border-[#C9784A] transition-colors";
 
 function Field({
   label,
@@ -338,9 +370,9 @@ function Field({
 }) {
   return (
     <div>
-      <label className="text-xs font-mono text-slate-300 block mb-1.5 font-medium">
-        {label} {required && <span className="text-blue-400">*</span>}{" "}
-        {optional && <span className="text-slate-500 font-normal">(Optional)</span>}
+      <label className="text-xs font-mono text-[#A7A096] block mb-1 font-medium">
+        {label} {required && <span className="text-[#C9784A]">*</span>}{" "}
+        {optional && <span className="text-[#A7A096]/60 font-normal">(Optional)</span>}
       </label>
       {children}
     </div>
