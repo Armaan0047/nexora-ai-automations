@@ -9,51 +9,51 @@ export interface SolutionCombination {
 
 export const COMBINED_SOLUTIONS: SolutionCombination[] = [
   {
-    id: "b2b-professional",
-    industryProfile: "B2B Professional Services & Advisory",
+    id: "local-services",
+    industryProfile: "Contractors & Local Service Businesses",
     scenarioDescription:
-      "Consulting firms, legal practices, and corporate advisory teams that win clients through authority, trust, and senior expertise.",
+      "Home services, contractors, plumbers, electricians, and cleaning companies who need fast quote requests and direct phone calls.",
     websiteComponent:
-      "Authoritative Next.js business website with structured case narratives, team credential architecture, and executive positioning.",
+      "Clean, mobile-first website showcasing services, past work photos, genuine customer reviews, and a 1-minute quote request form.",
     agentComponent:
-      "Conversational Lead Qualification Agent that pre-screens inquiry scope, budget fit, and regulatory frameworks before booking partner time.",
+      "Direct WhatsApp chat button + smart FAQ bot that answers common questions about pricing and collects job details 24/7.",
     unifiedOutcome:
-      "Partners spend their consultation time exclusively with pre-vetted, high-intent organizations equipped with a structured briefing.",
+      "Turn casual website visitors into direct quote inquiries and WhatsApp chats without losing leads while you are busy on the job.",
   },
   {
-    id: "tech-saas",
-    industryProfile: "Specialized Software & Tech Companies",
+    id: "professional-practices",
+    industryProfile: "Professional Practices & Consultancies",
     scenarioDescription:
-      "Technology companies offering complex technical products that require explaining architecture and onboarding buyers quickly.",
+      "Law firms, accounting practices, clinics, and consultants who need to establish trust and streamline client consultations.",
     websiteComponent:
-      "High-velocity product landing pages and documentation hub with clean typographic hierarchy and interactive feature walkthroughs.",
+      "Polished company website with clear service breakdowns, credentials, team bios, and direct consultation booking links.",
     agentComponent:
-      "Technical Support & Onboarding Agent trained on API documentation and product schemas to resolve prospective developer questions.",
+      "24/7 website assistant that answers routine questions about services, fees, and office hours, then guides clients to book.",
     unifiedOutcome:
-      "Immediate self-serve answers for prospective evaluators, accelerating technical validation and sales pipeline velocity.",
+      "Staff spends less time answering the same routine phone calls, while prospective clients get immediate answers at any hour.",
   },
   {
-    id: "high-ticket-contractors",
-    industryProfile: "Commercial Contracting & Engineering",
+    id: "tech-b2b",
+    industryProfile: "Growing Businesses & B2B Companies",
     scenarioDescription:
-      "Industrial contractors, commercial builders, and specialized engineering firms managing high-value RFP cycles.",
+      "Growing tech companies and service providers that need to explain what they do clearly and convert visitors into buyers.",
     websiteComponent:
-      "Modern portfolio and project showcase with detailed specification filters, regulatory certifications, and project galleries.",
+      "Modern, high-converting landing pages with clear benefit copy, product highlights, and responsive interactive previews.",
     agentComponent:
-      "Interactive Scope Intake Agent that collects project blueprints, square footage requirements, and timeline constraints.",
+      "Smart website chatbot that guides visitors through product features, answers questions, and qualifies serious business leads.",
     unifiedOutcome:
-      "Transforms unstructured email inquiries into complete project dossiers ready for estimating teams.",
+      "A sharp, professional online presence that explains your value clearly and captures qualified customer inquiries automatically.",
   },
   {
-    id: "healthcare-specialists",
-    industryProfile: "Private Clinics & Healthcare Practices",
+    id: "website-redesigns",
+    industryProfile: "Established Businesses Needing a Redesign",
     scenarioDescription:
-      "Private medical specialists, dental groups, and healthcare providers handling patient questions and appointment scheduling.",
+      "Established businesses with an old, slow, or outdated website that doesn't display well on mobile and loses customers to competitors.",
     websiteComponent:
-      "Calm, highly accessible clinic website engineered with strict WCAG AA contrast, physician bios, and patient resource hubs.",
+      "Complete website overhaul—rebuilt from scratch to look clean, fast, and perfectly formatted across phones, tablets, and laptops.",
     agentComponent:
-      "Deterministic 24/7 Patient FAQ Agent that answers procedure guidelines, preparation instructions, and triage questions.",
+      "Upgraded contact channels: instant WhatsApp messaging, easy inquiry forms, and automated notifications sent straight to your email.",
     unifiedOutcome:
-      "Reduces repetitive front-desk phone calls while providing anxious patients with accurate information at all hours.",
+      "A fresh, credible digital presence that immediately builds trust with visitors, works smoothly on mobile, and drives new inquiries.",
   },
 ];

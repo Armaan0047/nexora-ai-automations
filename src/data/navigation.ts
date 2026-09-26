@@ -1,18 +1,18 @@
 import { NavItem } from "@/types";
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: "Capabilities", href: "#capabilities" },
-  { label: "AI Websites", href: "#websites" },
-  { label: "AI Agents", href: "#agents" },
-  { label: "Architecture", href: "#architecture" },
-  { label: "Methodology", href: "#how-it-works" },
-  { label: "Consultation", href: "#consultation" },
+  { label: "Services", href: "#capabilities" },
+  { label: "Websites", href: "#websites" },
+  { label: "AI & Automation", href: "#agents" },
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "Why Nexora", href: "#why-nexora" },
+  { label: "Contact", href: "#consultation" },
 ];
 
 export const COMPANY_DETAILS = {
   name: "NEXORA",
-  tagline: "AI Systems. Automated Growth.",
+  tagline: "Modern Websites. Smart Integrations.",
   contactEmail: "ai.nexora.automations@gmail.com",
-  statusMessage: "Systems Engineering Studio • Inquiries Active",
+  statusMessage: "Website Development & Digital Solutions • Available for Projects",
   year: 2026,
 };

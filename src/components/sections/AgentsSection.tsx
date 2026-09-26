@@ -3,21 +3,13 @@
 import React, { useState } from "react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
-import { AGENT_PROFILES, AgentProfile } from "@/data/agentDemos";
+import { AGENT_PROFILES } from "@/data/agentDemos";
 import {
-  ArrowRight,
   Bot,
-  CheckCircle,
-  Clock,
   CornerDownLeft,
-  Cpu,
   FileText,
   HelpCircle,
-  Layers,
-  Send,
   ShieldCheck,
-  Sparkles,
   UserCheck,
 } from "lucide-react";
 
@@ -80,18 +72,18 @@ export function AgentsSection() {
 
     setActiveScenarioIndex(-1);
     setActiveResponse({
-      intent: `Custom Inquiry Triage [${profile.name}]`,
+      intent: `Customer Inquiry [${profile.name}]`,
       reasoning: [
-        `Received live prompt: "${customInput.substring(0, 60)}..."`,
-        "Validating against domain system prompt and compliance rules.",
-        "Synthesizing structured response with designated next action.",
+        `Received question: "${customInput.substring(0, 60)}..."`,
+        "Checking business guidelines and FAQ information.",
+        "Formulating a helpful, friendly response.",
       ],
-      answer: `Nexora Agent Engine has analyzed your inquiry: "${customInput}".\n\nIn a production deployment, this agent is grounded strictly in your proprietary documentation, pricing tables, or service schemas. It provides accurate, brand-aligned answers and logs the interaction to your CRM or internal support queue.`,
-      action: "Simulated inquiry triage and CRM record generation.",
+      answer: `Thanks for asking about: "${customInput}".\n\nWhen we build this for your business, the assistant is trained directly on your real prices, service details, and FAQs. It gives accurate answers and can forward the inquiry directly to your WhatsApp or email.`,
+      action: "Inquiry logged and ready to notify your team.",
       dataPayload: {
-        "Input Query": customInput.substring(0, 45) + "...",
-        "Triage Status": "Validated Against System Guardrails",
-        "Assigned Agent": profile.name,
+        "Customer Question": customInput.substring(0, 45) + "...",
+        "Assigned Assistant": profile.name,
+        "Status": "Ready for Follow-Up",
       },
     });
     setCustomInput("");
@@ -101,9 +93,9 @@ export function AgentsSection() {
     <section id="agents" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-surface-1/30">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          eyebrow="PILLAR 02 // AUTONOMOUS WORKFLOWS"
-          title="Intelligent AI agents built for real business operations."
-          description="We engineer custom, context-grounded AI agents that operate directly on your digital properties and internal tools. Built with strict deterministic boundaries to resolve inquiries, qualify leads, and support operations with zero hallucination."
+          eyebrow="SMART INTEGRATIONS"
+          title="Helpful AI assistants that answer questions and capture leads."
+          description="We can add smart AI chatbots, FAQ helpers, and automations directly into your website so customers get answers instantly, day and night."
           className="mb-16"
         />
 
@@ -119,10 +111,10 @@ export function AgentsSection() {
           >
             <div className="flex items-center justify-between mb-2">
               <Bot className="w-5 h-5 text-blue-400" />
-              <span className="text-[10px] font-mono text-slate-500">DISCIPLINE 01</span>
+              <span className="text-[10px] font-mono text-slate-500">FEATURE 01</span>
             </div>
-            <h4 className="text-sm font-semibold text-white">Website Conversational Agent</h4>
-            <p className="text-xs text-slate-400 mt-1">Converts high-intent visitors into booked discovery calls.</p>
+            <h4 className="text-sm font-semibold text-white">Website AI Assistant</h4>
+            <p className="text-xs text-slate-400 mt-1">Greets visitors and answers questions about your services in real time.</p>
           </button>
 
           <button
@@ -135,10 +127,10 @@ export function AgentsSection() {
           >
             <div className="flex items-center justify-between mb-2">
               <HelpCircle className="w-5 h-5 text-blue-400" />
-              <span className="text-[10px] font-mono text-slate-500">DISCIPLINE 02</span>
+              <span className="text-[10px] font-mono text-slate-500">FEATURE 02</span>
             </div>
-            <h4 className="text-sm font-semibold text-white">FAQ & Customer Support Agent</h4>
-            <p className="text-xs text-slate-400 mt-1">Grounded resolution with cited answers from your knowledge base.</p>
+            <h4 className="text-sm font-semibold text-white">24/7 FAQ &amp; Support</h4>
+            <p className="text-xs text-slate-400 mt-1">Answers common customer questions about prices, hours, and policies.</p>
           </button>
 
           <button
@@ -151,10 +143,10 @@ export function AgentsSection() {
           >
             <div className="flex items-center justify-between mb-2">
               <UserCheck className="w-5 h-5 text-blue-400" />
-              <span className="text-[10px] font-mono text-slate-500">DISCIPLINE 03</span>
+              <span className="text-[10px] font-mono text-slate-500">FEATURE 03</span>
             </div>
-            <h4 className="text-sm font-semibold text-white">Lead Qualification & Triage</h4>
-            <p className="text-xs text-slate-400 mt-1">Evaluates scope, budget, and urgency before booking senior sales time.</p>
+            <h4 className="text-sm font-semibold text-white">Quote &amp; Inquiry Helper</h4>
+            <p className="text-xs text-slate-400 mt-1">Collects project requirements so you can provide quotes quickly.</p>
           </button>
 
           <button
@@ -167,10 +159,10 @@ export function AgentsSection() {
           >
             <div className="flex items-center justify-between mb-2">
               <FileText className="w-5 h-5 text-blue-400" />
-              <span className="text-[10px] font-mono text-slate-500">DISCIPLINE 04</span>
+              <span className="text-[10px] font-mono text-slate-500">FEATURE 04</span>
             </div>
-            <h4 className="text-sm font-semibold text-white">Internal Business Assistant</h4>
-            <p className="text-xs text-slate-400 mt-1">Automates SOP queries, document synthesis, and internal memos.</p>
+            <h4 className="text-sm font-semibold text-white">Workflow Assistant</h4>
+            <p className="text-xs text-slate-400 mt-1">Helps your team draft messages, look up notes, and save hours of time.</p>
           </button>
         </div>
 
@@ -190,14 +182,14 @@ export function AgentsSection() {
 
             <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span>Grounded Deterministic Execution</span>
+              <span>Trained on Your Real Business Information</span>
             </div>
           </div>
 
           {/* Context Boundary Display */}
           <div className="mt-4 p-3 rounded-lg border border-white/10 bg-surface-2/60 text-xs text-slate-400">
             <span className="font-mono text-slate-300 font-semibold uppercase mr-2">
-              Domain Context:
+              How It Works:
             </span>
             {profile.systemPromptSummary}
           </div>
@@ -208,7 +200,7 @@ export function AgentsSection() {
             <div className="lg:col-span-5 space-y-5">
               <div>
                 <span className="text-xs font-mono uppercase text-slate-400 block mb-2">
-                  Select a Realistic Test Scenario:
+                  Click a Sample Customer Question:
                 </span>
                 <div className="space-y-2">
                   {profile.sampleScenarios.map((sc, idx) => (
@@ -222,7 +214,7 @@ export function AgentsSection() {
                       }`}
                     >
                       <div className="font-mono text-[10px] text-blue-400 uppercase mb-1">
-                        Scenario: {sc.category}
+                        Topic: {sc.category}
                       </div>
                       <div className="line-clamp-2 italic font-serif">
                         “{sc.prompt}”
@@ -235,7 +227,7 @@ export function AgentsSection() {
               {/* Freeform Live Test Input */}
               <div className="pt-2 border-t border-white/10">
                 <span className="text-xs font-mono uppercase text-slate-400 block mb-2">
-                  Or Test Custom Inquiry:
+                  Or Try Your Own Question:
                 </span>
                 <form onSubmit={handleCustomSubmit} className="relative">
                   <input
@@ -244,12 +236,12 @@ export function AgentsSection() {
                     onChange={(e) => setCustomInput(e.target.value)}
                     placeholder={
                       selectedRole === "chatbot"
-                        ? "e.g. Can we lease contiguous floors in Q3?"
+                        ? "e.g. Do you offer weekend services and what are your rates?"
                         : selectedRole === "support"
-                        ? "e.g. How does cold-chain escalation work?"
+                        ? "e.g. How long does a typical project take?"
                         : selectedRole === "qualifier"
-                        ? "e.g. Series B company needing SOC2 audit in 4 months..."
-                        : "e.g. Summarize Project Meridian milestones..."
+                        ? "e.g. I need a quote for our 3-bedroom house..."
+                        : "e.g. Draft a quick quote follow-up email..."
                     }
                     className="w-full text-xs bg-surface-2 border border-white/15 rounded-lg px-3.5 py-3 text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 pr-10"
                   />
@@ -262,18 +254,18 @@ export function AgentsSection() {
                   </button>
                 </form>
                 <span className="text-[11px] text-slate-500 mt-1.5 block">
-                  Simulates agent intent extraction and policy compliance check.
+                  Simulates how the assistant formulates an accurate, friendly response.
                 </span>
               </div>
             </div>
 
             {/* Right Column: Execution Workflow Breakdown */}
             <div className="lg:col-span-7 rounded-xl border border-white/10 bg-surface-base p-5 space-y-5">
-              {/* Step 1: Intent Recognition */}
+              {/* Step 1: Topic Recognition */}
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-1.5">
-                  <span className="uppercase text-blue-400">Step 01 / Intent Classification</span>
-                  <span>Deterministic Rule Check</span>
+                  <span className="uppercase text-blue-400">Step 01 / Customer Topic</span>
+                  <span>Identified Intent</span>
                 </div>
                 <div className="p-2.5 rounded border border-white/10 bg-surface-2 text-xs font-mono text-slate-200">
                   {activeResponse.intent}
@@ -283,8 +275,8 @@ export function AgentsSection() {
               {/* Step 2: Internal Reasoning Steps */}
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-1.5">
-                  <span className="uppercase text-blue-400">Step 02 / Grounded Reasoning Trace</span>
-                  <span>RAG Knowledge Verification</span>
+                  <span className="uppercase text-blue-400">Step 02 / Business Knowledge Lookup</span>
+                  <span>Checked Against Real Info</span>
                 </div>
                 <div className="p-3 rounded border border-white/10 bg-surface-2/60 space-y-1.5 font-mono text-xs text-slate-300">
                   {activeResponse.reasoning.map((step, idx) => (
@@ -299,28 +291,28 @@ export function AgentsSection() {
               {/* Step 3: Synthesized Output */}
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-1.5">
-                  <span className="uppercase text-emerald-400">Step 03 / Client-Facing Output</span>
-                  <span>Brand Persona Applied</span>
+                  <span className="uppercase text-emerald-400">Step 03 / Response Sent to Customer</span>
+                  <span>Friendly &amp; Accurate</span>
                 </div>
                 <div className="p-4 rounded-lg border border-white/15 bg-surface-1 text-xs sm:text-sm text-slate-200 leading-relaxed whitespace-pre-line font-sans">
                   {activeResponse.answer}
                 </div>
               </div>
 
-              {/* Step 4: Action / CRM Payload */}
+              {/* Step 4: Action / Next Step */}
               <div className="pt-3 border-t border-white/10">
                 <div className="flex items-center justify-between text-[11px] font-mono text-slate-400 mb-2">
                   <span className="uppercase text-slate-300 font-semibold">
-                    Step 04 / Automated Business Action
+                    Step 04 / Next Step for Your Business
                   </span>
-                  <span className="text-emerald-400">Committed</span>
+                  <span className="text-emerald-400">Logged</span>
                 </div>
                 <div className="text-xs text-slate-400 mb-2">
                   {activeResponse.action}
                 </div>
 
                 {activeResponse.dataPayload && (
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-2 border-t border-white/5">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 pt-2 border-t border-white/5">
                     {Object.entries(activeResponse.dataPayload).map(([k, v]) => (
                       <div key={k} className="p-2 rounded bg-surface-2 border border-white/5">
                         <span className="text-[10px] font-mono text-slate-500 block">{k}</span>

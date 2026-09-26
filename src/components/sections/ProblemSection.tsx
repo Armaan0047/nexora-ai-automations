@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { PROBLEM_FRICTIONS } from "@/data/problemData";
-import { AlertCircle, ArrowRight, CheckCircle2, ShieldAlert } from "lucide-react";
+import { AlertCircle, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export function ProblemSection() {
   const [selectedId, setSelectedId] = useState<string>(PROBLEM_FRICTIONS[0].id);
@@ -15,9 +15,9 @@ export function ProblemSection() {
     <section className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-surface-1/40">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          eyebrow="OPERATIONAL REALITY"
-          title="The hidden friction of static web presence & manual workflows."
-          description="Most growing companies don't have a traffic problem; they have an operational bottleneck. Static websites treat high-intent visitors like passive readers, while internal teams drown in repetitive triage."
+          eyebrow="COMMON PROBLEMS"
+          title="The website and inquiry bottlenecks we fix for you."
+          description="Most businesses lose potential clients not because their service is bad, but because their website is hard to use, takes too long to respond, or makes contacting them difficult."
           className="mb-16"
         />
 
@@ -49,7 +49,7 @@ export function ProblemSection() {
                       {item.problemTitle}
                     </h4>
                     <span className="text-xs font-mono text-slate-500 mt-1 block">
-                      Click to inspect diagnostic
+                      Click to view solution
                     </span>
                   </div>
                 </button>
@@ -64,7 +64,7 @@ export function ProblemSection() {
               <div className="pb-6 border-b border-white/10">
                 <div className="flex items-center gap-2 text-amber-400 text-xs font-mono uppercase tracking-wider mb-2">
                   <AlertCircle className="w-4 h-4" />
-                  <span>The Legacy Bottleneck</span>
+                  <span>The Problem</span>
                 </div>
                 <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
                   {activeProblem.problemTitle}
@@ -73,7 +73,7 @@ export function ProblemSection() {
                   {activeProblem.symptom}
                 </p>
                 <div className="mt-4 p-3 rounded-lg border border-amber-500/20 bg-amber-500/[0.04] text-xs text-amber-200/90 leading-relaxed font-sans">
-                  <span className="font-semibold uppercase font-mono mr-1">Business Cost:</span>
+                  <span className="font-semibold uppercase font-mono mr-1">Why It Hurts Business:</span>
                   {activeProblem.businessCost}
                 </div>
               </div>
@@ -82,25 +82,25 @@ export function ProblemSection() {
               <div className="pt-6">
                 <div className="flex items-center gap-2 text-blue-400 text-xs font-mono uppercase tracking-wider mb-2">
                   <CheckCircle2 className="w-4 h-4" />
-                  <span>Nexora Architectural Resolution</span>
+                  <span>How Nexora Solves It</span>
                 </div>
                 <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
                   {activeProblem.nexoraSolution}
                 </p>
                 <div className="mt-4 p-3 rounded-lg border border-blue-500/20 bg-blue-500/[0.04] text-xs text-blue-200/90 leading-relaxed font-sans">
-                  <span className="font-semibold uppercase font-mono mr-1">Outcome:</span>
+                  <span className="font-semibold uppercase font-mono mr-1">The Result:</span>
                   {activeProblem.solutionOutcome}
                 </div>
               </div>
             </div>
 
             <div className="mt-8 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-slate-500">
-              <span>Diagnostic Ref: {activeProblem.id}</span>
+              <span>Topic: {activeProblem.id}</span>
               <a
                 href="#consultation"
                 className="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center gap-1"
               >
-                <span>Resolve in your business</span>
+                <span>Fix this for your business</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>

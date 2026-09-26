@@ -2,7 +2,7 @@ import React from "react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { SystemVisual } from "./SystemVisual";
-import { Shield, Sparkles, Terminal } from "lucide-react";
+import { Globe, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
@@ -15,20 +15,20 @@ export function Hero() {
             {/* Eyebrow badge */}
             <div className="mb-6">
               <Badge variant="accent">
-                <Terminal className="w-3 h-3 text-blue-400" />
-                <span>AI ENGINEERING & BESPOKE ARCHITECTURE</span>
+                <Globe className="w-3 h-3 text-blue-400" />
+                <span>WEBSITES • AI CHATBOTS • AUTOMATION</span>
               </Badge>
             </div>
 
             {/* Display Headline */}
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight text-white leading-[1.06] font-sans">
-              AI Systems. <br />
+              Modern Websites. <br />
               <span className="text-slate-300">Automated Growth.</span>
             </h1>
 
             {/* Supporting Copy */}
             <p className="mt-6 text-lg sm:text-xl text-slate-400 leading-relaxed max-w-2xl font-normal">
-              Nexora engineers custom, high-performance websites and intelligent AI agents for modern businesses. We replace static web presences and manual human triage with autonomous digital engines tailored to your exact operations.
+              We build fast, modern business websites, upgrade existing sites, add helpful AI chatbots, connect WhatsApp, and automate everyday workflows to help you win more customers.
             </p>
 
             {/* Dual CTAs */}
@@ -39,7 +39,7 @@ export function Hero() {
                 withArrow
                 href="#consultation"
               >
-                Build With Nexora
+                Start Your Project
               </Button>
               <Button
                 variant="secondary"
@@ -50,27 +50,27 @@ export function Hero() {
               </Button>
             </div>
 
-            {/* Qualitative Credibility Indicators */}
+            {/* Practical Indicators */}
             <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full">
               <div className="flex flex-col">
-                <span className="text-xs font-mono uppercase text-slate-500">Business Model</span>
+                <span className="text-xs font-mono uppercase text-slate-500">Core Services</span>
+                <span className="text-sm font-medium text-slate-200 mt-1">Websites & Redesigns</span>
+                <span className="text-xs text-slate-400 mt-0.5">Fast, responsive & custom</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs font-mono uppercase text-slate-500">Smart Features</span>
+                <span className="text-sm font-medium text-slate-200 mt-1">AI Chat & WhatsApp</span>
+                <span className="text-xs text-slate-400 mt-0.5">Easy for clients to reach you</span>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xs font-mono uppercase text-slate-500">How We Work</span>
                 <span className="text-sm font-medium text-slate-200 mt-1">Requirement-Based</span>
-                <span className="text-xs text-slate-400 mt-0.5">No rigid packages</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xs font-mono uppercase text-slate-500">Target Market</span>
-                <span className="text-sm font-medium text-slate-200 mt-1">Industry-Agnostic</span>
-                <span className="text-xs text-slate-400 mt-0.5">Bespoke integrations</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xs font-mono uppercase text-slate-500">Engineering</span>
-                <span className="text-sm font-medium text-slate-200 mt-1">Grounded Runtimes</span>
-                <span className="text-xs text-slate-400 mt-0.5">Deterministic guardrails</span>
+                <span className="text-xs text-slate-400 mt-0.5">Tailored to your needs</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Functional System Architecture Visual */}
+          {/* Right Column: Functional Interactive Demo Visual */}
           <div className="lg:col-span-5 w-full">
             <SystemVisual />
           </div>

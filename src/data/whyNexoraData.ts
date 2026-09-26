@@ -9,56 +9,56 @@ export interface ValuePrinciple {
 export const WHY_NEXORA_PRINCIPLES: ValuePrinciple[] = [
   {
     id: "tailored-engineering",
-    pillar: "Requirement-Based Architecture",
-    headline: "Engineered For Your Specific Operations, Never Predefined Packages",
+    pillar: "Custom to Your Needs",
+    headline: "Built for Your Exact Requirements, Not Cookie-Cutter Packages",
     elaboration:
-      "Most digital agencies force clients into rigid Bronze/Silver/Gold tiers or generic CMS templates. Nexora starts from your actual business bottlenecks, data architecture, and commercial objectives. The solution is shaped by your requirements, and the quotation reflects only what your business genuinely needs.",
+      "We don't force you into rigid tiers or generic templates. We listen to what your business actually needs—whether that's a clean 3-page website, a high-converting landing page, or WhatsApp and AI chat tools.",
     practicalApplication:
-      "We design custom workflows, bespoke data connectors, and targeted interfaces rather than shoehorning your business into off-the-shelf templates.",
+      "You only pay for what your business actually needs, with no unnecessary extras.",
   },
   {
     id: "modern-tech",
-    pillar: "Production Technology Stack",
-    headline: "Built With Enterprise-Grade React, Next.js, and Strict Type Safety",
+    pillar: "Fast & Mobile-Friendly",
+    headline: "Clean, Modern Websites That Look Sharp on Every Screen",
     elaboration:
-      "We write clean, modular, maintainable code using the modern TypeScript and Next.js ecosystem. We avoid bloated drag-and-drop page builders that generate messy markup, slow down loading times, and degrade over time.",
+      "Most customers will view your website on a mobile phone. We build fast, responsive websites that load immediately, look professional, and make reading and navigating effortless.",
     practicalApplication:
-      "Your website and agent layers load instantaneously, maintain clean separation of concerns, and remain easy to scale as your operations expand.",
+      "A fast, modern experience that immediately builds trust with potential clients.",
   },
   {
-    id: "intelligent-ux",
-    pillar: "Purposeful Interaction Design",
-    headline: "Interfaces That Guide Decisions Instead of Showing Decorative Fluff",
+    id: "easy-contact",
+    pillar: "Easy Customer Contact",
+    headline: "Convenient Ways for Customers to Reach Out Immediately",
     elaboration:
-      "Every layout decision, typography choice, and interactive component exists to solve a communication or conversion problem. We design clear information hierarchy, calm dark surfaces, and frictionless inquiry pathways that respect your visitors' time.",
+      "Whether your clients prefer calling, filling a simple quote form, or chatting directly on WhatsApp, we make getting in touch completely frictionless so you don't lose interested buyers.",
     practicalApplication:
-      "Visitors understand your value proposition within seconds and can immediately take action or initiate an intelligent consultation.",
+      "More visitors convert into actual conversations, phone calls, and quote requests.",
   },
   {
-    id: "deterministic-agents",
-    pillar: "Brand Safety & Grounded AI",
-    headline: "Deterministic Guardrails That Eliminate Hallucinations",
+    id: "reliable-ai",
+    pillar: "Accurate AI & FAQ Tools",
+    headline: "Smart Features That Give Reliable Answers Every Time",
     elaboration:
-      "Deploying conversational AI to customer-facing channels requires strict reliability. We implement retrieval-augmented generation (RAG) and deterministic context boundaries so agents only answer with verified facts and escalate gracefully when uncertain.",
+      "When we set up AI assistants or customer FAQ pages, they are configured strictly with your verified business hours, services, and prices so customers always receive accurate information.",
     practicalApplication:
-      "Your brand reputation is safeguarded: prospective clients receive precise, cited answers rather than speculative or fabricated responses.",
+      "Helpful 24/7 customer support that represents your business accurately.",
   },
   {
-    id: "business-first",
-    pillar: "Commercial Alignment",
-    headline: "Focused on Measurable Business Leverage and ROI",
+    id: "practical-results",
+    pillar: "Real Business Value",
+    headline: "Focused on Bringing In Customers and Saving You Time",
     elaboration:
-      "Technology is an operational lever, not an end in itself. We measure our engineering success by tangible outcomes: captured inbound demand, reduced administrative drag on senior personnel, and faster lead-to-consultation cycles.",
+      "A good website should help you grow. We focus on clear service explanations, easy contact buttons, and simple automations that handle routine inquiries so you can focus on running your business.",
     practicalApplication:
-      "We build systems that generate clear operational value from day one and can be verified against your actual business metrics.",
+      "More qualified customer inquiries with less time spent answering repetitive questions.",
   },
   {
-    id: "code-ownership",
-    pillar: "Full Ownership & Transparency",
-    headline: "You Own Your Intellectual Property, Codebase, and Data",
+    id: "full-ownership",
+    pillar: "100% Ownership",
+    headline: "You Own Your Website and Content Completely",
     elaboration:
-      "We do not lock your business into proprietary agency platforms or hidden monthly licensing traps. You receive full access to your production codebase, design tokens, and integration documentation.",
+      "We believe in complete transparency. Once your website is delivered, you own all the code, design, and content. No proprietary platform lock-in or hidden licensing fees.",
     practicalApplication:
-      "Complete autonomy: your internal engineers or future partners can maintain and extend the codebase without external dependency.",
+      "Complete freedom, independence, and full control over your digital assets.",
   },
 ];

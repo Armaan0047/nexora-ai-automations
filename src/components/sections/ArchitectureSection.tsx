@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ARCHITECTURE_PIPELINE } from "@/data/architectureData";
-import { ArrowDown, ArrowRight, CheckCircle2, ChevronRight, Layers } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronRight } from "lucide-react";
 
 export function ArchitectureSection() {
   const [activeStepIndex, setActiveStepIndex] = useState<number>(0);
@@ -14,9 +14,9 @@ export function ArchitectureSection() {
     <section id="architecture" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          eyebrow="SYSTEM TOPOLOGY"
-          title="How Nexora digital engines connect and operate."
-          description="A transparent architectural map of how our software connects your real-world business objectives, frontend web touchpoints, intelligent agent layers, and CRM tooling into an automated system."
+          eyebrow="HOW IT CONNECTS"
+          title="How our website and digital solutions work together."
+          description="A clear, simple view of how we connect your business goals, modern web pages, WhatsApp options, and automated tools into an easy system that works for you."
           className="mb-16"
         />
 
@@ -48,7 +48,7 @@ export function ArchitectureSection() {
                       </span>
                       <div>
                         <span className="text-xs font-mono uppercase text-slate-500 block">
-                          Stage {node.index}
+                          Step {node.index}
                         </span>
                         <h4
                           className={`text-sm sm:text-base font-medium tracking-tight ${
@@ -81,7 +81,7 @@ export function ArchitectureSection() {
               <div className="flex items-center justify-between pb-4 border-b border-white/10">
                 <div className="flex items-center gap-2">
                   <span className="text-xs font-mono text-blue-400 uppercase font-semibold">
-                    Node {activeNode.index} Inspection
+                    Step {activeNode.index} Breakdown
                   </span>
                 </div>
                 <span className="text-xs font-mono text-slate-400">
@@ -99,7 +99,7 @@ export function ArchitectureSection() {
 
               <div className="mt-6 pt-6 border-t border-white/10 space-y-3">
                 <span className="text-xs font-mono uppercase text-slate-400 block font-medium">
-                  Architectural Capabilities:
+                  What This Includes:
                 </span>
                 {activeNode.technicalCapabilities.map((cap, cIdx) => (
                   <div key={cIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
@@ -113,7 +113,7 @@ export function ArchitectureSection() {
             <div className="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <span className="text-[11px] font-mono text-slate-500 uppercase block">
-                  Core Artifact:
+                  Deliverable:
                 </span>
                 <span className="text-xs font-mono text-emerald-400">
                   {activeNode.keyDeliverable}
@@ -123,7 +123,7 @@ export function ArchitectureSection() {
                 href="#consultation"
                 className="text-xs font-mono uppercase text-blue-400 hover:text-blue-300 inline-flex items-center gap-1"
               >
-                <span>Architect your flow</span>
+                <span>Discuss your project</span>
                 <ArrowRight className="w-3 h-3" />
               </a>
             </div>

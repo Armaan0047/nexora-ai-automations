@@ -5,25 +5,27 @@ export const SCHEMA_ORGANIZATION = {
   "legalName": "Nexora Technologies",
   "url": "https://nexora.systems",
   "logo": "https://nexora.systems/nexora-icon.png",
-  "description": "Nexora engineers custom AI websites and intelligent AI agents for modern businesses.",
-  "slogan": "AI Systems. Automated Growth.",
+  "description": "Nexora builds custom modern websites, landing pages, AI chatbots, and business automation.",
+  "slogan": "Modern Websites. Automated Growth.",
   "email": "ai.nexora.automations@gmail.com",
   "sameAs": [],
   "knowsAbout": [
-    "AI Websites",
-    "Conversational AI Agents",
-    "Customer Support Automation",
-    "Lead Qualification Systems",
-    "Next.js Software Engineering"
+    "Business Websites",
+    "Website Development",
+    "Landing Pages",
+    "Website Redesigns",
+    "Website AI Chatbots",
+    "WhatsApp Integration",
+    "Business Automation"
   ]
 };
 
 export const SCHEMA_WEBSITE = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "NEXORA - AI Systems & Modern Web Platforms",
+  "name": "NEXORA - Modern Websites & Digital Solutions",
   "url": "https://nexora.systems",
-  "description": "Official website for Nexora, engineering custom AI websites and autonomous business agents.",
+  "description": "Official website for Nexora, building modern business websites, landing pages, AI chatbots, and digital solutions.",
   "publisher": {
     "@type": "Organization",
     "name": "NEXORA"
@@ -34,22 +36,22 @@ export const SCHEMA_SERVICES = [
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "AI Website Engineering",
+    "serviceType": "Business Website Development",
     "provider": {
       "@type": "Organization",
       "name": "NEXORA"
     },
-    "description": "Custom business websites, landing pages, and architectural redesigns built with Next.js and React."
+    "description": "Custom business websites, high-converting landing pages, portfolio sites, and complete website redesigns."
   },
   {
     "@context": "https://schema.org",
     "@type": "Service",
-    "serviceType": "AI Agent Development",
+    "serviceType": "AI & Digital Solutions",
     "provider": {
       "@type": "Organization",
       "name": "NEXORA"
     },
-    "description": "Autonomous website chatbots, 24/7 customer support agents, lead qualification pipelines, and internal business assistants."
+    "description": "Website AI chatbots, 24/7 customer support assistants, direct WhatsApp integration, and business automation."
   }
 ];
 

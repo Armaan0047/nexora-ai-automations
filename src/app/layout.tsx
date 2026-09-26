@@ -27,21 +27,22 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "NEXORA | AI Systems. Automated Growth.",
+  title: "NEXORA | Modern Websites & AI Solutions",
   description:
-    "Nexora engineers custom, high-performance websites and intelligent AI agents for modern businesses. Requirement-based software solutions designed around your exact operational needs.",
+    "Nexora builds modern business websites, landing pages, website redesigns, AI chatbots, and business automation. Requirement-based solutions with no rigid packages.",
   keywords: [
-    "AI Systems",
-    "AI Websites",
-    "AI Agents",
+    "Business Websites",
+    "Website Development",
+    "Landing Pages",
+    "Website Redesign",
     "Website AI Chatbots",
+    "WhatsApp Website Integration",
     "Customer Support AI",
-    "Lead Qualification Agent",
-    "Internal Business Assistants",
+    "FAQ Systems",
+    "Business Automation",
     "Next.js Development",
-    "Custom Software Engineering",
   ],
-  authors: [{ name: "Nexora Technologies" }],
+  authors: [{ name: "Nexora" }],
   creator: "Nexora",
   publisher: "Nexora",
   metadataBase: new URL("https://nexora.systems"),
@@ -50,15 +51,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://nexora.systems",
     siteName: "NEXORA",
-    title: "NEXORA | AI Systems. Automated Growth.",
+    title: "NEXORA | Modern Websites & AI Solutions",
     description:
-      "Nexora engineers custom, high-performance websites and intelligent AI agents for modern businesses.",
+      "Modern business websites, landing pages, redesigns, AI chatbots, and business automation tailored to your exact requirements.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NEXORA - AI Systems. Automated Growth.",
+        alt: "NEXORA - Modern Websites & AI Solutions",
       },
     ],
   },

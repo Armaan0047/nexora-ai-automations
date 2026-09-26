@@ -8,9 +8,9 @@ export function SolutionsMatrix() {
     <section className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-surface-1/30">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          eyebrow="UNIFIED ENGAGEMENT"
-          title="Combining websites and intelligent agents into a cohesive system."
-          description="Nexora is industry-agnostic. We blend our core disciplines—modern web interfaces and autonomous AI agents—into a unified growth engine configured around your operational workflow."
+          eyebrow="REAL-WORLD EXAMPLES"
+          title="How websites and smart tools work together for your business."
+          description="Nexora works with businesses across many industries. Here is how a modern, high-converting website paired with smart contact and AI features solves everyday business challenges."
           className="mb-16"
         />
 
@@ -26,8 +26,8 @@ export function SolutionsMatrix() {
                   <h3 className="text-lg font-semibold text-white tracking-tight">
                     {item.industryProfile}
                   </h3>
-                  <span className="text-[10px] font-mono text-slate-500 uppercase px-2 py-0.5 rounded border border-white/10">
-                    Combined Engine
+                  <span className="text-[10px] font-mono text-slate-400 uppercase px-2 py-0.5 rounded border border-white/10">
+                    Website + Tools
                   </span>
                 </div>
 
@@ -41,7 +41,7 @@ export function SolutionsMatrix() {
                     <Globe className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                     <div>
                       <span className="text-[11px] font-mono text-blue-400 uppercase block font-medium">
-                        Website Layer:
+                        Website:
                       </span>
                       <span className="text-xs text-slate-300 leading-relaxed block mt-0.5">
                         {item.websiteComponent}
@@ -57,7 +57,7 @@ export function SolutionsMatrix() {
                     <Bot className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
                     <div>
                       <span className="text-[11px] font-mono text-blue-400 uppercase block font-medium">
-                        Agent Layer:
+                        Smart Tools & Chat:
                       </span>
                       <span className="text-xs text-slate-300 leading-relaxed block mt-0.5">
                         {item.agentComponent}
@@ -70,7 +70,7 @@ export function SolutionsMatrix() {
               {/* Unified Outcome */}
               <div className="mt-6 pt-4 border-t border-white/10">
                 <span className="text-[11px] font-mono uppercase text-emerald-400 block font-semibold mb-1">
-                  Unified Operational Leverage:
+                  What This Delivers:
                 </span>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
                   {item.unifiedOutcome}
@@ -83,12 +83,12 @@ export function SolutionsMatrix() {
         {/* Custom Combination Prompt */}
         <div className="mt-12 text-center">
           <p className="text-sm text-slate-400">
-            Have an operational workflow not listed here?{" "}
+            Need something specific for your business?{" "}
             <a
               href="#consultation"
               className="text-white hover:text-blue-400 font-medium underline underline-offset-4 inline-flex items-center gap-1 ml-1"
             >
-              <span>Scope a bespoke system with our engineers</span>
+              <span>Tell us about your project requirements</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </p>

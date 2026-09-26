@@ -11,62 +11,62 @@ export interface MethodologyStep {
 export const METHODOLOGY_STEPS: MethodologyStep[] = [
   {
     phaseNumber: "01",
-    name: "Discover & Diagnose",
-    tagline: "Uncovering Bottlenecks & Strategic Objectives",
-    durationGuideline: "Initial Scoping & Requirements Review",
+    name: "Discover & Understand",
+    tagline: "Understanding Your Business & Goals",
+    durationGuideline: "Initial Consultation",
     whatHappens:
-      "We begin with a structured technical consultation. Rather than pitching rigid packages, we analyze your current website performance, lead conversion friction, and internal support overhead.",
+      "We discuss what your business does, who your target customers are, and what you need your website to do. No complicated jargon—just a clear conversation about your goals and requirements.",
     clientCommitment:
-      "A 45-minute technical discovery session and access to existing documentation or touchpoints.",
+      "A quick 30-minute chat or call to discuss your project.",
     outcomes: [
-      "Documented friction points across current customer journeys",
-      "Definition of target customer profiles and qualification parameters",
-      "Comprehensive requirements brief with clear scope boundaries",
+      "Clear understanding of your services and target audience",
+      "List of pages, sections, and features you need",
+      "Clear, transparent project estimate with no surprises",
     ],
   },
   {
     phaseNumber: "02",
-    name: "Architect & Model",
-    tagline: "System Design & Interaction Blueprinting",
-    durationGuideline: "Architecture & Wireframing",
+    name: "Plan & Structure",
+    tagline: "Layout, Design & Content Setup",
+    durationGuideline: "Design & Content",
     whatHappens:
-      "We design the complete system blueprint: information architecture, typographic hierarchy, responsive layouts, data flow diagrams, agent system prompts, and CRM integration pathways.",
+      "We plan the layout of your pages, prepare clear content for your services, and map out helpful features like WhatsApp buttons, contact forms, or FAQ sections.",
     clientCommitment:
-      "Collaborative review of wireframes, agent persona guidelines, and system integration specs.",
+      "Sharing your logo, photos, and any specific business details.",
     outcomes: [
-      "Full interactive wireframes and component design tokens",
-      "Agent persona rules, response guidelines, and guardrail definitions",
-      "API data schema and integration mapping for third-party tooling",
+      "Clear visual plan of your website layout",
+      "Structured service descriptions and FAQ content",
+      "Confirmed contact and WhatsApp button placements",
     ],
   },
   {
     phaseNumber: "03",
-    name: "Engineer & Validate",
-    tagline: "Production Build with Strict Code Standards",
-    durationGuideline: "Frontend & Agent Development",
+    name: "Build & Integrate",
+    tagline: "Developing the Website & Adding Features",
+    durationGuideline: "Development & Testing",
     whatHappens:
-      "We engineer the production codebase using modern React and Next.js, implement strict type safety, configure agent reasoning pipelines, and integrate bidirectional data webhooks.",
+      "We build your website with clean, modern code, ensuring it looks sharp and loads quickly on phones and computers. We set up all forms, WhatsApp buttons, and AI features.",
     clientCommitment:
-      "Periodic milestone demonstrations and validation of live preview environments.",
+      "Testing the private preview link on your phone to give feedback.",
     outcomes: [
-      "Production-ready Next.js codebase adhering to WCAG 2.2 standards",
-      "Grounded AI agent runtime tested across real customer scenarios",
-      "Live staging environment accessible for stakeholder testing",
+      "Complete, fast-loading website optimized for mobile",
+      "Tested contact forms and working WhatsApp links",
+      "Private staging link for your review and approval",
     ],
   },
   {
     phaseNumber: "04",
     name: "Launch & Support",
-    tagline: "Deployment, Telemetry & Continuous Refinement",
-    durationGuideline: "Production Rollout & Review",
+    tagline: "Going Live & Easy Ownership",
+    durationGuideline: "Go-Live & Support",
     whatHappens:
-      "We deploy to global edge infrastructure, verify production telemetry, confirm DNS and SSL configurations, and provide comprehensive walkthroughs for your team.",
+      "We connect your website to your domain, test everything live on the web, and make sure new inquiries arrive smoothly to your email or WhatsApp.",
     clientCommitment:
-      "Go-live approval, DNS record pointing, and team onboarding session.",
+      "Giving final go-ahead and pointing your domain name.",
     outcomes: [
-      "Zero-downtime production deployment on edge infrastructure",
-      "Integrated error monitoring and performance telemetry",
-      "Complete code repository handover and operational training",
+      "Live website running securely with fast loading",
+      "Instant inquiry alerts sent straight to your phone or inbox",
+      "100% ownership of your website and peace of mind",
     ],
   },
 ];

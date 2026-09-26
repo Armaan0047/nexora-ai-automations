@@ -8,15 +8,15 @@ export function HowItWorks() {
     <section id="how-it-works" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          eyebrow="ENGINEERING PROTOCOL"
-          title="A transparent, requirement-driven engagement model."
-          description="We guide your project through a structured 4-phase delivery protocol. You maintain direct visibility into architecture decisions, codebase milestones, and testing environments from kickoff to deployment."
+          eyebrow="OUR PROCESS"
+          title="A simple, straightforward way to get your website live."
+          description="We keep the process transparent and easy from our first conversation to launch day. You always know what is happening and what comes next."
           className="mb-16"
         />
 
         {/* 4-Stage Editorial Sequence Track */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {METHODOLOGY_STEPS.map((step, idx) => (
+          {METHODOLOGY_STEPS.map((step) => (
             <div
               key={step.phaseNumber}
               className="flex flex-col justify-between pt-6 border-t border-white/15 relative group"
@@ -45,7 +45,7 @@ export function HowItWorks() {
 
                 <div className="mt-6 pt-4 border-t border-white/10 space-y-2">
                   <span className="text-[11px] font-mono uppercase text-slate-400 block font-medium">
-                    Verified Outcomes:
+                    What You Receive:
                   </span>
                   {step.outcomes.map((outcome, oIdx) => (
                     <div key={oIdx} className="flex items-start gap-2 text-xs text-slate-300">
@@ -58,7 +58,7 @@ export function HowItWorks() {
 
               <div className="mt-8 pt-4 border-t border-white/5 text-xs text-slate-400">
                 <span className="font-mono text-slate-300 block font-semibold mb-0.5">
-                  Client Collaboration:
+                  Your Role:
                 </span>
                 {step.clientCommitment}
               </div>
@@ -70,17 +70,17 @@ export function HowItWorks() {
         <div className="mt-16 p-6 rounded-xl border border-white/10 bg-surface-1 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div className="flex flex-col">
             <span className="text-sm font-semibold text-white">
-              Direct Technical Collaboration
+              Direct, Clear Communication
             </span>
             <span className="text-xs text-slate-400 mt-0.5">
-              You communicate directly with the engineers architecting your system, avoiding agency account management telephone games.
+              You speak directly with the people building your site, ensuring your ideas and feedback are implemented accurately.
             </span>
           </div>
           <a
             href="#consultation"
             className="text-xs font-mono uppercase tracking-wider text-blue-400 hover:text-blue-300 inline-flex items-center gap-1.5 shrink-0"
           >
-            <span>Review consultation scope</span>
+            <span>Start a project consultation</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
         </div>

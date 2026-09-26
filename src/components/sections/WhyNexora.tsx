@@ -8,13 +8,13 @@ export function WhyNexora() {
     <section className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10 bg-surface-1/40">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          eyebrow="TECHNICAL & COMMERCIAL RIGOR"
-          title="Why companies build custom systems with Nexora."
-          description="We reject generic templates, off-the-shelf wrappers, and forced service tiers. Our practice is built around six engineering commitments designed to protect your brand and maximize operational leverage."
+          eyebrow="WHY WORK WITH US"
+          title="Why businesses choose Nexora for their websites & digital solutions."
+          description="We don't use generic cookie-cutter templates or force you into rigid packages. We build clean, modern websites and practical digital tools designed around your specific business goals."
           className="mb-16"
         />
 
-        {/* 6 Engineering Principles Grid (Clean 3-column editorial format) */}
+        {/* 6 Core Principles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {WHY_NEXORA_PRINCIPLES.map((principle, idx) => (
             <div
@@ -23,8 +23,8 @@ export function WhyNexora() {
             >
               <div>
                 <div className="flex items-center justify-between mb-3 text-xs font-mono text-slate-500">
-                  <span>0{idx + 1} // STANDARD</span>
-                  <span className="text-blue-400 font-medium">Verified</span>
+                  <span>0{idx + 1} // ADVANTAGE</span>
+                  <span className="text-blue-400 font-medium">Standard</span>
                 </div>
 
                 <span className="text-xs font-mono uppercase tracking-wider text-blue-400 block mb-1">

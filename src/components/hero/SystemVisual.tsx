@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ArrowRight, CheckCircle2, Cpu, Globe, Layers, ShieldCheck, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle2, MessageSquare, Globe, Smartphone, ShieldCheck, Zap } from "lucide-react";
 
 interface WorkflowMode {
   id: string;
@@ -16,39 +16,39 @@ interface WorkflowMode {
 
 const WORKFLOW_MODES: WorkflowMode[] = [
   {
-    id: "consultation",
-    name: "Inbound Prospect Flow",
-    inputLabel: "High-Intent Visitor Traffic",
-    inputSample: "Prospective client inquiring about custom web architecture and AI support integration",
-    coreProcess: "Intent Extraction & Scope Triage",
-    guardrails: "ICP Qualification & Budget Validation",
-    outputSummary: "Structured Scope Dossier & Calendar Slot Reserved",
-    destinations: ["Executive CRM Pipeline", "Director Calendar", "Requirements Brief"],
+    id: "lead",
+    name: "Website & WhatsApp",
+    inputLabel: "Visitor on Your Website",
+    inputSample: "A potential customer visits your site looking for pricing and services",
+    coreProcess: "Instant Contact & WhatsApp Link",
+    guardrails: "One-click chat or simple inquiry form",
+    outputSummary: "Customer Reaches You Directly",
+    destinations: ["Direct WhatsApp Message", "Instant Email Alert", "Client Phone Call"],
   },
   {
     id: "support",
-    name: "Customer Support Triage",
-    inputLabel: "Active Client SLA Inquiry",
-    inputSample: "Enterprise customer requesting protocol clarification on data boundaries",
-    coreProcess: "RAG Knowledge Base Verification",
-    guardrails: "Deterministic Context Bounds (No Hallucination)",
-    outputSummary: "Verified Technical Answer with Direct Citations",
-    destinations: ["Client Portal Feed", "Resolution Audit Log", "Support Dispatch"],
+    name: "24/7 AI Support & FAQ",
+    inputLabel: "After-Hours Customer Question",
+    inputSample: "Customer asks about your service details or business hours at 10 PM",
+    coreProcess: "Accurate FAQ & AI Response",
+    guardrails: "Trained on your real business information",
+    outputSummary: "Instant Answer Without Waiting",
+    destinations: ["Immediate Chat Reply", "Support Log", "Staff Alert if Needed"],
   },
   {
-    id: "operations",
-    name: "Internal Knowledge Query",
-    inputLabel: "Operational Team Request",
-    inputSample: "Team member querying deployment SOPs for multi-region cloud staging",
-    coreProcess: "Repository Indexing & Synthesized Memo",
-    guardrails: "Role-Based Access Enforcement",
-    outputSummary: "Synthesized Action Checklist & Document Links",
-    destinations: ["Internal Slack/Teams", "Engineering Archive", "Project Workspace"],
+    id: "booking",
+    name: "Automated Bookings",
+    inputLabel: "Client Requesting a Consultation",
+    inputSample: "Client fills a quick form to schedule a call or request a quote",
+    coreProcess: "Automatic Scheduling & Intake",
+    guardrails: "Collects key details upfront",
+    outputSummary: "Meeting Booked on Your Calendar",
+    destinations: ["Calendar Invitation", "Confirmation Email", "Client Contact Details"],
   },
 ];
 
 export function SystemVisual() {
-  const [activeWorkflow, setActiveWorkflow] = useState<string>("consultation");
+  const [activeWorkflow, setActiveWorkflow] = useState<string>("lead");
 
   const current =
     WORKFLOW_MODES.find((m) => m.id === activeWorkflow) || WORKFLOW_MODES[0];
@@ -60,10 +60,10 @@ export function SystemVisual() {
         <div className="flex items-center gap-2">
           <div className="w-2 h-2 rounded-full bg-blue-500" />
           <span className="text-xs font-mono uppercase tracking-wider text-slate-300">
-            Architecture Blueprint
+            How It Works
           </span>
           <span className="text-[10px] font-mono text-slate-500 px-2 py-0.5 rounded border border-white/5 bg-white/[0.02]">
-            Concept Preview
+            Interactive Demo
           </span>
         </div>
 
@@ -84,14 +84,14 @@ export function SystemVisual() {
         </div>
       </div>
 
-      {/* Connected Architecture Flow: 3 Stages */}
+      {/* Connected Flow: 3 Simple Stages */}
       <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* Stage 1: Ingestion */}
+        {/* Stage 1: Visitor Arrival */}
         <div className="rounded-xl border border-white/10 bg-surface-2/70 p-4 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-3">
               <span className="text-[11px] font-mono text-slate-500 uppercase">
-                01 / Ingestion
+                01 / Step One
               </span>
               <Globe className="w-4 h-4 text-slate-400" />
             </div>
@@ -105,18 +105,18 @@ export function SystemVisual() {
 
           <div className="mt-4 pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-mono text-slate-500">
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
-            <span>Encrypted Webhook Stream</span>
+            <span>Fast, Mobile-Friendly Website</span>
           </div>
         </div>
 
-        {/* Stage 2: Nexora Core Intelligence */}
+        {/* Stage 2: Smart Feature / Assistant */}
         <div className="rounded-xl border border-blue-500/30 bg-surface-2/90 p-4 flex flex-col justify-between relative shadow-sm">
           <div>
             <div className="flex items-center justify-between mb-3">
               <span className="text-[11px] font-mono text-blue-400 uppercase font-medium">
-                02 / Nexora Agent Core
+                02 / Smart Feature
               </span>
-              <Cpu className="w-4 h-4 text-blue-400" />
+              <MessageSquare className="w-4 h-4 text-blue-400" />
             </div>
             <h4 className="text-sm font-semibold text-white">
               {current.coreProcess}
@@ -127,24 +127,24 @@ export function SystemVisual() {
                 <span>{current.guardrails}</span>
               </div>
               <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                <Layers className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                <span>Deterministic Context Matching</span>
+                <Smartphone className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                <span>Works on phones and computers</span>
               </div>
             </div>
           </div>
 
           <div className="mt-4 pt-3 border-t border-white/10 flex items-center gap-1.5 text-[11px] font-mono text-blue-400">
             <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-            <span>Active Pipeline Execution</span>
+            <span>Active &amp; Ready 24/7</span>
           </div>
         </div>
 
-        {/* Stage 3: Operational Destination */}
+        {/* Stage 3: Direct Result */}
         <div className="rounded-xl border border-white/10 bg-surface-2/70 p-4 flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-3">
               <span className="text-[11px] font-mono text-slate-500 uppercase">
-                03 / Business Outcome
+                03 / Result
               </span>
               <CheckCircle2 className="w-4 h-4 text-emerald-400" />
             </div>
@@ -167,18 +167,18 @@ export function SystemVisual() {
 
           <div className="mt-4 pt-3 border-t border-white/5 flex items-center gap-1.5 text-[11px] font-mono text-emerald-400">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-            <span>Action Committed</span>
+            <span>More Customers &amp; Less Busywork</span>
           </div>
         </div>
       </div>
 
-      {/* Baseline Architectural Note */}
+      {/* Baseline Practical Note */}
       <div className="mt-5 pt-4 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-slate-400">
         <span className="flex items-center gap-2">
           <Zap className="w-3.5 h-3.5 text-blue-400" />
-          <span>Every system is engineered from client requirements—never generic templates.</span>
+          <span>Every feature is tailored to what your business actually needs.</span>
         </span>
-        <span className="font-mono text-slate-500">React 19 • Next.js • Type-Safe Runtimes</span>
+        <span className="font-mono text-slate-500">Fast • Modern • Easy to Use</span>
       </div>
     </div>
   );

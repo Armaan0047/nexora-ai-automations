@@ -10,125 +10,125 @@ export interface ServiceDetail {
 export const WEBSITE_SERVICES: ServiceDetail[] = [
   {
     id: "business-websites",
-    title: "Enterprise & Business Websites",
-    badge: "Digital Flagship",
+    title: "Company & Business Websites",
+    badge: "Business Websites",
     summary:
-      "Modern, authoritative digital homes engineered with production React and Next.js architectures. Built to establish market credibility, present complex offerings with clarity, and maintain optimal performance.",
+      "Clean, modern, and mobile-friendly websites designed to showcase your company, establish credibility, and clearly explain your services to prospective clients.",
     deliverables: [
-      "Custom responsive interface architecture (desktop, tablet, mobile)",
-      "Strict semantic HTML5 structure with WCAG 2.2 accessibility",
-      "Dynamic content management integration & modular components",
-      "Production-grade technical SEO, OpenGraph, and structured schema",
+      "Modern responsive design that looks great on phones, tablets, and computers",
+      "Clear service pages, company overview, and team presentation",
+      "Simple contact options, location maps, and business hours",
+      "Fast page loading speeds and built-in search engine optimization (SEO)",
     ],
     operationalImpact:
-      "Positions your company as an industry leader with an interface that reflects genuine technical competence.",
+      "Gives your company an impressive online home that earns instant trust from potential customers.",
   },
   {
     id: "landing-pages",
-    title: "High-Conversion Landing Pages",
-    badge: "Conversion Engine",
+    title: "High-Converting Landing Pages",
+    badge: "Landing Pages",
     summary:
-      "Laser-focused campaign pages built for dedicated traffic acquisition. Eliminates navigation distractions and guides visitors through clear value propositions directly into action.",
+      "Focused single-page websites engineered to turn visitors into phone calls, quote requests, or booked consultations for specific services or campaigns.",
     deliverables: [
-      "Targeted typographic hierarchy and conversion-first narrative flow",
-      "Lightweight, optimized asset pipeline for instant first-contentful paint",
-      "Integrated telemetry hooks for tracking real user engagement",
-      "Frictionless multi-step lead capture and consultation scheduling",
+      "Clear, persuasive headlines and benefit-focused sections",
+      "Direct WhatsApp buttons and easy contact options",
+      "Simple, frictionless quote request and lead forms",
+      "Optimized for speed and mobile visitor conversion",
     ],
     operationalImpact:
-      "Maximizes capital efficiency on paid campaigns and organic launches by focusing strictly on conversion velocity.",
+      "Maximizes your marketing efforts by guiding visitors directly to take action.",
   },
   {
     id: "website-redesign",
-    title: "Architecture & Visual Redesign",
-    badge: "Platform Modernization",
+    title: "Website Redesigns & Improvements",
+    badge: "Redesigns & Upgrades",
     summary:
-      "Total transformation of legacy, slow, or template-bloated websites into lean, high-velocity digital products. We audit existing bottlenecks and rebuild from the ground up.",
+      "Upgrade your existing website with a fresh modern look, faster loading times, better mobile layout, and new features without starting from scratch.",
     deliverables: [
-      "Comprehensive information architecture and UX flow restructuring",
-      "Complete elimination of heavy legacy dependencies and bloated code",
-      "Design system standardization with centralized tokens and reusable UI primitives",
-      "Zero-downtime transition and preserved search equity with precise redirect planning",
+      "Complete visual and layout refresh tailored to your brand",
+      "Fixing mobile responsiveness, broken elements, and slow loading",
+      "Adding new pages, service sections, or customer features",
+      "Keeping your existing domain, email setup, and search rankings",
     ],
     operationalImpact:
-      "Restores modern brand perception and removes technical debt holding back your digital operations.",
+      "Breathes new life into an outdated website and turns it into a modern business asset.",
   },
   {
-    id: "lead-gen-websites",
-    title: "Interactive Lead-Generation Platforms",
-    badge: "Active Acquisition",
+    id: "portfolio-custom",
+    title: "Portfolio & Custom Websites",
+    badge: "Portfolios & Custom",
     summary:
-      "Web platforms featuring embedded self-qualification tools, dynamic cost/scope estimators, and interactive diagnostic flows that engage prospects before handing off to sales.",
+      "Showcase your past projects, client case studies, or specialized business offerings with clean galleries, filters, and custom features.",
     deliverables: [
-      "Interactive scope configurators and decision matrices",
-      "Conditional multi-branch intake flows tailored to visitor industry",
-      "Direct API synchronization into your CRM, database, or email infrastructure",
-      "Automated lead enrichment and notification triggers for sales teams",
+      "Custom visual photo galleries and project showcases",
+      "Client testimonial layouts and case study breakdowns",
+      "Custom forms and calculators tailored to your industry",
+      "Built to your exact requirements without rigid templates",
     ],
     operationalImpact:
-      "Replaces passive contact forms with an engaging qualification experience that delivers pre-vetted leads.",
+      "Lets your work speak for itself so potential clients can buy with confidence.",
   },
 ];
 
 export const AGENT_SERVICES: ServiceDetail[] = [
   {
     id: "website-chatbot",
-    title: "Website AI Conversational Agent",
-    badge: "Active Engagement",
+    title: "Website AI Chatbots",
+    badge: "AI Chatbots",
     summary:
-      "An intelligent, brand-aligned conversational agent operating directly on your website. Engages high-intent visitors in real time, answers specific service inquiries, and schedules discovery calls.",
+      "A friendly AI assistant on your website that greets visitors, answers common questions about your services or pricing, and collects contact info 24/7.",
     deliverables: [
-      "Deterministic guardrails preventing off-topic drift or hallucinations",
-      "Trained on your actual product documentation, service scopes, and brand tone",
-      "Native calendar integration for automated meeting booking inside the chat",
-      "Transcript routing and escalation triggers to human representatives when needed",
+      "Answers customer questions instantly day and night",
+      "Collects visitor names, emails, and phone numbers right in chat",
+      "Directs high-interest leads to book a call or send an inquiry",
+      "Strictly trained on your business details so answers stay accurate",
     ],
     operationalImpact:
-      "Captures high-intent prospects outside business hours when traditional staff are unavailable.",
+      "Captures customer interest while they are on your site, even outside business hours.",
   },
   {
-    id: "faq-support-agent",
-    title: "FAQ & 24/7 Support Agent",
-    badge: "Customer Support",
+    id: "whatsapp-integration",
+    title: "WhatsApp & Direct Contact Options",
+    badge: "WhatsApp Integration",
     summary:
-      "Resolves tier-1 customer inquiries, onboarding questions, and operational FAQs instantly using a verified knowledge retrieval base. Provides cited, accurate answers to complex questions.",
+      "Make it effortless for potential customers to reach you by adding direct WhatsApp chat buttons, pre-filled inquiry messages, and click-to-call options.",
     deliverables: [
-      "Retrieval-augmented grounding against private company knowledge repositories",
-      "Multi-channel readiness for web interfaces, client portals, and ticketing apps",
-      "Real-time fallback protocol routing unresolved edge cases to designated teams",
-      "Continuous logging of query trends to surface documentation gaps",
+      "Prominent WhatsApp chat button visible on phones and desktops",
+      "Pre-filled starter messages so clients can message with one tap",
+      "Direct redirection from website forms straight to WhatsApp",
+      "Click-to-call phone buttons and quick directions for local clients",
     ],
     operationalImpact:
-      "Dramatically reduces recurring support ticket volume, allowing human teams to focus on high-value client needs.",
+      "Removes contact friction so customers who prefer messaging can reach you immediately.",
   },
   {
-    id: "lead-qualification-agent",
-    title: "Lead Qualification & Triage Agent",
-    badge: "Pipeline Efficiency",
+    id: "support-faq",
+    title: "Support & FAQ Pages",
+    badge: "Support & FAQs",
     summary:
-      "Conducts conversational discovery with inbound prospects to evaluate budget, timeline, technical scope, and decision-maker authority before human sales intervention.",
+      "Dedicated help and FAQ sections that answer frequent customer questions clearly, helping visitors find information without having to call or email.",
     deliverables: [
-      "Custom qualification logic matching your exact ideal customer profile (ICP)",
-      "Automated prospect scoring and structured requirement brief generation",
-      "Instant CRM pipeline creation with tagged intent categories",
-      "Personalized routing logic directing enterprise prospects to senior directors",
+      "Clear, organized FAQ categories (pricing, process, turnaround, policies)",
+      "Helpful customer guides and downloadable info sheets",
+      "Searchable help section so visitors find answers in seconds",
+      "Fewer repetitive customer service emails and phone calls",
     ],
     operationalImpact:
-      "Protects executive and sales time by filtering low-intent inquiries and presenting structured prospect dossiers.",
+      "Gives customers the answers they need right away while saving your team hours every week.",
   },
   {
-    id: "internal-business-assistant",
-    title: "Internal Business Operations Assistant",
-    badge: "Operational Leverage",
+    id: "business-automation",
+    title: "Business Workflow Automation",
+    badge: "Business Automation",
     summary:
-      "A secure internal AI assistant designed to bridge company documents, project archives, SOPs, and internal workflows. Helps team members locate answers, draft briefs, and execute workflows.",
+      "Automate repetitive daily tasks like sending instant lead alerts to your phone, logging inquiries into your CRM, and sending quick confirmation messages.",
     deliverables: [
-      "Secure role-based access control ensuring sensitive documents remain protected",
-      "Instant search across internal standard operating procedures and meeting memos",
-      "Automated summary generation for recurring operational reviews and reporting",
-      "Workflow orchestration connecting internal tools via secure APIs",
+      "Instant inquiry notifications sent directly to your phone or inbox",
+      "Automatic logging of form submissions to your spreadsheet or CRM",
+      "Automated confirmation emails to customers who request a quote",
+      "Custom automations designed around your team's workflow",
     ],
     operationalImpact:
-      "Unlocks institutional knowledge trapped across silos and accelerates internal execution speed.",
+      "Saves hours of manual administrative work and ensures no potential client is left waiting.",
   },
 ];

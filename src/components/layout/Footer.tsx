@@ -20,7 +20,7 @@ export function Footer() {
               {COMPANY_DETAILS.tagline}
             </p>
             <p className="mt-4 text-xs text-slate-400 max-w-sm leading-relaxed">
-              Bespoke AI websites and autonomous agent pipelines engineered for modern businesses. Custom requirement-based solutions with zero rigid packages.
+              Custom modern websites, landing pages, AI chatbots, and business automation built around your specific business requirements.
             </p>
             <div className="mt-6 flex items-center gap-2 text-xs font-mono text-slate-400 px-3 py-1.5 rounded-full border border-white/10 bg-surface-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
@@ -30,88 +30,88 @@ export function Footer() {
 
           {/* Navigation Columns */}
           <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-8">
-            {/* Column 1: Core Disciplines */}
+            {/* Column 1: Services */}
             <div>
               <span className="text-xs font-mono uppercase text-slate-300 font-semibold block mb-3">
-                Core Disciplines
+                Our Services
               </span>
               <ul className="space-y-2 text-xs">
                 <li>
                   <a href="#websites" className="hover:text-white transition-colors">
-                    Enterprise Business Websites
+                    Business & Company Websites
                   </a>
                 </li>
                 <li>
                   <a href="#websites" className="hover:text-white transition-colors">
-                    Conversion Landing Pages
+                    High-Converting Landing Pages
                   </a>
                 </li>
                 <li>
                   <a href="#websites" className="hover:text-white transition-colors">
-                    Website Architecture Redesigns
+                    Website Redesigns & Updates
                   </a>
                 </li>
                 <li>
                   <a href="#agents" className="hover:text-white transition-colors">
-                    Website Conversational Agents
+                    AI Chatbots & Support Assistants
                   </a>
                 </li>
                 <li>
                   <a href="#agents" className="hover:text-white transition-colors">
-                    24/7 Customer Support Agents
+                    Direct WhatsApp Integration
                   </a>
                 </li>
                 <li>
                   <a href="#agents" className="hover:text-white transition-colors">
-                    Lead Qualification Runtimes
+                    Lead Intake & Automation
                   </a>
                 </li>
               </ul>
             </div>
 
-            {/* Column 2: Architecture & Methodology */}
+            {/* Column 2: How We Work */}
             <div>
               <span className="text-xs font-mono uppercase text-slate-300 font-semibold block mb-3">
-                Architecture & Standards
+                How We Work
               </span>
               <ul className="space-y-2 text-xs">
                 <li>
-                  <a href="#architecture" className="hover:text-white transition-colors">
-                    System Topology
+                  <a href="#capabilities" className="hover:text-white transition-colors">
+                    Custom Quote by Requirement
                   </a>
                 </li>
                 <li>
                   <a href="#how-it-works" className="hover:text-white transition-colors">
-                    4-Phase Engineering Protocol
+                    4-Phase Delivery Process
                   </a>
                 </li>
                 <li>
-                  <a href="#capabilities" className="hover:text-white transition-colors">
-                    Requirement-Based Model
+                  <a href="#why-nexora" className="hover:text-white transition-colors">
+                    Fast & Mobile-Friendly
                   </a>
                 </li>
                 <li>
-                  <span className="text-slate-400">
-                    Deterministic RAG Guardrails
-                  </span>
+                  <a href="#why-nexora" className="hover:text-white transition-colors">
+                    100% Code & Content Ownership
+                  </a>
                 </li>
                 <li>
-                  <span className="text-slate-400">
-                    WCAG 2.2 AA Accessibility
-                  </span>
+                  <a href="#why-nexora" className="hover:text-white transition-colors">
+                    Accurate Business FAQ Info
+                  </a>
                 </li>
                 <li>
-                  <span className="text-slate-400">
-                    100% Code Ownership
-                  </span>
+                  <a href="#why-nexora" className="hover:text-white transition-colors">
+                    Reliable Ongoing Support
+                  </a>
                 </li>
               </ul>
             </div>
 
-            {/* Column 3: Contact & Channels */}
+            {/* Column 3: Contact */}
             <div>
               <span className="text-xs font-mono uppercase text-slate-300 font-semibold block mb-3">
-                Direct Contact
+                Get In Touch
               </span>
               <ul className="space-y-2 text-xs">
                 <li>
@@ -125,11 +125,11 @@ export function Footer() {
                 </li>
                 <li>
                   <a href="#consultation" className="hover:text-white transition-colors">
-                    Request Technical Scope
+                    Request a Free Quote
                   </a>
                 </li>
                 <li className="pt-2 text-slate-400 font-mono text-[11px]">
-                  Global Edge Infrastructure
+                  Available for new projects
                 </li>
               </ul>
             </div>
@@ -139,11 +139,11 @@ export function Footer() {
         {/* Sub-Footer: Copyright & Legal */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div>
-            © {COMPANY_DETAILS.year} {COMPANY_DETAILS.name} Technologies. All rights reserved.
+            © {COMPANY_DETAILS.year} {COMPANY_DETAILS.name}. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
             <span className="font-mono text-[11px] text-slate-400">
-              Engineered with React 19 & Next.js 15
+              Modern Websites & Digital Solutions
             </span>
             <a
               href="#top"

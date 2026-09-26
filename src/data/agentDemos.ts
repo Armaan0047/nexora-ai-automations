@@ -25,212 +25,201 @@ export interface AgentProfile {
 export const AGENT_PROFILES: Record<string, AgentProfile> = {
   chatbot: {
     id: "chatbot",
-    name: "Website Conversational Agent",
-    badge: "Visitor Engagement",
+    name: "Website AI Assistant",
+    badge: "Website Chatbot",
     systemPromptSummary:
-      "Context: Nexora client commercial real estate firm. Role: Guide prospective commercial tenants through available square footage, lease structures, and schedule site tours with the leasing director.",
+      "Role: Greets website visitors, answers questions about your services and pricing, and helps them get in touch or book an appointment.",
     sampleScenarios: [
       {
-        prompt: "We need 15,000 sq ft of contiguous office space in Midtown with occupancy by Q3. Can we tour options this week?",
-        category: "Commercial Space Inquiry",
-        intent: "High-Intent Space Requirement & Tour Scheduling",
+        prompt: "Do you offer emergency repairs on weekends, and how much is the callout fee?",
+        category: "Availability & Pricing",
+        intent: "Emergency Service & Pricing Inquiry",
         reasoningSteps: [
-          "Parsing spatial criteria: 15,000 sq ft contiguous, Midtown submarket.",
-          "Cross-referencing available building inventory matching Q3 timeline.",
-          "Identified 2 candidate suites: 520 Madison (Floor 14) and 600 Lexington (Floor 9).",
-          "Accessing leasing director calendar availability for Thursday and Friday.",
+          "Checking weekend service hours and emergency callout rates.",
+          "Verifying on-duty technician availability.",
+          "Providing clear pricing and offering direct WhatsApp or call option.",
         ],
         response:
-          "We currently have two contiguous blocks matching your Q3 requirement: 16,200 sq ft at 520 Madison (Floor 14, move-in ready spec suite) and 14,800 sq ft at 600 Lexington (Floor 9, flexible layout). Both support immediate Q3 occupancy.\n\nOur Senior Leasing Director, Marcus Vance, has direct walkthrough windows open this Thursday at 11:00 AM or Friday at 2:30 PM. Would either of those times suit your team, or should I hold a different slot?",
+          "Yes, we provide 24/7 emergency service across weekends. Our emergency callout fee is $95, which includes the initial inspection.\n\nYou can book an emergency technician online right now, or click our WhatsApp button below to speak directly with our on-duty team.",
         actionSummary:
-          "Pre-reserved 45-minute tentative site tour slots; logged tenant requirement sheet into leasing CRM.",
+          "Provided clear pricing and offered direct WhatsApp contact.",
         dataPayload: {
-          "Space Requirement": "14,800 - 16,200 RSF",
-          "Target Submarket": "Midtown",
-          "Move-in Target": "Q3 2026",
-          "Next Step": "Site Tour Confirmation",
+          "Service": "Emergency Repair",
+          "Callout Fee": "$95 Standard",
+          "Next Step": "WhatsApp / Phone Call",
         },
       },
       {
-        prompt: "Do you offer full-floor leases with direct elevator access?",
-        category: "Lease Structure",
-        intent: "Specification Query: Full-floor Availability",
+        prompt: "Can I see photos of recent kitchen renovations you've completed?",
+        category: "Past Work & Photos",
+        intent: "Portfolio & Gallery Request",
         reasoningSteps: [
-          "Analyzing architectural parameter: Full floorplate + keycard elevator lockoff.",
-          "Verifying building specs across portfolio assets.",
-          "Formulating clear architectural confirmation with security specs.",
+          "Locating recent kitchen renovation projects and photo gallery.",
+          "Providing direct gallery link and WhatsApp lookbook option.",
         ],
         response:
-          "Yes. Floors 12 through 18 across our flagship assets are configured as single-tenant floorplates with dual-bank private elevator access, secure badge-lockoff programming, and dedicated mechanical zones. We can also provide floor plans in DWG or PDF format prior to your walkthrough.",
-        actionSummary: "Presented floorplate security specs; ready to transmit architectural PDF on request.",
+          "Certainly! We have completed over 20 kitchen renovations recently. You can browse our full project gallery with before-and-after photos under the 'Projects' tab on our website, or we can send our digital photo lookbook directly to your WhatsApp.",
+        actionSummary:
+          "Guided customer to project photos and offered WhatsApp lookbook.",
       },
     ],
     fallbackResponses: {
-      intent: "General Commercial Inquiry",
+      intent: "General Customer Inquiry",
       reasoning: [
-        "Analyzing user inquiry against property inventory and lease terms.",
-        "Synthesizing concise, brand-aligned response.",
-        "Offering direct contact with the leasing operations desk.",
+        "Analyzing customer inquiry against business services.",
+        "Providing clear, friendly response with direct contact options.",
       ],
       answer:
-        "Thank you for reaching out. Based on your criteria, our leasing team can prepare an availability matrix specific to your required timeline and footprint. Would you like us to forward the current specification sheet to your work email, or connect you directly with a leasing specialist?",
-      action: "Logged inquiry to property dispatch queue.",
+        "Thank you for asking! We'd be glad to help with that. Would you like to send us a quick message on WhatsApp, or leave your phone number so our team can get in touch with you?",
+      action: "Offered direct contact options to the visitor.",
     },
   },
   support: {
     id: "support",
-    name: "FAQ & Customer Support Agent",
-    badge: "Knowledge Verification",
+    name: "24/7 FAQ & Support Assistant",
+    badge: "FAQ & Customer Help",
     systemPromptSummary:
-      "Context: Nexora client specialized medical logistics company. Role: Provide grounded answers regarding cold-chain compliance, chain-of-custody tracking, and incident escalation protocols.",
+      "Role: Answers common customer questions about pricing, warranties, turnaround times, and booking policies.",
     sampleScenarios: [
       {
-        prompt: "What is your emergency escalation protocol if temperature deviation occurs during international transit?",
-        category: "SLA & Compliance",
-        intent: "Cold-Chain Deviation & SOP Verification",
+        prompt: "How long does a typical website redesign take, and will my current site stay online during the build?",
+        category: "Process & Timelines",
+        intent: "Project Turnaround & Website Uptime Inquiry",
         reasoningSteps: [
-          "Querying SOP-COLD-402: International Biopharma Transit Protocols.",
-          "Retrieving mandatory notification timeframes and dry-ice replenishment triggers.",
-          "Formatting step-by-step containment protocol with contact dispatch details.",
+          "Checking standard project turnaround guidelines (2 to 4 weeks).",
+          "Confirming that the existing website remains 100% online during development.",
         ],
         response:
-          "Under SOP-COLD-402, our monitoring hardware triggers an automated Level-1 alert if ambient core temp rises within 1.5°C of the upper allowable threshold:\n\n1. Automated Alert: Ground station dispatch is notified within 180 seconds of deviation telemetry.\n2. Local Intervention: The nearest airport handling hub deploys an active dry-ice or eutectic buffer replenishment team.\n3. Stakeholder Notification: An automated incident telemetry report with hourly sensor history is transmitted directly to your quality assurance coordinator.\n\nAll data is recorded on tamper-evident loggers compliant with 21 CFR Part 11.",
+          "A typical website redesign takes between 2 to 4 weeks depending on the number of pages.\n\nYour current website stays completely online and functional during the entire build. We develop the new version in a private staging area and only switch over once you have reviewed and approved everything.",
         actionSummary:
-          "Cited verified compliance SOP; generated active escalation tree for client review.",
+          "Answered timeline and confirmed zero downtime for the client.",
         dataPayload: {
-          "Compliance SOP": "SOP-COLD-402 Rev 4",
-          "Verification Standard": "21 CFR Part 11",
-          "Resolution Tier": "Level-1 Cold-Chain Dispatch",
+          "Average Timeline": "2 to 4 Weeks",
+          "Website Downtime": "Zero (Staging Build)",
+          "Client Review": "Pre-Launch Approval",
         },
       },
       {
-        prompt: "Can we download calibrated sensor certificates for shipment #NX-8821?",
-        category: "Document Retrieval",
-        intent: "Sensor Calibration Document Request",
+        prompt: "What is your cancellation and rescheduling policy for appointments?",
+        category: "Booking Policy",
+        intent: "Policy & Rescheduling Query",
         reasoningSteps: [
-          "Validating shipment manifest identifier #NX-8821.",
-          "Locating batch calibration records for NIST-traceable sensors.",
-          "Providing direct secure repository link.",
+          "Checking appointment policies (24-hour notice requested).",
+          "Providing simple online rescheduling link.",
         ],
         response:
-          "Shipment #NX-8821 utilized NIST-traceable CryoLogger units #CL-4091 and #CL-4092, calibrated on July 14. The certified calibration reports and pre-departure verification seals are available for download in your compliance portal under Documents > Calibration Certificates.",
-        actionSummary: "Located batch calibration records; verified NIST traceability compliance.",
+          "You can reschedule or cancel anytime with at least 24 hours' notice at no charge. You can do this directly through the link in your booking confirmation email, or by messaging our team on WhatsApp.",
+        actionSummary:
+          "Explained simple cancellation policy and provided WhatsApp contact.",
       },
     ],
     fallbackResponses: {
-      intent: "Technical Support & Documentation Request",
+      intent: "Customer Support Inquiry",
       reasoning: [
-        "Searching grounded knowledge base for verified documentation matches.",
-        "Ensuring answer complies with strict verification boundaries.",
+        "Searching FAQ records for matching business answers.",
+        "Formulating clear, practical answer.",
       ],
       answer:
-        "Our system has verified your documentation request against our operational database. You can review full protocol details in your customer management portal, or we can route this ticket directly to your dedicated compliance manager.",
-      action: "Generated verified knowledge response.",
+        "Our support assistant can help answer any questions about our services, pricing, or policies. If you need special assistance, you can also message us on WhatsApp or submit a quick inquiry form.",
+      action: "Provided helpful customer guidance.",
     },
   },
   qualifier: {
     id: "qualifier",
-    name: "Lead Qualification & Triage Agent",
-    badge: "Pipeline Diagnostics",
+    name: "Lead Capture & Quote Assistant",
+    badge: "Inquiries & Quotes",
     systemPromptSummary:
-      "Context: Nexora client enterprise cybersecurity consulting firm. Role: Triage incoming inquiries, identify regulatory scope (SOC2, ISO, HIPAA), timeline, team size, and route qualified enterprise clients to partner consultants.",
+      "Role: Collects project details from potential clients and organizes the inquiry so your team can provide an accurate quote quickly.",
     sampleScenarios: [
       {
-        prompt: "We are a Series B fintech with 90 employees preparing for SOC2 Type II audit in 4 months. We need readiness assessment and remediation assistance.",
-        category: "Enterprise Inbound Intake",
-        intent: "Target ICP Inbound: Fintech SOC2 Type II",
+        prompt: "We need weekly commercial office cleaning for a 5,000 sq ft office starting next month.",
+        category: "Quote Request",
+        intent: "Commercial Cleaning Quote Inquiry",
         reasoningSteps: [
-          "Evaluating ICP criteria: Series B fintech, 90 FTEs, 4-month audit horizon.",
-          "Assessing compliance scope: SOC2 Type II readiness + remediation consulting.",
-          "Scoring qualification: High-priority enterprise match (Budget band >$40k, strict urgency).",
-          "Routing assignment: Lead Partner - Financial Services Security Practice.",
+          "Capturing office size: 5,000 sq ft.",
+          "Capturing frequency: Weekly commercial cleaning.",
+          "Prompting for address and phone number for quote dispatch.",
         ],
         response:
-          "Thank you for detailing your context. With a 90-person fintech infrastructure and a 4-month target for SOC2 Type II, your optimal timeline requires initiating the gap assessment within the next two weeks to allow sufficient time for remediation observation.\n\nOur Financial Services Practice Lead, Elena Rostova, specializes specifically in rapid-readiness audit preparation for venture-backed fintechs. I have structured your requirement dossier and can coordinate a 30-minute scoping session directly with Elena's desk. Would tomorrow afternoon work for your technical team?",
+          "Thank you for reaching out! For a 5,000 sq ft office on a weekly schedule, we can provide an itemized quote.\n\nCould you share your business address and the best phone number or email? Our team will prepare a custom proposal and send it over to you.",
         actionSummary:
-          "Classified as High-Priority Enterprise ICP; generated pre-meeting brief; routed to Financial Services Practice Lead.",
+          "Captured office size and frequency; requested contact info for quote delivery.",
         dataPayload: {
-          "Organization Profile": "Fintech / 90 Employees",
-          "Audit Framework": "SOC2 Type II",
-          "Execution Horizon": "16 Weeks",
-          "Triage Verdict": "Qualified - Direct Partner Escalation",
+          "Space Size": "5,000 sq ft",
+          "Frequency": "Weekly",
+          "Status": "Ready for Quote Dispatch",
         },
       },
       {
-        prompt: "We just need a quick automated vulnerability scan tool for a personal blog.",
-        category: "Scope Assessment",
-        intent: "Out-of-Scope / Non-Enterprise Inquiry",
+        prompt: "I need a quote for painting the exterior of a two-story home.",
+        category: "Exterior Painting",
+        intent: "Residential Painting Estimate",
         reasoningSteps: [
-          "Evaluating scope criteria: Personal blog, self-serve automated scanner.",
-          "Comparing against core consulting offerings: High-touch enterprise advisory.",
-          "Determining polite deflection to public open-source resources.",
+          "Capturing project type: Two-story exterior painting.",
+          "Recommending photo upload via WhatsApp for fast estimation.",
         ],
         response:
-          "Our advisory practice focuses exclusively on enterprise compliance audits (SOC2, ISO 27001, HIPAA) and bespoke security architecture for organizations with multi-server cloud environments. For single-site personal blogs, we recommend utilizing open-source community utilities such as OWASP ZAP or built-in hosting vulnerability scanners, which are better suited for standalone websites.",
+          "We'd love to help! For exterior painting, we can provide a quick ballpark estimate if you send a few photos of your home to our WhatsApp, or we can schedule a quick 15-minute in-person inspection at your convenience.",
         actionSummary:
-          "Respectfully redirected out-of-scope inquiry; prevented unnecessary sales call scheduling.",
+          "Offered fast WhatsApp photo estimation or on-site visit.",
       },
     ],
     fallbackResponses: {
-      intent: "Prospective Client Diagnostic",
+      intent: "Quote Request Intake",
       reasoning: [
-        "Analyzing business profile, technical scope, and project urgency.",
-        "Evaluating organizational fit against practice parameters.",
+        "Analyzing project scope and gathering requirements.",
       ],
       answer:
-        "Thank you for sharing your project background. To determine the most effective collaboration model and ensure our advisory team is the right fit, could you briefly clarify your expected timeline and regulatory framework?",
-      action: "Prompted for missing qualification parameters.",
+        "To get you an accurate quote, could you let us know what specific services you need and your approximate timeline? We'll prepare an estimate right away.",
+      action: "Gathered initial project details.",
     },
   },
   assistant: {
     id: "assistant",
-    name: "Internal Business Operations Assistant",
-    badge: "Operations Intelligence",
+    name: "Business Workflow Assistant",
+    badge: "Internal Assistant",
     systemPromptSummary:
-      "Context: Nexora client engineering & architecture consultancy. Role: Query internal project archives, summarize weekly billable allocations, and draft executive client progress memos.",
+      "Role: Helps your team look up internal documents, client notes, pricing sheets, or draft customer follow-ups.",
     sampleScenarios: [
       {
-        prompt: "Summarize outstanding engineering milestones for Project Meridian and draft an update bullet for Thursday's steering committee.",
-        category: "Internal Milestone Synthesis",
-        intent: "Milestone Tracking & Executive Briefing",
+        prompt: "Draft a polite follow-up message to a customer who asked for a quote 3 days ago.",
+        category: "Customer Follow-Up",
+        intent: "Follow-Up Message Draft",
         reasoningSteps: [
-          "Querying internal project management database for Project Meridian.",
-          "Extracting sprint status: 4 completed deliverables, 1 in review, 0 blocking issues.",
-          "Synthesizing concise executive progress bullet focused on delivery timeline.",
+          "Generating a friendly, non-pushy follow-up template.",
+          "Including clear options to reply or ask questions.",
         ],
         response:
-          "**Project Meridian Status Summary:**\n- Foundation structural analysis: Complete (approved by City Inspector July 10)\n- MEP engineering schematics: Complete (delivered to general contractor)\n- Seismic damping verification: Currently in review (lead engineer sign-off expected Wednesday)\n\n**Draft for Thursday Steering Committee:**\n*“Project Meridian remains on schedule. Core structural and MEP engineering schematics have been formally delivered to the contractor, with final seismic review completing Wednesday prior to Friday's permit submission package.”*",
+          "Here is a ready-to-send follow-up message:\n\n'Hi [Name], hope you're having a great week! Just following up to see if you had any questions about the quote we sent over for [Service]. Happy to adjust the details or answer any questions whenever you're ready. Best regards, [Your Business]'",
         actionSummary:
-          "Synthesized multi-team status into executive draft; cross-checked permit deadline.",
+          "Drafted friendly customer follow-up message ready to copy and send.",
         dataPayload: {
-          "Project Code": "PRJ-MERIDIAN-04",
-          "Deliverable Health": "On Schedule (No Critical Blockers)",
-          "Next Major Milestone": "Permit Submission - Friday",
+          "Message Type": "Customer Quote Follow-Up",
+          "Tone": "Friendly & Non-Pushy",
         },
       },
       {
-        prompt: "Where is our standard non-disclosure agreement template stored, and who has signing authority for agreements under $100k?",
-        category: "Policy & Document Lookup",
-        intent: "Internal SOP & Signing Authority Query",
+        prompt: "What is our standard warranty policy on roof repair materials?",
+        category: "Policy Lookup",
+        intent: "Warranty Policy Information",
         reasoningSteps: [
-          "Searching corporate legal repository for active NDA template.",
-          "Checking Delegation of Authority matrix Section 4.2.",
-          "Providing direct file location and designated signatories.",
+          "Checking internal business records for material warranties.",
+          "Summarizing terms clearly for the customer.",
         ],
         response:
-          "The current standard mutual NDA template is stored in `Legal/Templates/2026/Mutual-NDA-v3.docx`. Under Section 4.2 of our Delegation of Authority policy, mutual NDAs and commercial agreements under $100,000 may be countersigned by Practice Directors or Senior Operations Leads without General Counsel pre-approval.",
-        actionSummary: "Cited file path and authority thresholds from company governance manual.",
+          "Our standard roof repairs include a 10-year manufacturer warranty on materials and a 2-year guarantee on our workmanship. You can share this directly with the customer.",
+        actionSummary:
+          "Retrieved warranty terms from internal documentation.",
       },
     ],
     fallbackResponses: {
-      intent: "Internal Information Retrieval",
+      intent: "Workflow Assistance",
       reasoning: [
-        "Indexing internal company repositories and documentation schemas.",
-        "Verifying access control clearance.",
+        "Reviewing business guidelines and standard procedures.",
       ],
       answer:
-        "I have indexed your inquiry against our internal document store. The requested records and operational guidelines are available in our central repository, or I can draft a detailed summary document on demand.",
-      action: "Indexed internal operational documentation.",
+        "I can help draft customer emails, look up pricing guidelines, or summarize internal notes to help your team work faster.",
+      action: "Ready to assist internal team.",
     },
   },
 };

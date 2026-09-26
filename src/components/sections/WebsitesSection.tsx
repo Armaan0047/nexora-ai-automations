@@ -6,11 +6,8 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { WEBSITE_SERVICES } from "@/data/capabilities";
 import {
-  ArrowRight,
   Check,
-  Code2,
   Laptop,
-  Maximize2,
   RefreshCw,
   Smartphone,
   Tablet,
@@ -33,9 +30,9 @@ export function WebsitesSection() {
     <section id="websites" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          eyebrow="PILLAR 01 // INTERFACE ENGINEERING"
-          title="Websites engineered like serious software products."
-          description="We build blazing-fast, accessible digital flagships and conversion engines using modern React and Next.js architectures. Every interface is designed around your business positioning and user intent."
+          eyebrow="WEBSITE DEVELOPMENT"
+          title="Modern websites designed to grow your business."
+          description="We build clean, fast, and mobile-friendly websites that look great, load quickly, and clearly explain what you offer to prospective customers."
           className="mb-16"
         />
 
@@ -70,7 +67,7 @@ export function WebsitesSection() {
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
             <div>
               <span className="text-xs font-mono uppercase tracking-wider text-blue-400">
-                Specification Brief
+                Service Overview
               </span>
               <h3 className="text-2xl sm:text-3xl font-semibold text-white tracking-tight mt-1">
                 {activeService.title}
@@ -81,7 +78,7 @@ export function WebsitesSection() {
 
               <div className="mt-6 space-y-3">
                 <span className="text-xs font-mono uppercase text-slate-500 block">
-                  Core Engineering Deliverables:
+                  What’s Included:
                 </span>
                 {activeService.deliverables.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-2 text-sm text-slate-300">
@@ -93,7 +90,7 @@ export function WebsitesSection() {
 
               <div className="mt-6 p-4 rounded-xl border border-white/10 bg-surface-1 text-xs text-slate-400">
                 <span className="font-mono uppercase text-slate-300 font-semibold block mb-1">
-                  Strategic Impact:
+                  Business Value:
                 </span>
                 {activeService.operationalImpact}
               </div>
@@ -101,7 +98,7 @@ export function WebsitesSection() {
 
             <div className="pt-4">
               <Button variant="secondary" size="md" href="#consultation" withArrow>
-                Scope This Website Format
+                Ask About This Service
               </Button>
             </div>
           </div>
@@ -113,7 +110,7 @@ export function WebsitesSection() {
               <div className="flex items-center gap-2">
                 <Badge variant="demo">Interactive Demo</Badge>
                 <span className="text-xs font-mono text-slate-400 hidden sm:inline">
-                  Responsive Architecture
+                  Mobile &amp; Desktop Preview
                 </span>
               </div>
 
@@ -129,7 +126,7 @@ export function WebsitesSection() {
                   aria-label="Desktop viewport"
                 >
                   <Laptop className="w-3.5 h-3.5" />
-                  <span className="text-xs font-mono hidden sm:inline">1440px</span>
+                  <span className="text-xs font-mono hidden sm:inline">Desktop</span>
                 </button>
                 <button
                   onClick={() => setViewport("tablet")}
@@ -141,7 +138,7 @@ export function WebsitesSection() {
                   aria-label="Tablet viewport"
                 >
                   <Tablet className="w-3.5 h-3.5" />
-                  <span className="text-xs font-mono hidden sm:inline">768px</span>
+                  <span className="text-xs font-mono hidden sm:inline">Tablet</span>
                 </button>
                 <button
                   onClick={() => setViewport("mobile")}
@@ -153,7 +150,7 @@ export function WebsitesSection() {
                   aria-label="Mobile viewport"
                 >
                   <Smartphone className="w-3.5 h-3.5" />
-                  <span className="text-xs font-mono hidden sm:inline">375px</span>
+                  <span className="text-xs font-mono hidden sm:inline">Mobile</span>
                 </button>
               </div>
             </div>
@@ -174,11 +171,11 @@ export function WebsitesSection() {
                   <div className="flex items-center gap-2">
                     <span className="w-2.5 h-2.5 rounded-full bg-slate-700" />
                     <span className="font-mono text-slate-400 text-[11px] truncate max-w-[140px]">
-                      preview.client-domain.com
+                      yourbusiness.com
                     </span>
                   </div>
                   <span className="text-[10px] font-mono text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded bg-emerald-500/10">
-                    HTTPS • Edge
+                    Live Preview
                   </span>
                 </div>
 
@@ -186,13 +183,13 @@ export function WebsitesSection() {
                 <div className="space-y-4">
                   <div>
                     <span className="text-[10px] font-mono uppercase text-blue-400 tracking-wider">
-                      Live Sample Interaction
+                      Interactive Feature Demo
                     </span>
                     <h4 className="text-base sm:text-lg font-semibold text-white tracking-tight mt-1">
-                      Adaptive Scope Assessment Flow
+                      Simple Quote Request Flow
                     </h4>
                     <p className="text-xs text-slate-400 mt-1 leading-relaxed">
-                      Testing multi-step qualification component designed to reduce lead abandonment.
+                      See how an easy, 2-step question flow makes it effortless for visitors to reach out.
                     </p>
                   </div>
 
@@ -202,17 +199,17 @@ export function WebsitesSection() {
                       <span>Step 0{interactiveStep} of 03</span>
                       <span className="text-blue-400">
                         {interactiveStep === 1
-                          ? "Select Requirement"
+                          ? "Select What You Need"
                           : interactiveStep === 2
-                          ? "Project Urgency"
-                          : "Deployment Scope"}
+                          ? "Desired Timeline"
+                          : "Ready to Connect"}
                       </span>
                     </div>
 
                     {interactiveStep === 1 && (
                       <div className="space-y-2">
                         <label className="text-xs font-medium text-slate-300 block">
-                          What is your primary commercial focus?
+                          What type of website are you looking for?
                         </label>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           <button
@@ -220,14 +217,14 @@ export function WebsitesSection() {
                             onClick={() => setInteractiveStep(2)}
                             className="text-left text-xs p-2 rounded border border-white/15 bg-white/[0.03] hover:border-blue-500/50 hover:bg-blue-500/10 text-slate-200 transition-colors"
                           >
-                            New Business Flagship
+                            New Business Website
                           </button>
                           <button
                             type="button"
                             onClick={() => setInteractiveStep(2)}
                             className="text-left text-xs p-2 rounded border border-white/15 bg-white/[0.03] hover:border-blue-500/50 hover:bg-blue-500/10 text-slate-200 transition-colors"
                           >
-                            Full Platform Redesign
+                            Upgrade Existing Website
                           </button>
                         </div>
                       </div>
@@ -236,7 +233,7 @@ export function WebsitesSection() {
                     {interactiveStep === 2 && (
                       <div className="space-y-2">
                         <label className="text-xs font-medium text-slate-300 block">
-                          Select expected deployment timeline:
+                          When would you like to get started?
                         </label>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           <button
@@ -244,14 +241,14 @@ export function WebsitesSection() {
                             onClick={() => setInteractiveStep(3)}
                             className="text-left text-xs p-2 rounded border border-white/15 bg-white/[0.03] hover:border-blue-500/50 hover:bg-blue-500/10 text-slate-200 transition-colors"
                           >
-                            Immediate (Next 30 Days)
+                            Right Away (This Month)
                           </button>
                           <button
                             type="button"
                             onClick={() => setInteractiveStep(3)}
                             className="text-left text-xs p-2 rounded border border-white/15 bg-white/[0.03] hover:border-blue-500/50 hover:bg-blue-500/10 text-slate-200 transition-colors"
                           >
-                            Q2 / Q3 Strategic Launch
+                            Exploring Options for Later
                           </button>
                         </div>
                       </div>
@@ -261,10 +258,10 @@ export function WebsitesSection() {
                       <div className="space-y-2">
                         <div className="flex items-center gap-2 text-xs text-emerald-400 font-medium">
                           <Check className="w-3.5 h-3.5" />
-                          <span>Parameters logged. Ready for technical review.</span>
+                          <span>Preferences selected. Direct connection ready.</span>
                         </div>
                         <p className="text-[11px] text-slate-400 leading-relaxed">
-                          This functional demonstration models how Nexora embeds low-friction diagnostic funnels into client websites to capture visitor context before sales calls.
+                          This demonstrates how we build simple, quick quote request flows into websites so customers can reach you with zero hassle.
                         </p>
                         <button
                           type="button"
@@ -272,7 +269,7 @@ export function WebsitesSection() {
                           className="text-xs font-mono text-blue-400 hover:text-blue-300 inline-flex items-center gap-1 mt-1 cursor-pointer"
                         >
                           <RefreshCw className="w-3 h-3" />
-                          <span>Reset Interactive Demo</span>
+                          <span>Test Again</span>
                         </button>
                       </div>
                     )}
@@ -283,8 +280,8 @@ export function WebsitesSection() {
 
             {/* Note on genuine architecture */}
             <div className="mt-4 flex items-center justify-between text-xs text-slate-500 font-mono">
-              <span>TypeScript • Next.js 15 • Tailwind</span>
-              <span>WCAG 2.2 AA Compliant</span>
+              <span>Mobile-First • Fast Loading</span>
+              <span>Built to Your Requirements</span>
             </div>
           </div>
         </div>

@@ -9,63 +9,63 @@ export interface ProblemFriction {
 
 export const PROBLEM_FRICTIONS: ProblemFriction[] = [
   {
-    id: "passive-web",
-    problemTitle: "Static Websites That Bleed High-Intent Demand",
+    id: "outdated-site",
+    problemTitle: "An Outdated Website That Doesn't Look Great on Phones",
     symptom:
-      "Visitors land on a generic brochure website, scan for seconds, find no interactive guidance or clear next step, and leave without leaving a footprint.",
+      "Your website was built years ago, loads slowly, looks cluttered, or doesn't work well on mobile phones.",
     businessCost:
-      "Marketing spend and organic traffic are wasted because the interface treats every visitor like a passive reader rather than an active buyer.",
+      "Visitors form an impression in seconds. If your site looks neglected, potential clients assume your services might be outdated too.",
     nexoraSolution:
-      "Interactive digital architecture with clear hierarchy, targeted conversion pathways, and conversational touchpoints that engage high-intent visitors immediately.",
+      "We design a clean, modern, and fast website that looks crisp on all devices, highlights your best work, and clearly explains what you offer.",
     solutionOutcome:
-      "Transforms passive page views into qualified, actionable conversations and booked consultations.",
+      "An impressive digital storefront that immediately earns credibility and trust from prospective clients.",
   },
   {
-    id: "delayed-response",
-    problemTitle: "Delayed Response Times Turning Warm Prospects Cold",
+    id: "missed-leads",
+    problemTitle: "Losing Potential Clients Outside Business Hours",
     symptom:
-      "A potential client submits a contact form after business hours or during weekend research. A human representative responds 18 to 48 hours later.",
+      "People often search for services during evenings or weekends when your office is closed or your phone is busy.",
     businessCost:
-      "In modern markets, responsiveness directly impacts win rates. By the time human staff reply, prospects have often already contacted competitors.",
+      "If visitors cannot easily ask a question or leave a message, they simply click back and contact your competitor.",
     nexoraSolution:
-      "Autonomous 24/7 AI agents that greet inbound prospects instantly, answer detailed capability questions, and guide them directly into the calendar.",
+      "We integrate WhatsApp chat buttons and 24/7 AI assistants that greet visitors, answer basic questions, and collect their contact info anytime.",
     solutionOutcome:
-      "Continuous business capture regardless of time zones, weekends, or internal team bandwidth.",
+      "Continuous lead capture so you never miss an interested customer while you are away.",
   },
   {
-    id: "support-drain",
-    problemTitle: "Core Teams Drained by Repetitive Inquiries",
+    id: "repetitive-faqs",
+    problemTitle: "Spending Time Answering the Same Questions Every Day",
     symptom:
-      "Senior staff and key team members spend hours each week answering the same recurring operational, pricing, and scope questions across email and chat.",
+      "Your team spends hours each week answering recurring questions about pricing, turnaround times, service areas, or booking steps.",
     businessCost:
-      "Key personnel are distracted from strategic delivery, product improvements, and high-value revenue activities.",
+      "Valuable time is drained by routine questions instead of delivering work for paying clients.",
     nexoraSolution:
-      "Grounded customer support agents operating on strict deterministic boundaries. They answer verified FAQs accurately with zero hallucination.",
+      "We build clear Support & FAQ sections and smart chatbots that answer common questions accurately and automatically.",
     solutionOutcome:
-      "Repetitive query volume is resolved autonomously, freeing teams to focus on complex, high-impact business execution.",
+      "Your customers get immediate answers, and your team gets their time back.",
   },
   {
-    id: "unstructured-triage",
-    problemTitle: "Unstructured Lead Intake Eating Executive Hours",
+    id: "friction-contact",
+    problemTitle: "Complicated Forms That Drive Visitors Away",
     symptom:
-      "Sales directors take exploratory calls only to discover 20 minutes in that the prospect has mismatched budget expectations, missing requirements, or an incompatible timeline.",
+      "Asking visitors to fill out lengthy, complex forms just to request a quote or ask a quick question.",
     businessCost:
-      "Hours of valuable leadership time are burned on ill-fitted conversations, reducing the energy available for ideal clients.",
+      "Most visitors browse on mobile. If contacting you takes more than a few taps, they leave without saying a word.",
     nexoraSolution:
-      "Conversational qualification agents and interactive requirement configurators that triage scope, budget fit, and decision authority upfront.",
+      "We add one-tap WhatsApp contact buttons, clean click-to-call links, and frictionless quote request forms.",
     solutionOutcome:
-      "Sales leadership enters conversations equipped with a structured briefing document and pre-screened criteria.",
+      "A fast, comfortable contact process that dramatically increases the number of people who reach out.",
   },
   {
-    id: "disconnected-tools",
-    problemTitle: "Siloed Software and Disconnected Manual Bridging",
+    id: "manual-followups",
+    problemTitle: "Inquiries Getting Lost in Inboxes and Spreadsheets",
     symptom:
-      "Website submissions sit in email inboxes, notes are manually re-typed into spreadsheets, and internal documents are scattered across fragmented folders.",
+      "Lead messages get buried in email threads, manual notes get misplaced, and follow-ups happen too late.",
     businessCost:
-      "Critical context gets lost between departments, leading to missed client follow-ups and operational friction.",
+      "Slow response times cost deals. The fastest responder almost always wins the client.",
     nexoraSolution:
-      "Integrated software pipelines where website touchpoints, AI agent interactions, and CRM databases communicate via secure, unified APIs.",
+      "We set up simple automations that send new lead notifications directly to your phone or CRM instantly.",
     solutionOutcome:
-      "A single, cohesive digital engine that connects customer touchpoints directly to internal execution pipelines.",
+      "You are alerted the moment a prospect shows interest, enabling fast, effective follow-ups.",
   },
 ];

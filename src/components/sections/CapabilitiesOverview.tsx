@@ -1,52 +1,52 @@
 import React from "react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { ArrowUpRight, Bot, Cpu, Gauge, Globe } from "lucide-react";
+import { ArrowUpRight, Bot, Globe, MessageCircle, Wrench } from "lucide-react";
 
 export function CapabilitiesOverview() {
   const pillars = [
     {
-      id: "ai-websites",
+      id: "business-websites",
       number: "01",
       icon: Globe,
-      title: "AI Websites",
-      scope: "Modern Flagships • Landing Pages • Redesigns • Lead Capture",
+      title: "Business Website Development",
+      scope: "New Websites • Landing Pages • Redesigns • Portfolios",
       narrative:
-        "High-performance digital surfaces built with modern Next.js architectures. Engineered for instant page loading, crisp typography, and intentional user flows that transform passive page visitors into engaged commercial opportunities.",
+        "We build clean, fast, and mobile-friendly websites that showcase your business with credibility. Whether you need a brand-new website or a high-converting landing page, we tailor it to your exact needs.",
       actionLink: "#websites",
-      actionText: "Explore AI Websites",
+      actionText: "Explore Website Services",
     },
     {
-      id: "ai-agents",
+      id: "ai-chatbots",
       number: "02",
       icon: Bot,
-      title: "AI Agents",
-      scope: "24/7 Chatbots • FAQ Support • Lead Qualification • Internal Assistants",
+      title: "AI Chatbots & 24/7 Support",
+      scope: "Website Chatbots • FAQ Answers • Customer Assistance",
       narrative:
-        "Autonomous conversational agents embedded directly into your digital channels and operations. Operating on grounded knowledge bases with strict deterministic guardrails to answer questions, qualify prospects, and route workflows without hallucination.",
+        "Add a helpful AI assistant directly to your website. It greets visitors, answers common questions about your services or pricing instantly, and collects customer contact details around the clock.",
       actionLink: "#agents",
-      actionText: "Explore AI Agents",
+      actionText: "Explore AI Features",
     },
     {
-      id: "custom-solutions",
+      id: "whatsapp-integration",
       number: "03",
-      icon: Cpu,
-      title: "Custom Solutions",
-      scope: "Requirement-Based • Bespoke Logic • Zero Rigid Packages",
+      icon: MessageCircle,
+      title: "WhatsApp & Direct Contact",
+      scope: "WhatsApp Buttons • Direct Chat • Click-to-Call",
       narrative:
-        "We do not force clients into pre-packaged tiers or generic CMS themes. Every system is architected around your specific business logic, data schemas, API integrations, and team operational workflows.",
+        "Make it effortless for potential customers to reach you. We add direct WhatsApp buttons and quick contact options so visitors can start a conversation with your business in one tap.",
       actionLink: "#consultation",
-      actionText: "Scope Custom Project",
+      actionText: "Ask About Integrations",
     },
     {
-      id: "automated-growth",
+      id: "website-improvements",
       number: "04",
-      icon: Gauge,
-      title: "Automated Growth",
-      scope: "Continuous Capture • Instant Triage • Operational Leverage",
+      icon: Wrench,
+      title: "Website Improvements & Automation",
+      scope: "UI/UX Redesign • Speed Boost • Automated Lead Routing",
       narrative:
-        "By integrating high-converting web interfaces with 24/7 intelligent agent response, your business captures demand continuously—expanding capacity and revenue velocity without a linear increase in manual overhead.",
-      actionLink: "#architecture",
-      actionText: "View System Architecture",
+        "Already have a website? We can refresh its look, improve mobile responsiveness, add support/FAQ pages, and automate inquiry notifications so you never miss a prospective client.",
+      actionLink: "#how-it-works",
+      actionText: "See Our Simple Process",
     },
   ];
 
@@ -54,13 +54,13 @@ export function CapabilitiesOverview() {
     <section id="capabilities" className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 border-t border-white/10">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
-          eyebrow="CORE DISCIPLINES"
-          title="Engineered for business leverage, not visual gimmickry."
-          description="Nexora combines modern web engineering with intelligent conversational agents to build unified digital engines tailored to your exact operational requirements."
+          eyebrow="OUR SERVICES"
+          title="Everything you need to grow your business online."
+          description="We build your website, upgrade existing pages, add helpful AI features, connect WhatsApp, and automate repetitive tasks—practical solutions that bring in more customers."
           className="mb-16"
         />
 
-        {/* Editorial 2-Column Grid with Deep Whitespace */}
+        {/* Editorial 2-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
           {pillars.map((pillar) => {
             const Icon = pillar.icon;
@@ -72,7 +72,7 @@ export function CapabilitiesOverview() {
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="text-xs font-mono text-slate-500">
-                      {pillar.number} // ARCHITECTURE
+                      {pillar.number} // SERVICE
                     </span>
                     <div className="w-8 h-8 rounded-lg bg-surface-2 border border-white/10 flex items-center justify-center text-slate-400 group-hover:text-blue-400 group-hover:border-blue-500/30 transition-colors">
                       <Icon className="w-4 h-4" />
