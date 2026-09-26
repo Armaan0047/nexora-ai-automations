@@ -21,10 +21,10 @@ const TIMELINE_OPTIONS = [
 ];
 
 const BUDGET_OPTIONS = [
-  "₹3,000 – ₹5,000",
-  "₹5,000 – ₹8,000",
-  "₹8,000 – ₹10,000",
-  "₹10,000+",
+  "Under ₹25,000",
+  "₹25,000–₹50,000",
+  "₹50,000–₹1,00,000",
+  "₹1,00,000+",
   "Not sure yet",
 ];
 
@@ -96,57 +96,57 @@ export function RequirementForm() {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8 border-b border-[#35312B]">
+    <section id="contact" className="py-20 sm:py-24 px-4 sm:px-6 lg:px-8 border-b border-[#35312B]">
       <div className="max-w-6xl mx-auto">
         <SectionHeader
           eyebrow="START A PROJECT"
           title="Tell us what needs to be built or improved."
-          description="Share what you are trying to achieve. We will review the situation and reply with a clear recommendation."
-          className="mb-14 sm:mb-16"
+          description="Share what you are trying to achieve. We will review your situation and reply with a clear recommendation."
+          className="mb-10 sm:mb-12"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-          {/* Left Column: What Happens After Submitting */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="p-6 sm:p-8 rounded-lg bg-[#1A1916] border border-[#35312B] space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          {/* Left Column: What Happens After Submitting (3 Steps) */}
+          <div className="lg:col-span-5 space-y-5">
+            <div className="p-6 sm:p-7 rounded-lg bg-[#1A1916] border border-[#35312B] space-y-5">
               <h3 className="font-serif text-xl text-[#F2EEE6] tracking-tight">
                 What happens after submitting
               </h3>
 
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {[
                   {
                     step: "01",
-                    title: "Initial review within 24 hours",
-                    desc: "We analyze your current website, service model, and goals before responding.",
+                    title: "We review your requirements",
+                    desc: "We analyze your current website, service model, and goals before proposing a plan.",
                   },
                   {
                     step: "02",
-                    title: "Straightforward recommendation & estimate",
-                    desc: "You receive an honest appraisal of the right approach and a ballpark budget scope.",
+                    title: "We recommend the right approach",
+                    desc: "You receive an honest appraisal and a straightforward recommendation for your situation.",
                   },
                   {
                     step: "03",
-                    title: "Kickoff call only if it makes sense",
-                    desc: "If our approach fits your goals, we schedule a 20-minute setup call to finalize timelines.",
+                    title: "You receive a clear scope and estimate",
+                    desc: "A transparent quotation and timeline tied specifically to the deliverables you need.",
                   },
                 ].map((item) => (
-                  <div key={item.step} className="flex items-start gap-3.5">
-                    <div className="w-7 h-7 rounded bg-[#24221E] border border-[#35312B] flex items-center justify-center text-xs font-mono text-[#C9784A] font-semibold shrink-0">
+                  <div key={item.step} className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded bg-[#24221E] border border-[#35312B] flex items-center justify-center text-xs font-mono text-[#C9784A] font-semibold shrink-0">
                       {item.step}
                     </div>
                     <div>
                       <h4 className="text-sm font-semibold text-[#F2EEE6]">{item.title}</h4>
-                      <p className="text-xs text-[#A7A096] mt-1 leading-relaxed">{item.desc}</p>
+                      <p className="text-xs text-[#A7A096] mt-0.5 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-5 border-t border-[#2A2722] space-y-2.5">
+              <div className="pt-4 border-t border-[#2A2722] space-y-2">
                 <div className="flex items-center gap-2 text-xs text-[#A7A096]">
                   <ShieldCheck className="w-4 h-4 text-[#8FA58A] shrink-0" />
-                  <span>Strict confidentiality. No marketing spam.</span>
+                  <span>No obligation. No marketing spam.</span>
                 </div>
                 <div className="flex items-center gap-2 text-xs text-[#A7A096]">
                   <Mail className="w-4 h-4 text-[#C9784A] shrink-0" />
@@ -163,27 +163,27 @@ export function RequirementForm() {
               </div>
             </div>
 
-            <div className="p-4 rounded-lg bg-[#161512] border border-[#35312B] text-xs text-[#A7A096] flex items-center justify-between font-mono">
-              <span>Studio Response Rate:</span>
-              <span className="text-[#8FA58A]">&lt; 24h on business days</span>
+            <div className="p-3.5 rounded-lg bg-[#161512] border border-[#35312B] text-xs text-[#A7A096] flex items-center justify-between font-mono">
+              <span>Studio Response Pledge:</span>
+              <span className="text-[#8FA58A]">Replies within 24h on business days</span>
             </div>
           </div>
 
           {/* Right Column: Form Container */}
-          <div className="lg:col-span-7 p-6 sm:p-8 rounded-lg bg-[#1A1916] border border-[#35312B]">
+          <div className="lg:col-span-7 p-6 sm:p-7 rounded-lg bg-[#1A1916] border border-[#35312B]">
             {submitted ? (
-              <div className="py-12 flex flex-col items-center text-center space-y-4">
-                <div className="w-12 h-12 rounded bg-[#8FA58A]/15 border border-[#8FA58A]/40 flex items-center justify-center text-[#8FA58A] mb-2">
-                  <CheckCircle2 className="w-6 h-6" />
+              <div className="py-10 flex flex-col items-center text-center space-y-3">
+                <div className="w-10 h-10 rounded bg-[#8FA58A]/15 border border-[#8FA58A]/40 flex items-center justify-center text-[#8FA58A] mb-1">
+                  <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <h3 className="font-serif text-2xl text-[#F2EEE6] tracking-tight">
                   Enquiry received
                 </h3>
                 <p className="text-xs sm:text-sm text-[#A7A096] max-w-md leading-relaxed">
-                  Thank you, <span className="text-[#F2EEE6] font-medium">{fullName}</span>. We will review your project requirements for <span className="text-[#F2EEE6] font-medium">{businessName}</span> and reply within 24 hours.
+                  Thank you, <span className="text-[#F2EEE6] font-medium">{fullName}</span>. We will review your project requirements for <span className="text-[#F2EEE6] font-medium">{businessName}</span> and reply within 24 hours on business days.
                 </p>
-                <div className="p-4 rounded bg-[#11100E] border border-[#2A2722] text-xs text-[#A7A096] max-w-md text-left w-full mt-4 space-y-1">
-                  <div className="font-mono text-[#F2EEE6] text-[11px] uppercase tracking-wider mb-1.5 pb-1 border-b border-[#2A2722]">
+                <div className="p-3.5 rounded bg-[#11100E] border border-[#2A2722] text-xs text-[#A7A096] max-w-md text-left w-full mt-3 space-y-1">
+                  <div className="font-mono text-[#F2EEE6] text-[11px] uppercase tracking-wider mb-1 pb-1 border-b border-[#2A2722]">
                     Recorded Details
                   </div>
                   <div>• Needed: {selectedNeeds.map((id) => REQUIREMENT_OPTIONS.find((o) => o.id === id)?.label).join(", ")}</div>
@@ -194,13 +194,13 @@ export function RequirementForm() {
                   variant="secondary"
                   size="sm"
                   onClick={() => setSubmitted(false)}
-                  className="mt-6"
+                  className="mt-4"
                 >
                   Send another message
                 </Button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <h3 className="text-base font-semibold text-[#F2EEE6] tracking-tight">
                     Project requirement intake
@@ -217,7 +217,7 @@ export function RequirementForm() {
                 )}
 
                 <div>
-                  <label className="text-xs font-mono uppercase text-[#A7A096] block mb-2 font-medium">
+                  <label className="text-xs font-mono uppercase text-[#A7A096] block mb-1.5 font-medium">
                     What do you need? (Select all that apply)
                   </label>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -242,7 +242,7 @@ export function RequirementForm() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Field label="Your Full Name" required>
                     <input
                       id="fullName"
@@ -267,7 +267,7 @@ export function RequirementForm() {
                   </Field>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Field label="Work Email" required>
                     <input
                       id="email"
@@ -302,7 +302,7 @@ export function RequirementForm() {
                   />
                 </Field>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <Field label="Target Timeline">
                     <select
                       value={timeline}
@@ -316,7 +316,7 @@ export function RequirementForm() {
                       ))}
                     </select>
                   </Field>
-                  <Field label="Approximate Budget">
+                  <Field label="Approximate project budget" optional>
                     <select
                       value={budget}
                       onChange={(e) => setBudget(e.target.value)}
@@ -331,9 +331,9 @@ export function RequirementForm() {
                   </Field>
                 </div>
 
-                <div className="pt-3 border-t border-[#2A2722] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div className="pt-2 border-t border-[#2A2722] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <span className="text-[11px] text-[#A7A096]">
-                    No obligation. Direct reply within 24 hours.
+                    No obligation. Direct reply within 24 hours on business days.
                   </span>
                   <Button
                     variant="primary"
@@ -342,7 +342,7 @@ export function RequirementForm() {
                     type="submit"
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? "Sending..." : "Submit project enquiry"}
+                    {isSubmitting ? "Sending..." : "Request a project review"}
                   </Button>
                 </div>
               </form>
@@ -355,7 +355,7 @@ export function RequirementForm() {
 }
 
 const inputClass =
-  "w-full text-xs sm:text-sm bg-[#11100E] border border-[#35312B] rounded-md px-3.5 py-2.5 text-[#F2EEE6] placeholder:text-[#A7A096]/50 focus:outline-none focus:border-[#C9784A] transition-colors";
+  "w-full text-xs sm:text-sm bg-[#11100E] border border-[#35312B] rounded-md px-3 py-2 text-[#F2EEE6] placeholder:text-[#A7A096]/50 focus:outline-none focus:border-[#C9784A] transition-colors";
 
 function Field({
   label,
